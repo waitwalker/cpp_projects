@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 4.15.0, 2021-05-26T16:49:45. -->
+<!-- Written by QtCreator 4.15.0, 2021-05-27T09:02:36. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -299,7 +299,7 @@
     <value type="bool" key="RunConfiguration.UseLibrarySearchPath">true</value>
     <value type="bool" key="RunConfiguration.UseQmlDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseQmlDebuggerAuto">true</value>
-    <value type="bool" key="RunConfiguration.UseTerminal">false</value>
+    <value type="bool" key="RunConfiguration.UseTerminal">true</value>
     <value type="QString" key="RunConfiguration.WorkingDirectory.default">/Users/waitwalker/Desktop/工作/github_projects/cpp_projects/build-day01_hello_cpp-Desktop_x86_darwin_generic_mach_o_64bit-Debug</value>
    </valuemap>
    <value type="int" key="ProjectExplorer.Target.RunConfigurationCount">1</value>
