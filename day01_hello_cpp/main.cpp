@@ -4,7 +4,35 @@
 /// std 标准; 使用标准的命名空间
 using namespace std;
 
+namespace A {
+    int a = 100;
+}
+
+namespace B {
+    int a = 200;
+    namespace C {
+        int a = 300;
+    }
+}
+
+/// 全局变量a
+int a = 10;
+void test01() {
+    int a = 20;
+    /// 局部变量a输出
+    cout << "a="<<a <<endl;
+
+    /// ::作用域运算符
+    /// 全局变量输出
+    cout<< "global a = "<<::a<<endl;
+}
+
 int main() {
+    cout<<"A::a = "<<A::a<<endl;
+    cout<<"B::a= "<<B::a<<endl;
+    cout<<"C::a= "<<B::C::a<<endl;
+
+    test01();
     /// cout类似于c语言的printf
     /// endl类似于c语言的换行符
     /// cout代表输出设备
