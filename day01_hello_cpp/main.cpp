@@ -53,7 +53,9 @@ void test01() {
 }
 
 int main() {
+    int a = 999;
     using namespace veryLongName;
+    cout<<"局部变量a="<<a<<endl;
     cout<<veryLongName::func()<<endl;
     func();
 
