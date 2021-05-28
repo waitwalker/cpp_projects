@@ -68,7 +68,30 @@ struct stu {
 
 extern const int num = 1001;
 
+#define Max 1024
+const short my_max = 1024;
+void test02(short i) {
+    cout<<"short函数"<<endl;
+}
+
+void test02(int i) {
+    cout<<"int函数"<<endl;
+}
+
 int main() {
+
+    test02(Max);
+    test02(my_max);
+
+    /// 3)const修饰自定义类型(对象,结构体等)也会开辟内存空间
+
+
+    /// 2)这时会开辟空间
+    int xx = 100;
+    const int y = xx;
+    int * pp = &xx;
+    *pp = 3000;
+    cout<<"xx="<<xx<<endl;
 
     int m = 10;
     int n = 20;
@@ -77,6 +100,7 @@ int main() {
 
     cout<<"const修饰的关键字:"<<num<<endl;
 
+    /// 1)对const修饰的局部变量进行&取地址时就会开辟空间
     const int data = 100;
     int *p = (int *)&data;
     *p = 2001;
