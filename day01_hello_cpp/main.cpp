@@ -27,6 +27,7 @@ void A::home() {
 
 namespace B {
     int a = 200;
+    const int x = 300;
     namespace C {
         int a = 300;
     }
