@@ -52,10 +52,49 @@ void test01() {
     cout<< "global a = "<<::a<<endl;
 }
 
+enum Color{
+    red,
+    yellow,
+    green
+};
+
+struct stu {
+    int age;
+    char name[32];
+    void getAge() {
+        cout<<"120"<<endl;
+    }
+};
+
+extern const int num = 1001;
+
 int main() {
+
+    int m = 10;
+    int n = 20;
+    int x = m > n ? m : n = 100;
+    cout<<"三目运算结果:"<<x<<endl;
+
+    cout<<"const修饰的关键字:"<<num<<endl;
+
+    const int data = 100;
+    int *p = (int *)&data;
+    *p = 2001;
+    cout<<"*p = "<<*p<<endl;
+    cout<<"data = "<<*(&data)<<endl;
+    bool flag = true;
+    cout<<"flag="<<flag<<endl;
+    cout<<"size bool="<<sizeof (bool)<<endl;
+
+
+    stu lucy = {10,"zhangsan"};
+    cout<<lucy.name<<endl;
+    lucy.getAge();
+    Color c = red;
+    cout<<"color c="<<c<<endl;
     int a = 999;
     using namespace veryLongName;
-    cout<<"局部变量a="<<a<<endl;
+    std::cout<<"局部变量a="<<a<<endl;
     cout<<veryLongName::func()<<endl;
     func();
 
