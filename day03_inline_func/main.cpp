@@ -1,9 +1,10 @@
 #include <iostream>
+int my_add(int a = 20, int b = 0);
 
 using namespace std;
 
 /// 函数参数默认值
-int my_add(int a = 20, int b = 0) {
+int my_add(int a, int b) {
     return a + b;
 }
 
