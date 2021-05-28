@@ -1,4 +1,7 @@
 #include <iostream>
+#include "Person.h"
+
+/// 在声明处添加默认参数值
 int my_add(int a = 20, int b = 0);
 
 using namespace std;
@@ -17,8 +20,29 @@ inline int my_num(int a, int b) {
     return a * b;
 }
 
+void test01() {
+    cout<<"test01 没有参数"<<endl;
+}
+
+void test01(int a) {
+    cout<<"test01 有 一个参数"<<endl;
+}
+
+void test01(int a, int b) {
+    cout<<"test01 有两个参数"<<endl;
+}
+
 int main()
 {
+    myName();
+
+    return 0;
+
+    test01();
+    test01(1);
+    test01(1,2);
+    return 0;
+
     cout<<my_add()<<endl;
     return 0;
 

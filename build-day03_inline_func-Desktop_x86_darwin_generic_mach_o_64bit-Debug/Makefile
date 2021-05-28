@@ -52,8 +52,10 @@ OBJECTS_DIR   = ./
 
 ####### Files
 
-SOURCES       = ../day03_inline_func/main.cpp 
-OBJECTS       = main.o
+SOURCES       = ../day03_inline_func/Person.c \
+		../day03_inline_func/main.cpp 
+OBJECTS       = Person.o \
+		main.o
 DIST          = /usr/local/Cellar/qt/6.1.0_1/share/qt/mkspecs/features/spec_pre.prf \
 		/usr/local/Cellar/qt/6.1.0_1/share/qt/mkspecs/features/device_config.prf \
 		/usr/local/Cellar/qt/6.1.0_1/share/qt/mkspecs/common/unix.conf \
@@ -214,6 +216,7 @@ DIST          = /usr/local/Cellar/qt/6.1.0_1/share/qt/mkspecs/features/spec_pre.
 		/usr/local/Cellar/qt/6.1.0_1/share/qt/mkspecs/features/qt_config.prf \
 		/usr/local/Cellar/qt/6.1.0_1/share/qt/mkspecs/macx-clang/qmake.conf \
 		/usr/local/Cellar/qt/6.1.0_1/share/qt/mkspecs/features/spec_post.prf \
+		../day03_inline_func/.qmake.stash \
 		/usr/local/Cellar/qt/6.1.0_1/share/qt/mkspecs/features/exclusive_builds.prf \
 		/usr/local/Cellar/qt/6.1.0_1/share/qt/mkspecs/features/mac/sdk.prf \
 		/usr/local/Cellar/qt/6.1.0_1/share/qt/mkspecs/features/toolchain.prf \
@@ -235,7 +238,8 @@ DIST          = /usr/local/Cellar/qt/6.1.0_1/share/qt/mkspecs/features/spec_pre.
 		/usr/local/Cellar/qt/6.1.0_1/share/qt/mkspecs/features/exceptions.prf \
 		/usr/local/Cellar/qt/6.1.0_1/share/qt/mkspecs/features/yacc.prf \
 		/usr/local/Cellar/qt/6.1.0_1/share/qt/mkspecs/features/lex.prf \
-		../day03_inline_func/day03_inline_func.pro  ../day03_inline_func/main.cpp
+		../day03_inline_func/day03_inline_func.pro Person.h ../day03_inline_func/Person.c \
+		../day03_inline_func/main.cpp
 QMAKE_TARGET  = day03_inline_func
 DESTDIR       = 
 TARGET        = day03_inline_func
@@ -244,7 +248,7 @@ TARGET        = day03_inline_func
 EXPORT_QMAKE_MAC_SDK = macosx
 EXPORT_QMAKE_MAC_SDK_VERSION = 11.3
 EXPORT_QMAKE_XCODE_DEVELOPER_PATH = /Applications/Xcode.app/Contents/Developer
-EXPORT__QMAKE_STASH_ = 
+EXPORT__QMAKE_STASH_ = /Users/waitwalker/Desktop/工作/github_projects/cpp_projects/build-day03_inline_func-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qmake.stash
 EXPORT_VALID_ARCHS = x86_64
 EXPORT_ACTIVE_ARCHS = $(filter $(EXPORT_VALID_ARCHS), $(ARCHS))
 EXPORT_ARCH_ARGS = $(foreach arch, $(if $(EXPORT_ACTIVE_ARCHS), $(EXPORT_ACTIVE_ARCHS), $(EXPORT_VALID_ARCHS)), -arch $(arch))
@@ -418,6 +422,7 @@ Makefile: ../day03_inline_func/day03_inline_func.pro /usr/local/Cellar/qt/6.1.0_
 		/usr/local/Cellar/qt/6.1.0_1/share/qt/mkspecs/features/qt_config.prf \
 		/usr/local/Cellar/qt/6.1.0_1/share/qt/mkspecs/macx-clang/qmake.conf \
 		/usr/local/Cellar/qt/6.1.0_1/share/qt/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		/usr/local/Cellar/qt/6.1.0_1/share/qt/mkspecs/features/exclusive_builds.prf \
 		/usr/local/Cellar/qt/6.1.0_1/share/qt/mkspecs/features/mac/sdk.prf \
 		/usr/local/Cellar/qt/6.1.0_1/share/qt/mkspecs/features/toolchain.prf \
@@ -601,6 +606,7 @@ Makefile: ../day03_inline_func/day03_inline_func.pro /usr/local/Cellar/qt/6.1.0_
 /usr/local/Cellar/qt/6.1.0_1/share/qt/mkspecs/features/qt_config.prf:
 /usr/local/Cellar/qt/6.1.0_1/share/qt/mkspecs/macx-clang/qmake.conf:
 /usr/local/Cellar/qt/6.1.0_1/share/qt/mkspecs/features/spec_post.prf:
+.qmake.stash:
 /usr/local/Cellar/qt/6.1.0_1/share/qt/mkspecs/features/exclusive_builds.prf:
 /usr/local/Cellar/qt/6.1.0_1/share/qt/mkspecs/features/mac/sdk.prf:
 /usr/local/Cellar/qt/6.1.0_1/share/qt/mkspecs/features/toolchain.prf:
@@ -646,6 +652,7 @@ clean: compiler_clean
 
 distclean: clean 
 	-$(DEL_FILE) $(TARGET) 
+	-$(DEL_FILE) .qmake.stash
 	-$(DEL_FILE) Makefile
 
 
@@ -670,7 +677,10 @@ compiler_clean:
 
 ####### Compile
 
-main.o: ../day03_inline_func/main.cpp 
+Person.o: ../day03_inline_func/Person.c ../day03_inline_func/Person.h
+	$(CC) -c $(CFLAGS) $(INCPATH) -o Person.o ../day03_inline_func/Person.c
+
+main.o: ../day03_inline_func/main.cpp ../day03_inline_func/Person.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../day03_inline_func/main.cpp
 
 ####### Install
