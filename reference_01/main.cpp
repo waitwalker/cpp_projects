@@ -37,10 +37,10 @@ typedef struct {
     char name[32];
 }STU;
 
-
-void myPoint(STU &tmp) {
+/// 常引用
+void myPoint(const STU &tmp) {
     cout<<sizeof (tmp)<<endl;
-    tmp.num = 2000;
+    //tmp.num = 2000;/// 这里不能修改了,常引用
 }
 
 int main()
