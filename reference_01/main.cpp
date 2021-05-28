@@ -26,9 +26,30 @@ int& my_data(void){
     return num;/// 函数返回啥变量,引用就是该变量的别名,这里操作是非法的,千万不要返回局部变量
 }
 
+void my_str2(char* &my_str){
+    my_str = (char *)calloc(1,32);
+    strcpy(my_str,"hello world");
+    return;
+}
+
+typedef struct {
+    int num;
+    char name[32];
+}STU;
+
+
+void myPoint(STU &tmp) {
+    cout<<sizeof (tmp)<<endl;
+    tmp.num = 2000;
+}
 
 int main()
 {
+    STU lucy = {100,"lucy"};
+
+    myPoint(lucy);
+    cout<<lucy.num<<endl;
+    return 0;
 
     int &ref = my_data();
 
