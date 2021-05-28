@@ -2,6 +2,7 @@
 
 using namespace std;
 
+/// 函数参数默认值
 int my_add(int a = 20, int b = 0) {
     return a + b;
 }
@@ -17,7 +18,7 @@ inline int my_num(int a, int b) {
 
 int main()
 {
-    cout<<my_add(10,30)<<endl;
+    cout<<my_add()<<endl;
     return 0;
 
     cout<<my_num(10,20)<<endl;
