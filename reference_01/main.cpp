@@ -19,11 +19,25 @@ void test02(){
     }
 }
 
+int& my_data(void){
+    int num = 10;
+    return num;/// 函数返回啥变量.引用就是该变量的别名
+}
+
+
 int main()
 {
+
+    int &ref = my_data();
+
+    cout<<"ref="<<ref<<endl;
+
+    return 0;
+
+    /// 引用作为函数的参数使用
     int data1 = 10, data2 = 20;
     cout<<"data1="<<data1<<",data2="<<data2<<endl;
-    my_swap(data1,data2);///这里并不能交换data1和data2的值
+    my_swap(data1,data2);
     cout<<"data1="<<data1<<",data2="<<data2<<endl;
 
     test02();
