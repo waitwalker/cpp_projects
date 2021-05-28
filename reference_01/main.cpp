@@ -20,8 +20,10 @@ void test02(){
 }
 
 int& my_data(void){
-    int num = 10;
-    return num;/// 函数返回啥变量.引用就是该变量的别名
+    /// 可以用static 修饰,不被释放,下面代码就OK了
+    static int num = 10;
+    cout<<"num="<<num<<endl;
+    return num;/// 函数返回啥变量,引用就是该变量的别名,这里操作是非法的,千万不要返回局部变量
 }
 
 
@@ -32,6 +34,9 @@ int main()
 
     cout<<"ref="<<ref<<endl;
 
+    my_data() = 1111;
+
+    my_data();
     return 0;
 
     /// 引用作为函数的参数使用
