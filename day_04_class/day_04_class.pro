@@ -4,4 +4,8 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += \
+        cub.cpp \
         main.cpp
+
+HEADERS += \
+    cub.h

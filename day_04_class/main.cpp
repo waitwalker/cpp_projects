@@ -49,7 +49,75 @@ public:
     }
 };
 
+class Cub
+{
+private:
+    int m_l;//长
+    int m_w;//宽
+    int m_h;//高
+public:
+    Cub();
+    void setL(int l) {
+        m_l = l;
+    }
+
+    void setW(int w) {
+        m_w = w;
+    }
+
+    void setH(int h) {
+        m_h = h;
+    }
+
+    int getL() {
+        return m_l;
+    }
+
+    int getW() {
+        return m_w;
+    }
+
+    int getH() {
+        return m_h;
+    }
+
+    /// 计算面积
+    int getS() {
+        return 2 * (m_l * m_w + m_l * m_h + m_w * m_h);
+    }
+
+    /// 计算体积
+    int getV() {
+        return m_l * m_w * m_h;
+    }
+
+};
+
+bool compareCub(Cub &cub1, Cub &cub2) {
+    if (cub1.getL() == cub2.getL() && cub1.getW() == cub2.getW() && cub1.getH() == cub2.getH()) {
+        return true;
+    }
+    return false;
+}
+
+
 int main() {
+
+    Cub cub1, cub2;
+    cub1.setL(10);
+    cub1.setW(20);
+    cub1.setH(30);
+
+    cub2.setL(15);
+    cub2.setW(30);
+    cub2.setH(23);
+
+    cout<<"面积1:"<<cub1.getS()<<endl;
+    cout<<"面积2:"<<cub2.getS()<<endl;
+
+    cout<<"比较结果:"<<compareCub(cub1,cub2)<<endl;
+
+    return 0;
 //    Person lucy;
 //    lucy.num = 20;
 //    lucy.desc();
