@@ -10,39 +10,23 @@ private:
     int m_h;//高
 public:
     Cub();
-    void setL(int l) {
-        m_l = l;
-    }
+    void setL(int l);
 
-    void setW(int w) {
-        m_w = w;
-    }
+    void setW(int w);
 
-    void setH(int h) {
-        m_h = h;
-    }
+    void setH(int h);
 
-    int getL() {
-        return m_l;
-    }
+    int getL();
 
-    int getW() {
-        return m_w;
-    }
+    int getW();
 
-    int getH() {
-        return m_h;
-    }
+    int getH();
 
     /// 计算面积
-    int getS() {
-        return 2 * (m_l * m_w + m_l * m_h + m_w * m_h);
-    }
+    int getS();
 
     /// 计算体积
-    int getV() {
-        return m_l * m_w * m_h;
-    }
+    int getV();
 
 };
 

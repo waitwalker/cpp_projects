@@ -5,7 +5,9 @@ CONFIG -= qt
 
 SOURCES += \
         cub.cpp \
+        data.cpp \
         main.cpp
 
 HEADERS += \
-    cub.h
+    cub.h \
+    data.h

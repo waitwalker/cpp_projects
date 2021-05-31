@@ -53,8 +53,10 @@ OBJECTS_DIR   = ./
 ####### Files
 
 SOURCES       = ../day_04_class/cub.cpp \
+		../day_04_class/data.cpp \
 		../day_04_class/main.cpp 
 OBJECTS       = cub.o \
+		data.o \
 		main.o
 DIST          = /usr/local/Cellar/qt/6.1.0_1/share/qt/mkspecs/features/spec_pre.prf \
 		/usr/local/Cellar/qt/6.1.0_1/share/qt/mkspecs/features/device_config.prf \
@@ -238,7 +240,9 @@ DIST          = /usr/local/Cellar/qt/6.1.0_1/share/qt/mkspecs/features/spec_pre.
 		/usr/local/Cellar/qt/6.1.0_1/share/qt/mkspecs/features/exceptions.prf \
 		/usr/local/Cellar/qt/6.1.0_1/share/qt/mkspecs/features/yacc.prf \
 		/usr/local/Cellar/qt/6.1.0_1/share/qt/mkspecs/features/lex.prf \
-		../day_04_class/day_04_class.pro cub.h ../day_04_class/cub.cpp \
+		../day_04_class/day_04_class.pro cub.h \
+		data.h ../day_04_class/cub.cpp \
+		../day_04_class/data.cpp \
 		../day_04_class/main.cpp
 QMAKE_TARGET  = day_04_class
 DESTDIR       = 
@@ -680,7 +684,11 @@ compiler_clean:
 cub.o: ../day_04_class/cub.cpp ../day_04_class/cub.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o cub.o ../day_04_class/cub.cpp
 
-main.o: ../day_04_class/main.cpp 
+data.o: ../day_04_class/data.cpp ../day_04_class/data.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o data.o ../day_04_class/data.cpp
+
+main.o: ../day_04_class/main.cpp ../day_04_class/cub.h \
+		../day_04_class/data.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../day_04_class/main.cpp
 
 ####### Install
