@@ -7,8 +7,17 @@
 
 #include <iostream>
 #include "Data.hpp"
+#include "Person.hpp"
 using namespace std;
 int main(int argc, const char * argv[]) {
+    
+    Person person(10,20,30);
+    person.showPerson();
+    
+    
+    
+    return 0;
+    
     // insert code here...
     Data data((char*)"lucy",20);
     
