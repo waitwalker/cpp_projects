@@ -10,6 +10,9 @@ int main()
 
     /// 显示调用构造函数
     Data data2 = Data();
+
+    /// 匿名对象
+    Data();
     cout << "Hello World!" << endl;
     return 0;
 }
