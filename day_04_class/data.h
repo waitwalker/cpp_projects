@@ -8,6 +8,8 @@ private:
     int num;
 public:
     Data();
+    Data(int a);
+    ~Data();
     void setNum(int n);
     int getNum();
 };

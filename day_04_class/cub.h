@@ -1,33 +1,33 @@
-#ifndef CUB_H
-#define CUB_H
+//#ifndef CUB_H
+//#define CUB_H
 
 
-class Cub
-{
-private:
-    int m_l;//长
-    int m_w;//宽
-    int m_h;//高
-public:
-    Cub();
-    void setL(int l);
+//class Cub
+//{
+//private:
+//    int m_l;//长
+//    int m_w;//宽
+//    int m_h;//高
+//public:
+//    Cub();
+//    void setL(int l);
 
-    void setW(int w);
+//    void setW(int w);
 
-    void setH(int h);
+//    void setH(int h);
 
-    int getL();
+//    int getL();
 
-    int getW();
+//    int getW();
 
-    int getH();
+//    int getH();
 
-    /// 计算面积
-    int getS();
+//    /// 计算面积
+//    int getS();
 
-    /// 计算体积
-    int getV();
+//    /// 计算体积
+//    int getV();
 
-};
+//};
 
-#endif // CUB_H
+//#endif // CUB_H
