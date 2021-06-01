@@ -22,6 +22,10 @@ Data::Data(const Data &data){
     cout<<"Data构造拷贝"<<endl;
 }
 
+void Data::showDesc() {
+    cout<<"静态成员 函数"<<data<<endl;
+}
+
 Data::~Data(){
     cout<<"Data析构函数"<<endl;
 }

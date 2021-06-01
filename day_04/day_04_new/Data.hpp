@@ -22,6 +22,8 @@ public:
     Data();
     Data(int n);
     Data(const Data &data);
+    
+    static void showDesc();
     ~Data();
 };
 

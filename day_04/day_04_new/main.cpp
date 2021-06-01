@@ -24,6 +24,10 @@ int main(int argc, const char * argv[]) {
     ob1.data = 400;
     cout<<"Data::data值为:"<<Data::data<<endl;
     
+    ///静态成员函数直接通过类直接访问或者通过对象直接访问
+    Data::showDesc();
+    ob1.showDesc();
+    
     return 0;
     
     Person *person1 = new Person("zhangsan2",11);
