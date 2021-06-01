@@ -6,9 +6,18 @@
 //
 
 #include <iostream>
+#include "Person.hpp"
+
 using namespace std;
 
 int main(int argc, const char * argv[]) {
+    
+    /// new 为对象申请空间&&初始化
+    Person *per = new Person((char *)"zhangsan",20);
+    per->showDesc();
+    delete per;
+    return 0;
+    
     
     /// 这种初始化方式在qt creator中不行的 错误的,不过在Xcode是可以的
     char *arr1 = new char[32]{"hehe"};
@@ -16,8 +25,6 @@ int main(int argc, const char * argv[]) {
     /// 这样初始化才行 或者同 strcpy
     //char *arr1 = new char[32]{'h','e','h','e'};
     cout<<arr1<<endl;
-    
-    
     delete [] arr1;
     
     
