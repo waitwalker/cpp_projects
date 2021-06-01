@@ -12,6 +12,11 @@ using namespace std;
 
 int main(int argc, const char * argv[]) {
     
+    /// 通过new 来创建对象数组
+    Person *arr3 = new Person[5]{Person("zhangsan1", 10)};
+    delete [] arr3;
+    return 0;
+    
     /// 对象数组 & 初始化对象
     Person arr2[5] = {Person("zhangsan1", 18),Person("zhangsan2", 19)};
     
