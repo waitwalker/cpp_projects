@@ -16,6 +16,14 @@ int main(int argc, const char * argv[]) {
     
     cout<<"Data::data值为:"<<Data::data<<endl;
     
+    Data::data = 300;
+    cout<<"Data::data值为:"<<Data::data<<endl;
+    
+    Data ob1;
+    cout<<"Data::data值为:"<<Data::data<<endl;
+    ob1.data = 400;
+    cout<<"Data::data值为:"<<Data::data<<endl;
+    
     return 0;
     
     Person *person1 = new Person("zhangsan2",11);
