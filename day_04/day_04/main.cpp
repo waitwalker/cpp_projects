@@ -8,6 +8,9 @@
 #include <iostream>
 #include "Data.hpp"
 #include "Person.hpp"
+#include "Student.hpp"
+
+
 using namespace std;
 
 
@@ -68,9 +71,16 @@ public:
 
 int main(int argc, const char * argv[]) {
     
+    /// 隐式转换构造
+    Student stu = 10;
+    
+    
+    return 0;
+    
     
     //DataSource ob1;
     DataSource ob2(10,20, 30);
+    
     
     return 0;
     

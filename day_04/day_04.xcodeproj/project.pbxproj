@@ -10,6 +10,7 @@
 		6A613E592664C8D8006EF75B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A613E582664C8D8006EF75B /* main.cpp */; };
 		6A613E612664C938006EF75B /* Data.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A613E5F2664C938006EF75B /* Data.cpp */; };
 		6A613E642664DC6D006EF75B /* Person.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A613E622664DC6D006EF75B /* Person.cpp */; };
+		6A613E672665BDEF006EF75B /* Student.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A613E652665BDEF006EF75B /* Student.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,8 @@
 		6A613E602664C938006EF75B /* Data.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Data.hpp; sourceTree = "<group>"; };
 		6A613E622664DC6D006EF75B /* Person.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Person.cpp; sourceTree = "<group>"; };
 		6A613E632664DC6D006EF75B /* Person.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Person.hpp; sourceTree = "<group>"; };
+		6A613E652665BDEF006EF75B /* Student.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Student.cpp; sourceTree = "<group>"; };
+		6A613E662665BDEF006EF75B /* Student.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Student.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +71,8 @@
 				6A613E602664C938006EF75B /* Data.hpp */,
 				6A613E622664DC6D006EF75B /* Person.cpp */,
 				6A613E632664DC6D006EF75B /* Person.hpp */,
+				6A613E652665BDEF006EF75B /* Student.cpp */,
+				6A613E662665BDEF006EF75B /* Student.hpp */,
 			);
 			path = day_04;
 			sourceTree = "<group>";
@@ -131,6 +136,7 @@
 				6A613E592664C8D8006EF75B /* main.cpp in Sources */,
 				6A613E642664DC6D006EF75B /* Person.cpp in Sources */,
 				6A613E612664C938006EF75B /* Data.cpp in Sources */,
+				6A613E672665BDEF006EF75B /* Student.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
