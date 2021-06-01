@@ -13,7 +13,7 @@ using namespace std;
 
 int main(int argc, const char * argv[]) {
     
-    
+    /// 静态成员变量(成员属性) 通过类或对象都能访问 内存中只有一份拷贝
     cout<<"Data::data值为:"<<Data::data<<endl;
     
     Data::data = 300;
