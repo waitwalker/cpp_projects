@@ -12,6 +12,12 @@ using namespace std;
 
 int main(int argc, const char * argv[]) {
     
+    /// 对象数组 & 初始化对象
+    Person arr2[5] = {Person("zhangsan1", 18),Person("zhangsan2", 19)};
+    
+    return 0;
+    
+    
     /// new 为对象申请空间&&初始化
     Person *per = new Person((char *)"zhangsan",20);
     per->showDesc();
