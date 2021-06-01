@@ -24,6 +24,9 @@ Data::Data(const Data &data){
 
 void Data::showDesc() {
     cout<<"静态成员 函数"<<data<<endl;
+    
+    /// 静态成员函数只能访问静态成员变量,不能访问普通成员变量
+    //cout<<"静态成员 函数"<<num<<endl;
 }
 
 Data::~Data(){
