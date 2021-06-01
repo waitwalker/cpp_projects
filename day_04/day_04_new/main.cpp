@@ -13,8 +13,14 @@ using namespace std;
 int main(int argc, const char * argv[]) {
     
     /// 通过new 来创建对象数组
+    /// 方式1
     Person *arr3 = new Person[5]{Person("zhangsan1", 10)};
     delete [] arr3;
+    
+    /// 方式2
+    Person *arr4 = NULL;
+    arr4 = new Person[5];
+    delete [] arr4;
     return 0;
     
     /// 对象数组 & 初始化对象
