@@ -20,7 +20,8 @@ private:
     
 public:
     Student();
-    Student(int a);
+    /// 限制隐式转换构造
+    explicit Student(int a);
     Student(const Student &stu);
     ~Student();
 };

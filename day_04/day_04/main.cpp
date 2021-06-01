@@ -72,7 +72,7 @@ public:
 int main(int argc, const char * argv[]) {
     
     /// 隐式转换构造
-    Student stu = 10;
+    Student stu = 10;/// explicit 关键字修饰后就不能进行隐式转换构造了
     
     
     return 0;
