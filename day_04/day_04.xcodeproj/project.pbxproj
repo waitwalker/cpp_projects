@@ -13,6 +13,7 @@
 		6A613E672665BDEF006EF75B /* Student.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A613E652665BDEF006EF75B /* Student.cpp */; };
 		6A613E6F2665CEAD006EF75B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A613E6E2665CEAD006EF75B /* main.cpp */; };
 		6A613E752665D442006EF75B /* Person.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A613E732665D442006EF75B /* Person.cpp */; };
+		6A613E782665E59E006EF75B /* Data.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A613E762665E59E006EF75B /* Data.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -49,6 +50,8 @@
 		6A613E6E2665CEAD006EF75B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		6A613E732665D442006EF75B /* Person.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Person.cpp; sourceTree = "<group>"; };
 		6A613E742665D442006EF75B /* Person.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Person.hpp; sourceTree = "<group>"; };
+		6A613E762665E59E006EF75B /* Data.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Data.cpp; sourceTree = "<group>"; };
+		6A613E772665E59E006EF75B /* Data.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Data.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +110,8 @@
 				6A613E6E2665CEAD006EF75B /* main.cpp */,
 				6A613E732665D442006EF75B /* Person.cpp */,
 				6A613E742665D442006EF75B /* Person.hpp */,
+				6A613E762665E59E006EF75B /* Data.cpp */,
+				6A613E772665E59E006EF75B /* Data.hpp */,
 			);
 			path = day_04_new;
 			sourceTree = "<group>";
@@ -199,6 +204,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A613E782665E59E006EF75B /* Data.cpp in Sources */,
 				6A613E752665D442006EF75B /* Person.cpp in Sources */,
 				6A613E6F2665CEAD006EF75B /* main.cpp in Sources */,
 			);

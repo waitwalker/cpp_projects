@@ -7,11 +7,16 @@
 
 #include <iostream>
 #include "Person.hpp"
+#include "Data.hpp"
 
 using namespace std;
 
 int main(int argc, const char * argv[]) {
     
+    
+    cout<<"Data::data值为:"<<Data::data<<endl;
+    
+    return 0;
     
     Person *person1 = new Person("zhangsan2",11);
     
