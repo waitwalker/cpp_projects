@@ -14,6 +14,8 @@ using namespace std;
 
 int main(int argc, const char * argv[]) {
     
+    Printer *pert = Printer::getSinglePrinter();
+    pert->startPrint((char *)"学习成绩");
     
     return 0;
     

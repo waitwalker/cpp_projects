@@ -21,3 +21,8 @@ Printer::Printer(){
 Printer::Printer(const Printer &printer){
     
 }
+
+
+void Printer::startPrint(char *text) {
+    cout<<"打印的内容:"<<text<<endl;
+}
