@@ -25,6 +25,8 @@ public:
     Data& myCout(char *name);
     
     void setNum(int num);
+    
+    void myFun() const;
     ~Data();
 };
 

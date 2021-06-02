@@ -24,6 +24,12 @@ void Data::setNum(int num) {
     this->num = num;
 }
 
+void Data::myFun() const {
+    /// 这里直接报错了
+    //this.num = 100;
+    cout<<"当前num值:"<<this->num<<endl;
+}
+
 Data::Data(const Data &data) {
     cout<<"Data拷贝构造"<<endl;
 }

@@ -10,6 +10,14 @@
 
 int main(int argc, const char * argv[]) {
     
+    Data ob111;
+    ob111.setNum(20);
+    ob111.myFun();
+    
+    
+    return 0;
+    
+    /// this 关键字
     Data ob1;
     ob1.setNum(10);
     cout<<"ob1 num:"<<ob1.num<<endl;
