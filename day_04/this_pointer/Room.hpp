@@ -11,11 +11,14 @@
 #include <stdio.h>
 #include <iostream>
 #include <string.h>
-
+#include "GoodGay.hpp"
 
 using namespace std;
 
 class Room {
+    /// 将GoodGay作为Room的友元类
+    /// GoodGay可以访问Room中所有的成员函数 可以访问Room的私有数据 
+    friend class GoodGay;
     friend void visit(Room &ro);
     friend void visit2(Room &ro);
 private:
