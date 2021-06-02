@@ -8,7 +8,7 @@ using namespace std;
 int main()
 {
 
-    Person lucy = Person("lucy",20);
+    Person lucy = Person((char *)"lucy",20);
 
     return 0;
     Data ob1(10);

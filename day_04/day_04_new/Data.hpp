@@ -18,6 +18,8 @@ private:
 public:
     int num;
     static int data;
+    /// const 修饰的静态成员
+    static const int age;
     
     Data();
     Data(int n);
