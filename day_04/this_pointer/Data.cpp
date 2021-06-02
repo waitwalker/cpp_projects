@@ -26,7 +26,7 @@ void Data::setNum(int num) {
 
 void Data::myFun() const {
     /// 这里直接报错了
-    //this.num = 100;
+    this->num = 100;
     cout<<"当前num值:"<<this->num<<endl;
 }
 

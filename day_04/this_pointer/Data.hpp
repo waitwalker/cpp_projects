@@ -17,7 +17,7 @@ class Data {
 private:
     
 public:
-    int num;
+    mutable int num;
     Data();
     Data(int nu);
     Data(const Data &data);
