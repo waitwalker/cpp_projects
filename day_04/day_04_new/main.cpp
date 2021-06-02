@@ -8,10 +8,14 @@
 #include <iostream>
 #include "Person.hpp"
 #include "Data.hpp"
+#include "Printer.hpp"
 
 using namespace std;
 
 int main(int argc, const char * argv[]) {
+    
+    
+    return 0;
     
     /// 静态成员变量使用案例1:统计对象个数
     Data ob11;
