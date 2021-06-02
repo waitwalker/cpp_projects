@@ -11,6 +11,10 @@ void visit(Room &ro) {
     cout<<"卧室:"<<ro.bedRoom<<endl;
 }
 
+void visit2(Room &room) {
+    cout<<"卧室:"<<room.bedRoom<<endl;
+}
+
 Room::Room() {
     cout<<"Room不参数构造"<<endl;
 }

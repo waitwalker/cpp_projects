@@ -12,10 +12,12 @@
 #include <iostream>
 #include <string.h>
 
+
 using namespace std;
 
 class Room {
     friend void visit(Room &ro);
+    friend void visit2(Room &ro);
 private:
     string bedRoom;
     

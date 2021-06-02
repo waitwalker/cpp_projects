@@ -9,6 +9,7 @@
 #include "Data.hpp"
 #include "Room.hpp"
 
+/// 友元基本使用
 void test01() {
     
     Room r1 = Room("卧室1111", "客厅1111");
