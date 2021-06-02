@@ -7,9 +7,25 @@
 
 #include <iostream>
 #include "Data.hpp"
+#include "Room.hpp"
+
+void test01() {
+    
+    Room r1 = Room("卧室1111", "客厅1111");
+    
+    visit(r1);
+    
+    //cout<<"客厅:"<<r1.sittingRoom<<endl;
+    //cout<<"卧室:"<<r1.bedRoom<<endl;
+}
 
 int main(int argc, const char * argv[]) {
     
+    test01();
+    return 0;
+    
+    
+    /// const 修饰对象叫常对象 只能调用常函数
     const Data ob22 = Data(200);
     ob22.setNum(20);
     ob22.myFun();
