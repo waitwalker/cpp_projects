@@ -13,8 +13,18 @@ using namespace std;
 
 int main(int argc, const char * argv[]) {
     
+    /// 静态成员变量使用案例1:统计对象个数
+    Data ob11;
+    Data ob12 = Data(1);
+    
+    Data ob13;
+    
+    cout<<"对象的个数:"<<Data::data<<endl;
+    
+    return 0;
+    
     /// 静态成员被const修饰后变成只读共享成员
-    Data::age = 100;///报错
+    //Data::age = 100;///报错
     
     
     /// 静态成员变量(成员属性) 通过类或对象都能访问 内存中只有一份拷贝
