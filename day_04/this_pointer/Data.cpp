@@ -7,7 +7,7 @@
 
 #include "Data.hpp"
 
-Data::Data(){
+Data::Data() {
     cout<<"Data无参数构造"<<endl;
 }
 
@@ -15,14 +15,19 @@ Data::Data(int nu):num(nu) {
     cout<<"Data有参数构造"<<endl;
 }
 
-void Data::setNum(int nu) {
-    this->num = nu;
+Data& Data::myCout(char *name) {
+    cout<<name;
+    return * this;
+}
+
+void Data::setNum(int num) {
+    this->num = num;
 }
 
 Data::Data(const Data &data) {
     cout<<"Data拷贝构造"<<endl;
 }
 
-Data::~Data(){
+Data::~Data() {
     cout<<"Data析构函数"<<endl;
 }

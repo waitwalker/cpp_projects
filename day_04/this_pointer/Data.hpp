@@ -22,7 +22,9 @@ public:
     Data(int nu);
     Data(const Data &data);
     
-    void setNum(int nu);
+    Data& myCout(char *name);
+    
+    void setNum(int num);
     ~Data();
 };
 

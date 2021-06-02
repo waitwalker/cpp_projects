@@ -22,6 +22,8 @@ int main(int argc, const char * argv[]) {
     ob3.setNum(30);
     cout<<"ob3 num:"<<ob3.num<<endl;
     
+    ob1.myCout((char *)"张三").myCout((char *)"李四");
+    
     std::cout << "Hello, World!\n";
     return 0;
 }
