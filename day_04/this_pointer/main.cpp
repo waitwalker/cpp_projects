@@ -10,6 +10,12 @@
 
 int main(int argc, const char * argv[]) {
     
+    const Data ob22 = Data(200);
+    ob22.setNum(20);
+    ob22.myFun();
+    return 0;
+    
+    /// const 修饰成员函数 如果想修改普通成员变量,得用mutable关键字修饰
     Data ob111;
     ob111.setNum(20);
     ob111.myFun();

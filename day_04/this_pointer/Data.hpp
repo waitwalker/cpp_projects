@@ -24,7 +24,7 @@ public:
     
     Data& myCout(char *name);
     
-    void setNum(int num);
+    void setNum(int num) const;
     
     void myFun() const;
     ~Data();
