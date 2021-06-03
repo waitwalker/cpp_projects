@@ -18,6 +18,7 @@
 		6A8FDBBB2667694D000FFB6A /* GoodGay.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A8FDBB92667694D000FFB6A /* GoodGay.cpp */; };
 		6A8FDBC326677840000FFB6A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A8FDBC226677840000FFB6A /* main.cpp */; };
 		6A8FDBC92667789D000FFB6A /* TV.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A8FDBC72667789D000FFB6A /* TV.cpp */; };
+		6A8FDBCC26686842000FFB6A /* Remote.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A8FDBCA26686842000FFB6A /* Remote.cpp */; };
 		6AACD76226671D4E0001F438 /* Printer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6AACD76026671D4E0001F438 /* Printer.cpp */; };
 		6AACD76A266723790001F438 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6AACD769266723790001F438 /* main.cpp */; };
 		6AACD7702667238B0001F438 /* Data.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6AACD76E2667238B0001F438 /* Data.cpp */; };
@@ -85,6 +86,8 @@
 		6A8FDBC226677840000FFB6A /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		6A8FDBC72667789D000FFB6A /* TV.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TV.cpp; sourceTree = "<group>"; };
 		6A8FDBC82667789D000FFB6A /* TV.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TV.hpp; sourceTree = "<group>"; };
+		6A8FDBCA26686842000FFB6A /* Remote.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Remote.cpp; sourceTree = "<group>"; };
+		6A8FDBCB26686842000FFB6A /* Remote.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Remote.hpp; sourceTree = "<group>"; };
 		6AACD76026671D4E0001F438 /* Printer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Printer.cpp; sourceTree = "<group>"; };
 		6AACD76126671D4E0001F438 /* Printer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Printer.hpp; sourceTree = "<group>"; };
 		6AACD767266723790001F438 /* this_pointer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = this_pointer; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -181,6 +184,8 @@
 				6A8FDBC226677840000FFB6A /* main.cpp */,
 				6A8FDBC72667789D000FFB6A /* TV.cpp */,
 				6A8FDBC82667789D000FFB6A /* TV.hpp */,
+				6A8FDBCA26686842000FFB6A /* Remote.cpp */,
+				6A8FDBCB26686842000FFB6A /* Remote.hpp */,
 			);
 			path = sample_tv;
 			sourceTree = "<group>";
@@ -342,6 +347,7 @@
 			files = (
 				6A8FDBC326677840000FFB6A /* main.cpp in Sources */,
 				6A8FDBC92667789D000FFB6A /* TV.cpp in Sources */,
+				6A8FDBCC26686842000FFB6A /* Remote.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
