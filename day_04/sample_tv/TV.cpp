@@ -53,3 +53,12 @@ void TV::channelDown() {
     }
     this->mChannel--;
 }
+
+void TV::showTVState() {
+    string state = this->mState==On? "开机" : "关机";
+    cout<<"电视机的状态:"<<state<<endl;
+    
+    cout<<"电视机音量:"<<this->mVolume<<endl;
+    
+    cout<<"电视机频道:"<<this->mChannel<<endl;
+}

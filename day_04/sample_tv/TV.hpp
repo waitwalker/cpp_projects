@@ -7,8 +7,13 @@
 
 #ifndef TV_hpp
 #define TV_hpp
-#include <string.h>
 #include <stdio.h>
+
+
+#include <string.h>
+#include <iostream>
+
+using namespace std;
 
 class TV {
     
@@ -41,6 +46,10 @@ public:
     /// 减少频道
     void channelDown();
     
+    /// 显示电视状态
+    void showTVState();
+    
+    /// 析构函数
     ~TV();
 };
 
