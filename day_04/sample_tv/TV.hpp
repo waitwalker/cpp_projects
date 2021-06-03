@@ -9,7 +9,6 @@
 #define TV_hpp
 #include <stdio.h>
 
-
 #include <string.h>
 #include <iostream>
 
@@ -17,6 +16,7 @@ using namespace std;
 
 class TV {
     
+    friend class Remote;
     enum {On, Off};///电视状态
     enum {minVol, maxVol = 100}; /// 音量从0到100
     enum {minChannel = 1, maxChannel = 255}; //电视频道从1到255

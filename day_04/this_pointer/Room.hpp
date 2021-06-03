@@ -11,7 +11,6 @@
 #include <stdio.h>
 #include <iostream>
 #include <string.h>
-#include "GoodGay.hpp"
 
 using namespace std;
 

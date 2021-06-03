@@ -13,6 +13,8 @@
 #include <stdio.h>
 #include "TV.hpp"
 
+using namespace std;
+
 class Remote {
 private:
     TV *p_tv;
@@ -37,6 +39,11 @@ public:
     /// 减少频道
     void channelDown();
     
+    /// 设置频道
+    void setChannel(int num);
+    
+    /// 显示电视机状态
+    void showTVState();
     ~Remote();
 };
 

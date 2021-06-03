@@ -8,7 +8,7 @@
 #include "Remote.hpp"
 
 Remote::Remote() {
-    
+    cout<<"遥控器无参数构造"<<endl;
 }
 
 Remote::Remote(TV *pTv) {
@@ -17,11 +17,11 @@ Remote::Remote(TV *pTv) {
 
 
 Remote::Remote(const Remote &remote) {
-    
+    cout<<"遥控器拷贝构造"<<endl;
 }
 
 Remote::~Remote() {
-    
+    cout<<"遥控器析构函数"<<endl;
 }
 
 
@@ -45,3 +45,15 @@ void Remote::channelUp() {
 void Remote::channelDown() {
     this->p_tv->channelDown();
 }
+
+void Remote::setChannel(int num) {
+    /// 判断频道是否有效
+    if (num >= TV::minChannel && num <= TV::maxChannel) {
+        this->p_tv->mChannel = num;
+    }
+}
+
+void Remote::showTVState() {
+    this->p_tv->showTVState();
+}
+
