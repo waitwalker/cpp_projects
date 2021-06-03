@@ -42,3 +42,12 @@ MyArray::~MyArray() {
         this->addr = NULL;
     }
 }
+
+int MyArray:: getData(int pos) {
+    if (pos >= this->size) {
+        cout<<"位置索引无效"<<endl;
+        return -1;
+    }
+    
+    return this->addr[pos];
+}

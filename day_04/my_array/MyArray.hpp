@@ -30,6 +30,9 @@ public:
     
     /// 往数组尾部插入数据
     void puashBack(int data);
+    
+    /// 获取当前位置的数组
+    int getData(int pos);
     ~MyArray();
 };
 
