@@ -70,3 +70,14 @@ int MyArray:: getCapacity() {
 int MyArray:: getSize() {
     return this->size;
 }
+
+void MyArray:: printMyArray() {
+    if (this->getSize() <= 0) {
+        cout<<"数组元素为空"<<endl;
+        return;
+    }
+    
+    for (int i = 0; i < this->getSize(); i++) {
+        cout<<"当前元素:"<<this->addr[i]<<endl;
+    }
+}

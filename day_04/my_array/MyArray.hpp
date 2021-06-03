@@ -42,6 +42,10 @@ public:
     
     /// 获取数组已存数据个数
     int getSize();
+    
+    /// 打印数据
+    void printMyArray();
+    
     ~MyArray();
 };
 

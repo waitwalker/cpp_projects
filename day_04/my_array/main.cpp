@@ -22,11 +22,13 @@ int main(int argc, const char * argv[]) {
     
     
     for (int i = 0; i < 20; i++) {
-        arr2.puashBack(i);
+        arr2.puashBack(i+100);
     }
     
     cout<<"容量:"<<arr2.getCapacity()<<endl;
     cout<<"大小:"<<arr2.getSize()<<endl;
+    
+    arr2.printMyArray();
     
     std::cout << "Hello, World!\n";
     return 0;
