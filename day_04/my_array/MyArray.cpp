@@ -44,10 +44,20 @@ MyArray::~MyArray() {
 }
 
 int MyArray:: getData(int pos) {
-    if (pos >= this->size) {
+    if (pos >= this->size || pos < 0) {
         cout<<"位置索引无效"<<endl;
         return -1;
     }
     
     return this->addr[pos];
+}
+
+
+void MyArray:: setData(int pos, int data) {
+    if (pos >= this->size || pos < 0) {
+        cout<<"位置索引无效"<<endl;
+        return;
+    }
+    
+    this->addr[pos] = data;
 }

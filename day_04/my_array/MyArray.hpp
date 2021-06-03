@@ -33,6 +33,9 @@ public:
     
     /// 获取当前位置的数组
     int getData(int pos);
+    
+    /// 修改指定位置数据
+    void setData(int pos, int data);
     ~MyArray();
 };
 
