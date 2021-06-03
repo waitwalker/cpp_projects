@@ -25,6 +25,9 @@ int main(int argc, const char * argv[]) {
         arr2.puashBack(i+100);
     }
     
+    
+    arr2.setData(5, 20000);
+    
     cout<<"容量:"<<arr2.getCapacity()<<endl;
     cout<<"大小:"<<arr2.getSize()<<endl;
     
