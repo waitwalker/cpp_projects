@@ -39,3 +39,17 @@ void TV::volumeDown() {
     }
     this->mVolume--;
 }
+
+void TV::channelUp() {
+    if (this->mChannel >= maxChannel) {
+        return;
+    }
+    this->mChannel++;
+}
+
+void TV::channelDown() {
+    if (this->maxChannel <= minChannel) {
+        return;
+    }
+    this->mChannel--;
+}

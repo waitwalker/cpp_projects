@@ -35,6 +35,12 @@ public:
     /// 调小音量
     void volumeDown();
     
+    /// 增加频道
+    void channelUp();
+    
+    /// 减少频道
+    void channelDown();
+    
     ~TV();
 };
 
