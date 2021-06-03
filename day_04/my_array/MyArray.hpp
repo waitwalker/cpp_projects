@@ -36,6 +36,12 @@ public:
     
     /// 修改指定位置数据
     void setData(int pos, int data);
+    
+    /// 获取数组容量
+    int getCapacity();
+    
+    /// 获取数组已存数据个数
+    int getSize();
     ~MyArray();
 };
 

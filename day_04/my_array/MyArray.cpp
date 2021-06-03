@@ -61,3 +61,12 @@ void MyArray:: setData(int pos, int data) {
     
     this->addr[pos] = data;
 }
+
+int MyArray:: getCapacity() {
+    return this->capacity;
+}
+
+
+int MyArray:: getSize() {
+    return this->size;
+}
