@@ -20,6 +20,14 @@ TV::TV(int state, int volume, int channel){
     this->mChannel = channel;
 }
 
+TV::TV(const TV &tv) {
+    cout<<"TV拷贝构造函数"<<endl;
+}
+
+TV::~TV(){
+    cout<<"TV析构函数"<<endl;
+}
+
 void TV::onOrOff() {
     this->mState = (this->mState == Off? On : Off);
 }
