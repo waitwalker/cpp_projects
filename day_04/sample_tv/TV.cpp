@@ -23,3 +23,19 @@ TV::TV(int state, int volume, int channel){
 void TV::onOrOff() {
     this->mState = (this->mState == Off? On : Off);
 }
+
+
+void TV::volumeUp() {
+    if (this->mVolume >= maxVol) {
+        return;
+    }
+    
+    this->mVolume++;
+}
+
+void TV::volumeDown() {
+    if (this->mVolume <= minVol) {
+        return;
+    }
+    this->mVolume--;
+}

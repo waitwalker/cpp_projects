@@ -26,7 +26,14 @@ public:
     TV(int state, int volume, int channel);
     TV(const TV &tv);
     
+    /// 打开或关闭
     void onOrOff();
+    
+    /// 加大音量
+    void volumeUp();
+    
+    /// 调小音量
+    void volumeDown();
     
     ~TV();
 };
