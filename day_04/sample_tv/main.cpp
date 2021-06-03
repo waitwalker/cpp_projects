@@ -7,8 +7,21 @@
 
 #include <iostream>
 #include "TV.hpp"
+#include "Remote.hpp"
 
 int main(int argc, const char * argv[]) {
+    
+    /// 遥控器使用
+    TV p_Tv;
+    Remote remote(&p_Tv);
+    remote.onOrOff();
+    
+    remote.channelUp();
+    remote.volumeUp();
+    
+    remote.showTVState();
+    
+    return 0;
     
     TV tv;
     /// 开机
