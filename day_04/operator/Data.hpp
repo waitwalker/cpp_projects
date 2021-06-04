@@ -26,6 +26,9 @@ public:
     void showData();
     /// 前置++ ,先加减后使用
     Data& operator++();
+    
+    /// 重载后置++ 先使用后加
+    Data operator++(int);
     ~Data();
 };
 

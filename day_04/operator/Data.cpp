@@ -31,4 +31,12 @@ Data& Data:: operator++() {
     return *this;
 }
 
+Data Data:: operator++(int) {
+    /// 先使用 后加减 备份之前的值
+    Data old = *this;
+    a++;
+    b++;
+    return old;
+}
+
 Data::~Data(){}
