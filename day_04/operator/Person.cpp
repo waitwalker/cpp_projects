@@ -26,6 +26,19 @@ Person::Person(const Person &per){
     
 }
 
+Person Person:: operator+(Person &per) {
+    char *tmp_name = new char[strlen(per.name) +  strlen(this->name) + 1];
+    strcpy(tmp_name, this->name);
+    strcat(tmp_name, per.name);
+    
+    Person tmp(tmp_name, this->num + per.num);
+    if (tmp_name != NULL) {
+        delete [] tmp_name;
+        tmp_name = NULL;
+    }
+    return tmp;
+}
+
 Person::~Person(){
     if (this->name != NULL) {
         delete [] this->name;

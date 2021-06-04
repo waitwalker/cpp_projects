@@ -17,7 +17,7 @@ class Person {
     /// 友元函数
     friend ostream& operator<<(ostream &out, Person &per);
     
-    friend Person operator+(Person &ob1, Person &ob2);
+    //friend Person operator+(Person &ob1, Person &ob2);
 private:
     char *name;
     int num;
@@ -28,6 +28,7 @@ public:
     Person(const Person &per);
     
     void printPerson();
+    Person operator+(Person &per);
     ~Person();
 };
 
