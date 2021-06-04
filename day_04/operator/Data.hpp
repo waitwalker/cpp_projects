@@ -29,6 +29,9 @@ public:
     
     /// 重载后置++ 先使用后加
     Data operator++(int);
+    
+    /// 前置--,先加减后使用
+    Data& operator--();
     ~Data();
 };
 

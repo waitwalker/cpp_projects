@@ -39,4 +39,10 @@ Data Data:: operator++(int) {
     return old;
 }
 
+Data& Data::operator--() {
+    this->a--;
+    this->b--;
+    return *this;
+}
+
 Data::~Data(){}
