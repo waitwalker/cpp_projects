@@ -25,4 +25,10 @@ void Data:: showData() {
     cout<<"a:"<<this->a<<"\nb:"<<this->b<<endl;
 }
 
+Data& Data:: operator++() {
+    this->a++;
+    this->b++;
+    return *this;
+}
+
 Data::~Data(){}

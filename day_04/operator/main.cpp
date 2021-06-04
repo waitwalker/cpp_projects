@@ -70,6 +70,8 @@ int main(int argc, const char * argv[]) {
     
     Data ob1(10,20);
     ob1.showData();
+    ++ob1;
+    ob1.showData();
     std::cout << "Hello, World!\n";
     return 0;
 }
