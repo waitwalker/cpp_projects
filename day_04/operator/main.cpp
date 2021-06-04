@@ -88,8 +88,7 @@ int main(int argc, const char * argv[]) {
     //test03();
     //test04();
     
-    Student *stu = new Student(100);
-    stu->showStudent();
+    Student student(new Student(200));
     std::cout << "Hello, World!\n";
     return 0;
 }

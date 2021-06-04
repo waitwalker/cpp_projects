@@ -18,7 +18,9 @@ private:
     int num;
     
 public:
+    Student *pStudent;
     Student();
+    Student(Student *p);
     Student(int num);
     Student(const Student &stu);
     void showStudent();
