@@ -14,6 +14,8 @@
 using namespace std;
 
 class Person {
+    /// 友元函数
+    friend void operator<<(ostream &out, Person &per);
 private:
     char *name;
     int num;
@@ -22,6 +24,8 @@ public:
     Person();
     Person(char *name, int num);
     Person(const Person &per);
+    
+    void printPerson();
     ~Person();
 };
 

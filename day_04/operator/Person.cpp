@@ -18,6 +18,10 @@ Person::Person(char *name, int num){
     this->num = num;
 }
 
+void Person:: printPerson() {
+    cout<<"姓名:"<<this->name<<"\n学号:"<<this->num<<endl;
+}
+
 Person::Person(const Person &per){
     
 }
