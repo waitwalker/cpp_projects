@@ -8,6 +8,10 @@
 #include <iostream>
 #include "Person.hpp"
 #include "Data.hpp"
+#include "Student.hpp"
+
+
+
 using namespace std;
 
 /// 全局函数作为友元 完成运算符重载
@@ -62,12 +66,7 @@ void test03() {
     cout<<ob3<<endl;
 }
 
-
-int main(int argc, const char * argv[]) {
-    //test01();
-    //test02();
-    //test03();
-    
+void test04(){
     Data ob1(10,20);
     ob1.showData();
     ++ob1;
@@ -80,6 +79,17 @@ int main(int argc, const char * argv[]) {
     ob2++;
     ob2.showData();
     ob2--;
+}
+
+
+int main(int argc, const char * argv[]) {
+    //test01();
+    //test02();
+    //test03();
+    //test04();
+    
+    Student *stu = new Student(100);
+    stu->showStudent();
     std::cout << "Hello, World!\n";
     return 0;
 }
