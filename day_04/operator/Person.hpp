@@ -15,7 +15,7 @@ using namespace std;
 
 class Person {
     /// 友元函数
-    friend void operator<<(ostream &out, Person &per);
+    friend ostream& operator<<(ostream &out, Person &per);
 private:
     char *name;
     int num;
