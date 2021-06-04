@@ -7,7 +7,7 @@
 
 #include <iostream>
 #include "Person.hpp"
-
+#include "Data.hpp"
 using namespace std;
 
 /// 全局函数作为友元 完成运算符重载
@@ -62,10 +62,14 @@ void test03() {
     cout<<ob3<<endl;
 }
 
+
 int main(int argc, const char * argv[]) {
     //test01();
     //test02();
-    test03();
+    //test03();
+    
+    Data ob1(10,20);
+    ob1.showData();
     std::cout << "Hello, World!\n";
     return 0;
 }
