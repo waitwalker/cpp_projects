@@ -16,6 +16,8 @@ using namespace std;
 class Person {
     /// 友元函数
     friend ostream& operator<<(ostream &out, Person &per);
+    
+    friend Person operator+(Person &ob1, Person &ob2);
 private:
     char *name;
     int num;
