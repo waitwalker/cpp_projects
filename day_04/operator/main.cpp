@@ -9,7 +9,7 @@
 #include "Person.hpp"
 #include "Data.hpp"
 #include "Student.hpp"
-
+#include "Teacher.hpp"
 
 
 using namespace std;
@@ -82,14 +82,28 @@ void test04(){
 }
 
 
+void test05() {
+    Student student(new Student(200));
+    student.pStudent->showStudent();
+}
+
 int main(int argc, const char * argv[]) {
     //test01();
     //test02();
     //test03();
     //test04();
+    //test05();
     
-    Student student(new Student(200));
-    student.pStudent->showStudent();
+    Teacher ob1(10,20);
+    ob1.showTeacher();
+    
+    Teacher ob2 = ob1;///旧对象给新对象进行初始化 调用的是拷贝构造
+    ob2.showTeacher();
+    
+    /// 有参构造会屏蔽有参数构造
+    Teacher ob3;
+    ob3 = ob1;/// 赋值运算
+    ob3.showTeacher();
     
     std::cout << "Hello, World!\n";
     return 0;
