@@ -33,3 +33,7 @@ Student::~Student() {
         pStudent = NULL;
     }
 }
+
+Student* Student:: operator->() {
+    return this->pStudent;
+}

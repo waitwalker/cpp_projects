@@ -89,6 +89,8 @@ int main(int argc, const char * argv[]) {
     //test04();
     
     Student student(new Student(200));
+    student.pStudent->showStudent();
+    
     std::cout << "Hello, World!\n";
     return 0;
 }

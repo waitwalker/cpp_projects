@@ -20,9 +20,11 @@ private:
 public:
     Student *pStudent;
     Student();
+    /// 智能指针
     Student(Student *p);
     Student(int num);
     Student(const Student &stu);
+    Student* operator->();
     void showStudent();
     ~Student();
 };
