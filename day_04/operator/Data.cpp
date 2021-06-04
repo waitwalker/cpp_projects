@@ -45,4 +45,11 @@ Data& Data::operator--() {
     return *this;
 }
 
+Data Data::operator--(int) {
+    Data old = *this;
+    a--;
+    b--;
+    return old;
+}
+
 Data::~Data(){}

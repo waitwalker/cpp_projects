@@ -32,6 +32,9 @@ public:
     
     /// 前置--,先加减后使用
     Data& operator--();
+    
+    /// 后置--, 先使用,后使用
+    Data operator--(int);
     ~Data();
 };
 

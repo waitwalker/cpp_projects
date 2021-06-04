@@ -72,12 +72,14 @@ int main(int argc, const char * argv[]) {
     ob1.showData();
     ++ob1;
     ob1.showData();
+    --ob1;
     
     
     Data ob2(100, 200);
     
     ob2++;
     ob2.showData();
+    ob2--;
     std::cout << "Hello, World!\n";
     return 0;
 }
