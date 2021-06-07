@@ -125,16 +125,8 @@ void test08() {
     }
 }
 
-int main(int argc, const char * argv[]) {
-    //test01();
-    //test02();
-    //test03();
-    //test04();
-    //test05();
-    //test06();
-    //test07();
-    //test08();
-    
+/// 重载小括号 也叫仿函数
+void test09() {
     Fun fun;
     
     
@@ -144,6 +136,19 @@ int main(int argc, const char * argv[]) {
     cout<<"重载小括号运算结果:"<<fun(100, 200)<<endl;
     /// 匿名对象
     cout<<"重载小括号运算结果:"<<Fun()(100, 200)<<endl;
+}
+
+int main(int argc, const char * argv[]) {
+    //test01();
+    //test02();
+    //test03();
+    //test04();
+    //test05();
+    //test06();
+    //test07();
+    //test08();
+    //test09();
+    
     std::cout << "Hello, World!\n";
     return 0;
 }
