@@ -25,6 +25,7 @@ public:
     
     Tool(const Tool &tool);
     Tool operator=(Tool &tool);
+    bool operator==(Tool &ob);
     ~Tool();
 };
 

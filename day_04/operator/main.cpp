@@ -101,6 +101,14 @@ void test06() {
     ob3.showTeacher();
 }
 
+void test07() {
+    Tool ob1((char *)"zhangsan");
+    /// 拷贝构造 实例化ob2
+    Tool ob2((char *)"Bob");
+    
+    ob2 = ob1;
+}
+
 int main(int argc, const char * argv[]) {
     //test01();
     //test02();
@@ -108,12 +116,22 @@ int main(int argc, const char * argv[]) {
     //test04();
     //test05();
     //test06();
+    //test07();
     
-    Tool ob1((char *)"zhangsan");
-    /// 拷贝构造 实例化ob2
-    Tool ob2((char *)"Bob");
+    Tool ob1((char *)"lucy");
+    Tool ob2((char *)"lucy");
+    Tool ob3((char *)"bob");
     
-    ob2 = ob1;
+    if (ob1 == ob2) {
+        cout<<"ob1 和 ob2相等"<<endl;
+    }
+    
+    if (ob1 == ob3) {
+        cout<<"ob1 和 ob3相等"<<endl;
+    } else {
+        cout<<"ob1 和 ob3不相等"<<endl;
+    }
+    
     
     std::cout << "Hello, World!\n";
     return 0;

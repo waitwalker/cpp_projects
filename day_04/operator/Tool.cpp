@@ -36,6 +36,10 @@ Tool Tool:: operator=(Tool &tool) {
     return *this;
 }
 
+bool Tool:: operator==(Tool &ob) {
+    return strcmp(this->name, ob.name) == 0 ? true : false;
+}
+
 Tool::Tool(const Tool &tool) {
     cout<<"Tool拷贝构造"<<endl;
 }
