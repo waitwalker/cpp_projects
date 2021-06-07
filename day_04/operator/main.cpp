@@ -142,6 +142,8 @@ int main(int argc, const char * argv[]) {
     cout<<"重载小括号运算结果:"<<fun.operator()(100, 200)<<endl;
     /// 简化 此处fun()不是函数名,只是上面的简化操作,仿函数
     cout<<"重载小括号运算结果:"<<fun(100, 200)<<endl;
+    /// 匿名对象
+    cout<<"重载小括号运算结果:"<<Fun()(100, 200)<<endl;
     std::cout << "Hello, World!\n";
     return 0;
 }
