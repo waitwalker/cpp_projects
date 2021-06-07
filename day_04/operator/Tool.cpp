@@ -19,6 +19,23 @@ Tool::Tool(char *name) {
     strcpy(this->name, name);
 }
 
+Tool Tool:: operator=(Tool &tool) {
+    cout<<"赋值运算符重载"<<endl;
+    
+    if (this->name != NULL) {
+        /// 如果之前空间存在,先释放
+        cout<<"如果之前空间存在,先释放"<<endl;
+        delete [] this->name;
+        this->name = NULL;
+    }
+    
+    /// 申请空间
+    this->name = new char[strlen(tool.name) + 1];
+    /// 拷贝内容
+    strcpy(this->name, tool.name);
+    return *this;
+}
+
 Tool::Tool(const Tool &tool) {
     cout<<"Tool拷贝构造"<<endl;
 }

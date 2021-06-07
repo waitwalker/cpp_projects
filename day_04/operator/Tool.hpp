@@ -16,13 +16,15 @@ using namespace std;
 
 class Tool {
 private:
-    char *name;
     
 public:
+    
+    char *name;
     Tool();
     Tool(char *name);
     
     Tool(const Tool &tool);
+    Tool operator=(Tool &tool);
     ~Tool();
 };
 

@@ -109,6 +109,12 @@ int main(int argc, const char * argv[]) {
     //test05();
     //test06();
     
+    Tool ob1((char *)"zhangsan");
+    /// 拷贝构造 实例化ob2
+    Tool ob2((char *)"Bob");
+    
+    ob2 = ob1;
+    
     std::cout << "Hello, World!\n";
     return 0;
 }
