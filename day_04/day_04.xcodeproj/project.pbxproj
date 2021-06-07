@@ -30,6 +30,7 @@
 		6AACD76A266723790001F438 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6AACD769266723790001F438 /* main.cpp */; };
 		6AACD7702667238B0001F438 /* Data.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6AACD76E2667238B0001F438 /* Data.cpp */; };
 		6AE9BEED266DCD7D00FE642E /* Tool.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6AE9BEEB266DCD7D00FE642E /* Tool.cpp */; };
+		6AE9BEF0266DF60600FE642E /* Fun.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6AE9BEEE266DF60600FE642E /* Fun.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -136,6 +137,8 @@
 		6AACD76F2667238B0001F438 /* Data.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Data.hpp; sourceTree = "<group>"; };
 		6AE9BEEB266DCD7D00FE642E /* Tool.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Tool.cpp; sourceTree = "<group>"; };
 		6AE9BEEC266DCD7D00FE642E /* Tool.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Tool.hpp; sourceTree = "<group>"; };
+		6AE9BEEE266DF60600FE642E /* Fun.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Fun.cpp; sourceTree = "<group>"; };
+		6AE9BEEF266DF60600FE642E /* Fun.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Fun.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -274,6 +277,8 @@
 				6A8FDBFB266A1A70000FFB6A /* Teacher.hpp */,
 				6AE9BEEB266DCD7D00FE642E /* Tool.cpp */,
 				6AE9BEEC266DCD7D00FE642E /* Tool.hpp */,
+				6AE9BEEE266DF60600FE642E /* Fun.cpp */,
+				6AE9BEEF266DF60600FE642E /* Fun.hpp */,
 			);
 			path = operator;
 			sourceTree = "<group>";
@@ -499,6 +504,7 @@
 				6A8FDBF32669AE9A000FFB6A /* Person.cpp in Sources */,
 				6AE9BEED266DCD7D00FE642E /* Tool.cpp in Sources */,
 				6A8FDBED2669AE89000FFB6A /* main.cpp in Sources */,
+				6AE9BEF0266DF60600FE642E /* Fun.cpp in Sources */,
 				6A8FDBF9266A00A1000FFB6A /* Student.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -11,7 +11,7 @@
 #include "Student.hpp"
 #include "Teacher.hpp"
 #include "Tool.hpp"
-
+#include "Fun.hpp"
 
 using namespace std;
 
@@ -135,8 +135,11 @@ int main(int argc, const char * argv[]) {
     //test07();
     //test08();
     
+    Fun fun;
     
     
+    cout<<"运算结果:"<<fun.my_add(100, 200)<<endl;
+    cout<<"重载小括号运算结果:"<<fun.operator()(100, 200)<<endl;
     std::cout << "Hello, World!\n";
     return 0;
 }
