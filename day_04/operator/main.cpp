@@ -10,6 +10,7 @@
 #include "Data.hpp"
 #include "Student.hpp"
 #include "Teacher.hpp"
+#include "Tool.hpp"
 
 
 using namespace std;
@@ -87,13 +88,7 @@ void test05() {
     student.pStudent->showStudent();
 }
 
-int main(int argc, const char * argv[]) {
-    //test01();
-    //test02();
-    //test03();
-    //test04();
-    //test05();
-    
+void test06() {
     Teacher ob1(10,20);
     ob1.showTeacher();
     
@@ -104,6 +99,15 @@ int main(int argc, const char * argv[]) {
     Teacher ob3;
     ob3 = ob1;/// 赋值运算
     ob3.showTeacher();
+}
+
+int main(int argc, const char * argv[]) {
+    //test01();
+    //test02();
+    //test03();
+    //test04();
+    //test05();
+    //test06();
     
     std::cout << "Hello, World!\n";
     return 0;
