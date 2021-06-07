@@ -109,15 +109,7 @@ void test07() {
     ob2 = ob1;
 }
 
-int main(int argc, const char * argv[]) {
-    //test01();
-    //test02();
-    //test03();
-    //test04();
-    //test05();
-    //test06();
-    //test07();
-    
+void test08() {
     Tool ob1((char *)"lucy");
     Tool ob2((char *)"lucy");
     Tool ob3((char *)"bob");
@@ -131,6 +123,18 @@ int main(int argc, const char * argv[]) {
     } else {
         cout<<"ob1 和 ob3不相等"<<endl;
     }
+}
+
+int main(int argc, const char * argv[]) {
+    //test01();
+    //test02();
+    //test03();
+    //test04();
+    //test05();
+    //test06();
+    //test07();
+    //test08();
+    
     
     
     std::cout << "Hello, World!\n";
