@@ -9,8 +9,6 @@
 #include "IOTHtml.hpp"
 
 class Student {
-    
-    
 public:
     void sayName() {
         cout<<"this name is Student"<<endl;
@@ -22,8 +20,6 @@ public:
 };
 
 class Lucy: public Student {
-    
-    
 public:
     void sayName() {
         cout<<"name is Lucy"<<endl;
@@ -41,7 +37,6 @@ protected:
 
 //public方式继承,子类内外都可以访问父类public数据,父类中private类型数据在子类中不可见.父类protected类型,在子类中也是protected,子类内部可以访问,外部不可见.
 class Son1:public Base {
-    
 public:
     Son1() {
         a = 1000;
@@ -56,8 +51,6 @@ public:
 
 /// 父类中public,proteced在子类内部可以访问,子类外部不可见.父类中private类型在子类内外不可见
 class Son2:protected Base {
-    
-    
 public:
     Son2() {
         a = 1000;
@@ -70,9 +63,8 @@ public:
     }
 };
 
+/// 父类中public,protected在子类中可以访问,在子类外部不可见,public,protected类型数据到子类中变成private类型数据.父类中private类型在子类内外不可见
 class Son3:private Base {
-    
-    
 public:
     Son3() {
         a = 1000;
