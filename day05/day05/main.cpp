@@ -70,6 +70,21 @@ public:
     }
 };
 
+class Son3:private Base {
+    
+    
+public:
+    Son3() {
+        a = 1000;
+        //b = 2000;
+        c = 3000;
+    }
+    void getData() {
+        cout<<"a:"<<this->a<<endl;
+        cout<<"c:"<<c<<endl;
+    }
+};
+
 void test01(){
     Son1 son;
     son.a = 100;
@@ -82,6 +97,12 @@ void test02(){
     son.getData();
 }
 
+void test03(){
+    Son3 son;
+    //son.a = 100;
+    son.getData();
+}
+
 int main(int argc, const char * argv[]) {
 //    IOTHtml html;
 //    html.mainBody();
@@ -89,7 +110,8 @@ int main(int argc, const char * argv[]) {
 //    Lucy lucy;
 //    lucy.comeOn();
     //test01();
-    test02();
+    //test02();
+    test03();
     
     std::cout << "Hello, World!\n";
     return 0;
