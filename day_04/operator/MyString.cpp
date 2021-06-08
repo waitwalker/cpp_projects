@@ -125,7 +125,7 @@ MyString& MyString:: operator+(const char *str) {
 }
 
 bool MyString:: operator==(const MyString &ob) {
-    return strcmp(this->str, ob.str) == 0? true : false;
+    return (strcmp(this->str, ob.str) == 0 && this->size == ob.size)? true : false;
 }
 
 MyString::~MyString() {
