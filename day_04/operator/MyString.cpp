@@ -61,6 +61,21 @@ MyString MyString:: operator=(const MyString &ob) {
     return *this;
 }
 
+MyString MyString:: operator=(const char *str) {
+    /// 首先释放旧值
+    if (this->str != NULL) {
+        delete [] this->str;
+        this->str = NULL;
+    }
+    
+    /// 根据ob中str长度申请空间
+    this->str = new char[strlen(str) + 1];
+    /// 将ob中的str拷给this->str
+    strcpy(this->str, str);
+    this->size = (int)strlen(str);
+    return *this;
+}
+
 MyString::~MyString() {
     cout<<"析构函数"<<endl;
     if (this->str != NULL) {

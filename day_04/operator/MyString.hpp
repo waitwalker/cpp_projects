@@ -34,7 +34,11 @@ public:
     /// 重载[] 根据index获取值 返回引用 因为支持修改
     char& operator[](int index);
     
+    /// 重载赋值运算符 参数是对象
     MyString operator=(const MyString &ob);
+    
+    /// 重载赋值运算符 参数是字符串
+    MyString operator=(const char *str);
     /// 析构函数
     ~MyString();
 };
