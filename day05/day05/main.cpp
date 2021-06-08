@@ -54,6 +54,7 @@ public:
     }
 };
 
+/// 父类中public,proteced在子类内部可以访问,子类外部不可见.父类中private类型在子类内外不可见
 class Son2:protected Base {
     
     
@@ -77,7 +78,7 @@ void test01(){
 
 void test02(){
     Son2 son;
-    son.a = 100;
+    //son.a = 100;
     son.getData();
 }
 
