@@ -183,6 +183,7 @@ void test10() {
     
     MyString ob2;
     ob2 = ob1;
+    cout<<"ob2:"<<ob2<<endl;
 }
 
 int main(int argc, const char * argv[]) {

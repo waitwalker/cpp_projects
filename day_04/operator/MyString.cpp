@@ -57,6 +57,7 @@ MyString MyString:: operator=(const MyString &ob) {
     this->str = new char[strlen(ob.str) + 1];
     /// 将ob中的str拷给this->str
     strcpy(this->str, ob.str);
+    this->size = ob.size;
     return *this;
 }
 
