@@ -110,9 +110,12 @@ public:
     Son4() {
         cout<<"子类Son4无参初始化"<<endl;
     }
-    Son4(int d) {
+    
+    /// 如果子类想调用父类的有参数构造,必须通过初始化列表
+    Son4(int d):Base(d) {
         cout<<"子类Son4有参初始化"<<endl;
     }
+    
     ~Son4() {
         cout<<"子类Son4析构函数"<<endl;
     }
