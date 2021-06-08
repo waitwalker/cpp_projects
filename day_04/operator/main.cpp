@@ -195,6 +195,12 @@ void test10() {
     MyString ob5((char *)"上海");
     cout<<ob5 + ",很好"<<endl;
     
+    if (ob1 == ob5) {
+        cout<<"相等"<<endl;
+    } else {
+        cout<<"不相等"<<endl;
+    }
+    
 }
 
 int main(int argc, const char * argv[]) {

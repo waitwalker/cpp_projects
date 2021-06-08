@@ -124,6 +124,10 @@ MyString& MyString:: operator+(const char *str) {
     return newStr;
 }
 
+bool MyString:: operator==(const MyString &ob) {
+    return strcmp(this->str, ob.str) == 0? true : false;
+}
+
 MyString::~MyString() {
     cout<<"析构函数"<<endl;
     if (this->str != NULL) {

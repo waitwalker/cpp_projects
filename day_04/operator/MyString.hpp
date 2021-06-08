@@ -41,10 +41,13 @@ public:
     MyString operator=(const char *str);
     
     /// 重写+运算符 实现拼接字符串
-    MyString& operator+(const MyString &Ob);
+    MyString& operator+(const MyString &ob);
     
     /// 重写+运算符 实现拼接字符串 参数是char *
     MyString& operator+(const char* str);
+    
+    /// 重载相等运算符
+    bool operator==(const MyString &ob);
     /// 析构函数
     ~MyString();
 };
