@@ -39,11 +39,11 @@ protected:
     int c;
 };
 
-class Son:public Base {
-    
+//public方式继承,子类内外都可以访问父类public数据,父类中private类型数据在子类中不可见.父类protected类型,在子类中也是protected,子类内部可以访问,外部不可见.
+class Son1:public Base {
     
 public:
-    Son() {
+    Son1() {
         a = 1000;
         //b = 20;
         c = 30;
@@ -54,8 +54,29 @@ public:
     }
 };
 
+class Son2:protected Base {
+    
+    
+public:
+    Son2() {
+        a = 1000;
+        //b = 2000;
+        c = 3000;
+    }
+    void getData() {
+        cout<<"a:"<<this->a<<endl;
+        cout<<"c:"<<c<<endl;
+    }
+};
+
 void test01(){
-    Son son;
+    Son1 son;
+    son.a = 100;
+    son.getData();
+}
+
+void test02(){
+    Son2 son;
     son.a = 100;
     son.getData();
 }
@@ -66,7 +87,8 @@ int main(int argc, const char * argv[]) {
 //
 //    Lucy lucy;
 //    lucy.comeOn();
-    test01();
+    //test01();
+    test02();
     
     std::cout << "Hello, World!\n";
     return 0;
