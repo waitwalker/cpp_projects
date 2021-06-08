@@ -12,6 +12,8 @@
 #include "Teacher.hpp"
 #include "Tool.hpp"
 #include "Fun.hpp"
+#include "MyString.hpp"
+
 
 using namespace std;
 
