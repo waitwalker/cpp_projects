@@ -28,6 +28,8 @@ public:
     void mainBody();
     
     void footer();
+    
+    void title();
     ~Html();
 };
 

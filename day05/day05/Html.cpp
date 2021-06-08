@@ -28,6 +28,15 @@ void Html:: mainBody() {
     cout<<"Html mainBody"<<endl;
 }
 
+void Html:: footer() {
+    cout<<"Html footer"<<endl;
+}
+
+void Html:: title() {
+    cout<<"Html title"<<endl;
+}
+
+
 Html::~Html() {
     cout<<"析构函数"<<endl;
 }
