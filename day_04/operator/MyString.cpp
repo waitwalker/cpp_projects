@@ -11,11 +11,11 @@ MyString::MyString(){
     cout<<"无参数构造"<<endl;
 }
 
-MyString::MyString(char *str, int size) {
+MyString::MyString(char *str) {
     cout<<"有参数构造"<<endl;
     this->str = new char[strlen(str) + 1];
     strcpy(this->str, str);
-    this->size = size;
+    this->size = strlen(str);
 }
 
 MyString::MyString(const MyString &string) {

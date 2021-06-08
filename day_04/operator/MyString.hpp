@@ -15,6 +15,7 @@
 using namespace std;
 
 class MyString {
+    friend ostream& operator<<(ostream &out, MyString &ob);
 private:
     int size;
     char *str;
@@ -22,7 +23,7 @@ private:
 public:
     /// 构造函数
     MyString();
-    MyString(char *str, int size);
+    MyString(char *str);
     MyString(const MyString &str);
     
     /// 析构函数
