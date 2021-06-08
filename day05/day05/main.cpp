@@ -43,14 +43,21 @@ class Son:public Base {
     
     
 public:
+    Son() {
+        a = 1000;
+        //b = 20;
+        c = 30;
+    }
     void getData() {
         cout<<"a:"<<this->a<<endl;
+        cout<<"c:"<<c<<endl;
     }
 };
 
 void test01(){
     Son son;
     son.a = 100;
+    son.getData();
 }
 
 int main(int argc, const char * argv[]) {
