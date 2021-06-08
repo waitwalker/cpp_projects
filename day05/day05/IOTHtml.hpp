@@ -19,6 +19,7 @@ class IOTHtml: public Html {
 public:
     int age;
     
+    void mainBody();
 };
 
 #endif /* IOTHtml_hpp */

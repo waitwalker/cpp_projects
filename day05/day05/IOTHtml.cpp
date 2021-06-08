@@ -7,3 +7,7 @@
 
 #include "IOTHtml.hpp"
 
+
+void IOTHtml::mainBody() {
+    
+}
