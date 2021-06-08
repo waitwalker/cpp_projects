@@ -184,6 +184,14 @@ void test10() {
     MyString ob2;
     ob2 = ob1;
     cout<<"ob2:"<<ob2<<endl;
+    
+    ob2 = "张三";
+    cout<<"ob2:"<<ob2<<endl;
+    
+    MyString ob3((char *)"你好,");
+    MyString ob4((char *)"北京");
+    
+    cout<<ob3 + ob4 << endl;
 }
 
 int main(int argc, const char * argv[]) {

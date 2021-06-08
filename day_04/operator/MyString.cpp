@@ -76,6 +76,30 @@ MyString MyString:: operator=(const char *str) {
     return *this;
 }
 
+MyString& MyString:: operator+(const MyString &ob) {
+    
+    /// 计算两个待拼接字符串的总长度
+    int newSize = this->size + ob.size + 1;
+    /// 依据总长度申请空间
+    char *tmpStr = new char[newSize];
+    
+    /// 将tmpStr全部清空
+    memset(tmpStr, 0, newSize);
+    
+    /// 先将this->str拷贝到tmp中取
+    strcpy(tmpStr, this->str);
+    
+    /// 然后将ob.str拼接在后面
+    strcat(tmpStr, ob.str);
+    
+    static MyString newStr(tmpStr);
+    if (tmpStr != NULL) {
+        delete [] tmpStr;
+        tmpStr = NULL;
+    }
+    return newStr;
+}
+
 MyString::~MyString() {
     cout<<"析构函数"<<endl;
     if (this->str != NULL) {

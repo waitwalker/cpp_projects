@@ -39,6 +39,9 @@ public:
     
     /// 重载赋值运算符 参数是字符串
     MyString operator=(const char *str);
+    
+    /// 重写+运算符 实现拼接字符串
+    MyString& operator+(const MyString &Ob);
     /// 析构函数
     ~MyString();
 };
