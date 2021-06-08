@@ -26,6 +26,8 @@ public:
     void leftNavigation();
     
     void mainBody();
+    
+    void footer();
     ~Html();
 };
 
