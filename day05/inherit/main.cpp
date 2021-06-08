@@ -19,24 +19,24 @@ public:
         this->num = 0;
         cout<<"父类无参数构造"<<endl;
     }
+    
     Base(int num) {
         cout<<"父类有参数构造"<<endl;
         this->num = num;
     }
     
+    /// 父类中同名函数
     void getNum() {
         cout<<"父类中getNum"<<endl;
         cout<<this->num<<endl;
     }
     
-    void getNum2() {
+    void getNum(int a) {
         cout<<"父类中getNum2"<<endl;
     }
 };
 
 class Son: public Base {
-    
-    
 public:
     /// 子类中同名成员变量(属性)
     int num;
@@ -61,7 +61,7 @@ void test01() {
     son.showNum();
     son.getNum();
     son.Base::getNum();
-    son.getNum2();
+    son.Base::getNum(5);
 }
 
 int main(int argc, const char * argv[]) {
