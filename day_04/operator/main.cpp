@@ -180,6 +180,9 @@ void test10() {
     cout<<ob1[2]<<endl;
     ob1[2] = 'g';
     cout<<ob1[2]<<endl;
+    
+    MyString ob2;
+    ob2 = ob1;
 }
 
 int main(int argc, const char * argv[]) {

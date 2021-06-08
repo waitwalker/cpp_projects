@@ -15,6 +15,7 @@
 using namespace std;
 
 class MyString {
+    /// 全局友元函数 重载输出&输入运算符
     friend ostream& operator<<(ostream &out, MyString &ob);
     friend istream& operator>>(istream &in, MyString &ob);
 private:
@@ -32,6 +33,8 @@ public:
     
     /// 重载[] 根据index获取值 返回引用 因为支持修改
     char& operator[](int index);
+    
+    MyString operator=(const MyString &ob);
     /// 析构函数
     ~MyString();
 };
