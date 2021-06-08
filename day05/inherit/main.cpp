@@ -60,6 +60,8 @@ void test01() {
     Son son(10,20);
     son.showNum();
     son.getNum();
+    son.Base::getNum();
+    son.getNum2();
 }
 
 int main(int argc, const char * argv[]) {
