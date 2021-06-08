@@ -30,12 +30,36 @@ public:
     }
 };
 
-int main(int argc, const char * argv[]) {
-    IOTHtml html;
-    html.mainBody();
+class Base {
+private:
+    int b;
+public:
+    int a;
+protected:
+    int c;
+};
+
+class Son:public Base {
     
-    Lucy lucy;
-    lucy.comeOn();
+    
+public:
+    void getData() {
+        cout<<"a:"<<this->a<<endl;
+    }
+};
+
+void test01(){
+    Son son;
+    son.a = 100;
+}
+
+int main(int argc, const char * argv[]) {
+//    IOTHtml html;
+//    html.mainBody();
+//
+//    Lucy lucy;
+//    lucy.comeOn();
+    test01();
     
     std::cout << "Hello, World!\n";
     return 0;
