@@ -23,6 +23,15 @@ public:
         cout<<"父类有参数构造"<<endl;
         this->num = num;
     }
+    
+    void getNum() {
+        cout<<"父类中getNum"<<endl;
+        cout<<this->num<<endl;
+    }
+    
+    void getNum2() {
+        cout<<"父类中getNum2"<<endl;
+    }
 };
 
 class Son: public Base {
@@ -40,11 +49,17 @@ public:
         cout<<"父类中的成员num:"<<Base::num<<endl;
         cout<<"子类中的成员num:"<<this->num<<endl;
     }
+    
+    void getNum() {
+        cout<<"子类类中getNum"<<endl;
+        cout<<this->num<<endl;
+    }
 };
 
 void test01() {
     Son son(10,20);
     son.showNum();
+    son.getNum();
 }
 
 int main(int argc, const char * argv[]) {
