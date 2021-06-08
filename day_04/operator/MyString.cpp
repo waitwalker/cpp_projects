@@ -34,12 +34,14 @@ int MyString:: getSize() {
     return this->size;
 }
 
-char MyString:: operator[](int index) {
+char& MyString:: operator[](int index) {
     if (index >= 0 && index < this->size) {
         return this->str[index];
+    } else {
+        cout<<"index无效"<<endl;
+        char *tmp = (char *)"-1";
+        return tmp[0];
     }
-    cout<<"index无效"<<endl;
-    return NULL;
 }
 
 MyString::~MyString() {

@@ -178,6 +178,8 @@ void test10() {
     cin>>ob1;
     cout<<ob1<<endl;
     cout<<ob1[2]<<endl;
+    ob1[2] = 'g';
+    cout<<ob1[2]<<endl;
 }
 
 int main(int argc, const char * argv[]) {

@@ -30,8 +30,8 @@ public:
     /// 获取字符串大小
     int getSize();
     
-    /// 重载[] 根据index获取值
-    char operator[](int index);
+    /// 重载[] 根据index获取值 返回引用 因为支持修改
+    char& operator[](int index);
     /// 析构函数
     ~MyString();
 };
