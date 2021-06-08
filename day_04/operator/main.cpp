@@ -24,6 +24,28 @@ ostream& operator<<(ostream &out, MyString &ob) {
     return out;
 }
 
+/// 给对象输入数据
+istream& operator>>(istream &in, MyString &ob) {
+    
+    cout<<"请输入字符:"<<endl;
+    
+    /// 输入之前要将原有数据擦除
+    if (ob.str != NULL) {
+        delete [] ob.str;
+        ob.str = NULL;
+    }
+    
+    /// 获取键盘输入
+    char buf[1024] = "";
+    
+    /// 先得到键盘输入数据 然后根据buf的大小开辟空间
+    in >> buf;
+    ob.str = new char[strlen(buf) + 1];
+    strcpy(ob.str, buf);
+    ob.size = (int)strlen(buf);
+    return in;
+}
+
 /// 全局函数作为友元 完成运算符重载
 //ostream& operator<<(ostream &out, Person &per){
 //    out<<per.name<<per.num<<endl;
@@ -49,7 +71,7 @@ ostream& operator<<(ostream &out, MyString &ob) {
 //    //ob1.printPerson();
 //    /// 方法1
 //    //operator<<(cout, ob1);
-//    
+//
 //    /// 方法2
 //    cout<<ob1<<endl;///等价于 operator<<(cout,ob1);
 //}
@@ -59,9 +81,9 @@ ostream& operator<<(ostream &out, MyString &ob) {
 //    Person ob2((char *)"bob",19);
 //    cout<<ob1<<endl;
 //    cout<<ob2<<endl;
-//    
+//
 //    Person ob3 = ob1 + ob2;
-//    
+//
 //    cout<<ob3<<endl;
 //}
 //
@@ -70,9 +92,9 @@ ostream& operator<<(ostream &out, MyString &ob) {
 //    Person ob2((char *)"bob",19);
 //    cout<<ob1<<endl;
 //    cout<<ob2<<endl;
-//    
+//
 //    Person ob3 = ob1.operator+(ob2);
-//    
+//
 //    cout<<ob3<<endl;
 //}
 //
@@ -82,10 +104,10 @@ ostream& operator<<(ostream &out, MyString &ob) {
 //    ++ob1;
 //    ob1.showData();
 //    --ob1;
-//    
-//    
+//
+//
 //    Data ob2(100, 200);
-//    
+//
 //    ob2++;
 //    ob2.showData();
 //    ob2--;
@@ -100,10 +122,10 @@ ostream& operator<<(ostream &out, MyString &ob) {
 //void test06() {
 //    Teacher ob1(10,20);
 //    ob1.showTeacher();
-//    
+//
 //    Teacher ob2 = ob1;///旧对象给新对象进行初始化 调用的是拷贝构造
 //    ob2.showTeacher();
-//    
+//
 //    /// 有参构造会屏蔽有参数构造
 //    Teacher ob3;
 //    ob3 = ob1;/// 赋值运算
@@ -114,7 +136,7 @@ ostream& operator<<(ostream &out, MyString &ob) {
 //    Tool ob1((char *)"zhangsan");
 //    /// 拷贝构造 实例化ob2
 //    Tool ob2((char *)"Bob");
-//    
+//
 //    ob2 = ob1;
 //}
 //
@@ -122,11 +144,11 @@ ostream& operator<<(ostream &out, MyString &ob) {
 //    Tool ob1((char *)"lucy");
 //    Tool ob2((char *)"lucy");
 //    Tool ob3((char *)"bob");
-//    
+//
 //    if (ob1 == ob2) {
 //        cout<<"ob1 和 ob2相等"<<endl;
 //    }
-//    
+//
 //    if (ob1 == ob3) {
 //        cout<<"ob1 和 ob3相等"<<endl;
 //    } else {
@@ -137,8 +159,8 @@ ostream& operator<<(ostream &out, MyString &ob) {
 ///// 重载小括号 也叫仿函数
 //void test09() {
 //    Fun fun;
-//    
-//    
+//
+//
 //    cout<<"运算结果:"<<fun.my_add(100, 200)<<endl;
 //    cout<<"重载小括号运算结果:"<<fun.operator()(100, 200)<<endl;
 //    /// 简化 此处fun()不是函数名,只是上面的简化操作,仿函数
@@ -150,6 +172,9 @@ ostream& operator<<(ostream &out, MyString &ob) {
 /// 综合练习
 void test10() {
     MyString ob1((char *)"hehe");
+    /// 全局友元函数实现自定义输出
+    cout<<ob1<<endl;
+    cin>>ob1;
     cout<<ob1<<endl;
 }
 

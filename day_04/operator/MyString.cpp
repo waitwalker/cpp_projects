@@ -15,7 +15,7 @@ MyString::MyString(char *str) {
     cout<<"有参数构造"<<endl;
     this->str = new char[strlen(str) + 1];
     strcpy(this->str, str);
-    this->size = strlen(str);
+    this->size = (int)strlen(str);
 }
 
 MyString::MyString(const MyString &string) {

@@ -16,6 +16,7 @@ using namespace std;
 
 class MyString {
     friend ostream& operator<<(ostream &out, MyString &ob);
+    friend istream& operator>>(istream &in, MyString &ob);
 private:
     int size;
     char *str;
