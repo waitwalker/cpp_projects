@@ -190,8 +190,11 @@ void test10() {
     
     MyString ob3((char *)"你好,");
     MyString ob4((char *)"北京");
-    
     cout<<ob3 + ob4 << endl;
+    
+    MyString ob5((char *)"上海");
+    cout<<ob5 + ",很好"<<endl;
+    
 }
 
 int main(int argc, const char * argv[]) {

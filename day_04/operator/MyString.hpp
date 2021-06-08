@@ -42,6 +42,9 @@ public:
     
     /// 重写+运算符 实现拼接字符串
     MyString& operator+(const MyString &Ob);
+    
+    /// 重写+运算符 实现拼接字符串 参数是char *
+    MyString& operator+(const char* str);
     /// 析构函数
     ~MyString();
 };
