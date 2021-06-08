@@ -30,6 +30,10 @@ MyString::MyString(const MyString &string) {
     this->size = string.size;
 }
 
+int MyString:: getSize() {
+    return this->size;
+}
+
 MyString::~MyString() {
     cout<<"析构函数"<<endl;
     if (this->str != NULL) {

@@ -27,6 +27,7 @@ public:
     MyString(char *str);
     MyString(const MyString &str);
     
+    int getSize();
     /// 析构函数
     ~MyString();
 };
