@@ -112,7 +112,9 @@ public:
     }
     
     /// 如果子类想调用父类的有参数构造,必须通过初始化列表
-    Son4(int d):Base(d) {
+    Son4(int d, int e):Base(d) {
+        this->d = d;
+        this->e = e;
         cout<<"子类Son4有参初始化"<<endl;
     }
     
@@ -143,7 +145,7 @@ void test03(){
 /// 子类中有对象成员的构造和析构顺序:父类构造->子类中对象成员构造->子类构造->子类析构->子类中对象成员析构->父类析构
 void test04() {
     cout<<sizeof(Son4)<<endl;
-    Son4 son(10);
+    Son4 son(10,20);
 }
 
 int main(int argc, const char * argv[]) {
