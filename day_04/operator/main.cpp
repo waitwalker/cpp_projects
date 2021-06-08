@@ -174,8 +174,10 @@ void test10() {
     MyString ob1((char *)"hehe");
     /// 全局友元函数实现自定义输出
     cout<<ob1<<endl;
+    /// 获取键盘输入&将输入的赋给ob1
     cin>>ob1;
     cout<<ob1<<endl;
+    cout<<ob1[2]<<endl;
 }
 
 int main(int argc, const char * argv[]) {

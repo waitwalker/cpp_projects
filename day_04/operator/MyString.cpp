@@ -34,6 +34,14 @@ int MyString:: getSize() {
     return this->size;
 }
 
+char MyString:: operator[](int index) {
+    if (index >= 0 && index < this->size) {
+        return this->str[index];
+    }
+    cout<<"index无效"<<endl;
+    return NULL;
+}
+
 MyString::~MyString() {
     cout<<"析构函数"<<endl;
     if (this->str != NULL) {
