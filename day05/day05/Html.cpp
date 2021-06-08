@@ -24,6 +24,10 @@ void Html:: leftNavigation() {
     cout<<"Html leftNavigation"<<endl;
 }
 
+void Html:: mainBody() {
+    cout<<"Html mainBody"<<endl;
+}
+
 Html::~Html() {
     cout<<"析构函数"<<endl;
 }

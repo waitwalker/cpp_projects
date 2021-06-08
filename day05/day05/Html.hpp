@@ -24,6 +24,8 @@ public:
     void header();
     
     void leftNavigation();
+    
+    void mainBody();
     ~Html();
 };
 
