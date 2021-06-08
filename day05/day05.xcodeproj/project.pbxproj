@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6A5586E3266F1BAE000ACFBE /* Html.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A5586E1266F1BAE000ACFBE /* Html.cpp */; };
+		6A5586E6266F1E83000ACFBE /* IOTHtml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A5586E4266F1E83000ACFBE /* IOTHtml.cpp */; };
 		6A6885D8266F195400D62112 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A6885D7266F195400D62112 /* main.cpp */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +27,8 @@
 /* Begin PBXFileReference section */
 		6A5586E1266F1BAE000ACFBE /* Html.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Html.cpp; sourceTree = "<group>"; };
 		6A5586E2266F1BAE000ACFBE /* Html.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Html.hpp; sourceTree = "<group>"; };
+		6A5586E4266F1E83000ACFBE /* IOTHtml.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = IOTHtml.cpp; sourceTree = "<group>"; };
+		6A5586E5266F1E83000ACFBE /* IOTHtml.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = IOTHtml.hpp; sourceTree = "<group>"; };
 		6A6885D4266F195400D62112 /* day05 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = day05; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A6885D7266F195400D62112 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -63,6 +66,8 @@
 				6A6885D7266F195400D62112 /* main.cpp */,
 				6A5586E1266F1BAE000ACFBE /* Html.cpp */,
 				6A5586E2266F1BAE000ACFBE /* Html.hpp */,
+				6A5586E4266F1E83000ACFBE /* IOTHtml.cpp */,
+				6A5586E5266F1E83000ACFBE /* IOTHtml.hpp */,
 			);
 			path = day05;
 			sourceTree = "<group>";
@@ -126,6 +131,7 @@
 			files = (
 				6A5586E3266F1BAE000ACFBE /* Html.cpp in Sources */,
 				6A6885D8266F195400D62112 /* main.cpp in Sources */,
+				6A5586E6266F1E83000ACFBE /* IOTHtml.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
