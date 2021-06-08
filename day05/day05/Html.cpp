@@ -20,6 +20,10 @@ void Html:: header() {
     cout<<"Html header"<<endl;
 }
 
+void Html:: leftNavigation() {
+    cout<<"Html leftNavigation"<<endl;
+}
+
 Html::~Html() {
     cout<<"析构函数"<<endl;
 }

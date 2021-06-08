@@ -22,6 +22,8 @@ public:
     Html(const Html &html);
     
     void header();
+    
+    void leftNavigation();
     ~Html();
 };
 
