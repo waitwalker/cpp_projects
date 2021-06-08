@@ -31,6 +31,12 @@ private:
     int b;
 public:
     int a;
+    Base() {
+        cout<<"Base 父类无惨初始化"<<endl;
+    }
+    ~Base() {
+        cout<<"Base 父类析构函数"<<endl;
+    }
 protected:
     int c;
 };
@@ -77,6 +83,20 @@ public:
     }
 };
 
+class Son4:public Base {
+    
+    
+public:
+    int d;
+    int e;
+    Son4() {
+        cout<<"子类Son4无惨初始化"<<endl;
+    }
+    ~Son4() {
+        cout<<"子类Son4析构函数"<<endl;
+    }
+};
+
 void test01(){
     Son1 son;
     son.a = 100;
@@ -95,6 +115,11 @@ void test03(){
     son.getData();
 }
 
+void test04() {
+    cout<<sizeof(Son4)<<endl;
+    Son4 son;
+}
+
 int main(int argc, const char * argv[]) {
 //    IOTHtml html;
 //    html.mainBody();
@@ -103,7 +128,8 @@ int main(int argc, const char * argv[]) {
 //    lucy.comeOn();
     //test01();
     //test02();
-    test03();
+    //test03();
+    test04();
     
     std::cout << "Hello, World!\n";
     return 0;
