@@ -45,7 +45,11 @@ private:
 public:
     int a;
     Base() {
-        cout<<"Base 父类无惨初始化"<<endl;
+        cout<<"Base 父类无参初始化"<<endl;
+    }
+    
+    Base(int a) {
+        cout<<"Base 父类有参初始化"<<endl;
     }
     ~Base() {
         cout<<"Base 父类析构函数"<<endl;
@@ -104,7 +108,10 @@ public:
     int e;
     Thing ob;
     Son4() {
-        cout<<"子类Son4无惨初始化"<<endl;
+        cout<<"子类Son4无参初始化"<<endl;
+    }
+    Son4(int d) {
+        cout<<"子类Son4有参初始化"<<endl;
     }
     ~Son4() {
         cout<<"子类Son4析构函数"<<endl;
@@ -133,7 +140,7 @@ void test03(){
 /// 子类中有对象成员的构造和析构顺序:父类构造->子类中对象成员构造->子类构造->子类析构->子类中对象成员析构->父类析构
 void test04() {
     cout<<sizeof(Son4)<<endl;
-    Son4 son;
+    Son4 son(10);
 }
 
 int main(int argc, const char * argv[]) {
