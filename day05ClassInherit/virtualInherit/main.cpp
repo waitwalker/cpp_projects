@@ -43,6 +43,7 @@ void test01() {
 
 class Animal {
 public:
+    /// 使用virtual修饰的就函数就是虚函数
     virtual void sleep() {
         cout<<"Animal 睡觉"<<endl;
     }
