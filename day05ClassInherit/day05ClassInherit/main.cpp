@@ -8,14 +8,21 @@
 #include <iostream>
 using namespace std;
 
-class Base1 {
+class Base {
+    
+    
+public:
+    int num;
+};
+
+class Base1: public Base {
     
     
 public:
     int a;
 };
 
-class Base2 {
+class Base2: public Base {
     
     
 public:
@@ -34,6 +41,7 @@ int main(int argc, const char * argv[]) {
     Son son;
     son.Base1::a = 100;
     son.Base2::a = 300;
+    son.Base1::num = 500;
     //son.b = 300;
     
     std::cout << "Hello, World!\n";
