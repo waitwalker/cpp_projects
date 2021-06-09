@@ -31,14 +31,29 @@ public:
     
 };
 
-int main(int argc, const char * argv[]) {
-    
+void test01() {
     Son son;
     son.num = 100;
     
     /// *(int *)&son虚基类表的起始位置
     int offSet = (*(int *)&son) + 1;///偏移量
     cout<<"偏移量:"<<offSet<<endl;
+}
+
+
+class Animal {
+     
+    
+public:
+    void sleep() {
+        cout<<"Animal 睡觉"<<endl;
+    }
+};
+
+
+int main(int argc, const char * argv[]) {
+    
+    
     
     std::cout << "Hello, World!\n";
     return 0;
