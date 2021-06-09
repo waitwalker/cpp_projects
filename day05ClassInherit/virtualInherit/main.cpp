@@ -45,7 +45,7 @@ class Animal {
      
     
 public:
-    void sleep() {
+    virtual void sleep() {
         cout<<"Animal 睡觉"<<endl;
     }
 };
@@ -54,7 +54,7 @@ class Cat: public Animal {
     
     
 public:
-    void sleep() {
+    virtual void sleep() {
         cout<<"Cat 睡觉"<<endl;
     }
 };
