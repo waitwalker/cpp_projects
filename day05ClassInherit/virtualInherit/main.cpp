@@ -66,6 +66,9 @@ int main(int argc, const char * argv[]) {
     cat.sleep();
     cat.Animal::sleep();
     
+    Animal *p = new Cat;
+    p->sleep();
+    
     std::cout << "Hello, World!\n";
     return 0;
 }
