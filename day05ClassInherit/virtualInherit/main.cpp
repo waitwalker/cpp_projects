@@ -62,7 +62,8 @@ public:
 
 int main(int argc, const char * argv[]) {
     
-    
+    Cat cat;
+    cat.sleep();
     
     std::cout << "Hello, World!\n";
     return 0;
