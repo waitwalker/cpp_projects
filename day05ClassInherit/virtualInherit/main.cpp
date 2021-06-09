@@ -38,6 +38,7 @@ int main(int argc, const char * argv[]) {
     
     /// *(int *)&son虚基类表的起始位置
     int offSet = (*(int *)&son) + 1;///偏移量
+    cout<<"偏移量:"<<offSet<<endl;
     
     std::cout << "Hello, World!\n";
     return 0;
