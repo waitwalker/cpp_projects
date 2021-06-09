@@ -15,8 +15,10 @@ class Base {
 public:
     /// 父类中同名成员变量(属性)
     int num;
+    static int age;
     Base() {
         this->num = 0;
+        age = 20;
         cout<<"父类无参数构造"<<endl;
     }
     
@@ -47,6 +49,7 @@ public:
     
     void showNum() {
         cout<<"父类中的成员num:"<<Base::num<<endl;
+        cout<<"父类中的成员age:"<<Son::age<<endl;
         cout<<"子类中的成员num:"<<this->num<<endl;
     }
     
