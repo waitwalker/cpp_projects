@@ -19,7 +19,7 @@ class Base2 {
     
     
 public:
-    int b;
+    int a;
 };
 
 class Son: public Base1, public Base2 {
@@ -33,7 +33,7 @@ int main(int argc, const char * argv[]) {
     
     Son son;
     son.a = 100;
-    son.b = 300;
+    //son.b = 300;
     
     std::cout << "Hello, World!\n";
     return 0;
