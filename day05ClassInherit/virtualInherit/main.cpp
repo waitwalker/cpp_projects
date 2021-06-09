@@ -10,29 +10,21 @@
 using namespace std;
 
 class Base {
-    
-    
 public:
     int num;
 };
 
 class Base1: virtual public Base {
-    
-    
 public:
     int a;
 };
 
 class Base2: virtual public Base {
-    
-    
 public:
     int a;
 };
 
 class Son: public Base1, public Base2 {
-    
-    
 public:
     
 };
