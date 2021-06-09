@@ -61,7 +61,7 @@ int main(int argc, const char * argv[]) {
     
     Son1 ob1;
     Son2 ob2;
-    Son3 ob3; 
+    Son3 ob3;
     Son4 ob4;
     
     Base base;
