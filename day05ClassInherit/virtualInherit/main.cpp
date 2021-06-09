@@ -70,6 +70,9 @@ int main(int argc, const char * argv[]) {
     Animal *p = new Cat;
     p->sleep();
     
+    /// 这样不能初始化成功&&也不安全,会出现访问非法内存
+    //Cat *pCat = new Animal;
+    //pCat->sleep();
     std::cout << "Hello, World!\n";
     return 0;
 }
