@@ -17,13 +17,13 @@ public:
 /// Son的虚基类
 class Base1: virtual public Base {
 public:
-    int a;
+    //int a;
 };
 
 /// Son的虚基类
 class Base2: virtual public Base {
 public:
-    int a;
+    //int a;
 };
 
 class Son: public Base1, public Base2 {
@@ -35,6 +35,9 @@ int main(int argc, const char * argv[]) {
     
     Son son;
     son.num = 100;
+    
+    /// *(int *)&son虚基类表的起始位置
+    int offSet = (*(int *)&son) + 1;///偏移量
     
     std::cout << "Hello, World!\n";
     return 0;
