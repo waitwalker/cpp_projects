@@ -14,11 +14,13 @@ public:
     int num;
 };
 
+/// Son的虚基类
 class Base1: virtual public Base {
 public:
     int a;
 };
 
+/// Son的虚基类
 class Base2: virtual public Base {
 public:
     int a;
