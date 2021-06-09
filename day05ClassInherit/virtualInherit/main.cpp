@@ -56,9 +56,7 @@ public:
     }
 };
 
-
-int main(int argc, const char * argv[]) {
-    
+void test02() {
     Cat cat;
     cat.sleep();
     cat.Animal::sleep();
@@ -74,6 +72,15 @@ int main(int argc, const char * argv[]) {
     Cat a;
     Animal &ob = a;
     ob.sleep();
+}
+
+
+int main(int argc, const char * argv[]) {
+    //test01();
+    //test02();
+    
+    Animal an;
+    an.sleep();
     std::cout << "Hello, World!\n";
     return 0;
 }
