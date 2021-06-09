@@ -50,6 +50,15 @@ public:
     }
 };
 
+class Cat: public Animal {
+    
+    
+public:
+    void sleep() {
+        cout<<"Cat 睡觉"<<endl;
+    }
+};
+
 
 int main(int argc, const char * argv[]) {
     
