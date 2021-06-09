@@ -73,6 +73,10 @@ int main(int argc, const char * argv[]) {
     /// 这样不能初始化成功&&也不安全,会出现访问非法内存
     //Cat *pCat = new Animal;
     //pCat->sleep();
+    
+    Cat a;
+    Animal &ob = a;
+    ob.sleep();
     std::cout << "Hello, World!\n";
     return 0;
 }
