@@ -20,7 +20,7 @@ public:
         cout<<"动物睡觉"<<endl;
     }
     
-    ~Animal() {
+    virtual ~Animal() {
         cout<<"动物析构函数"<<endl;
     }
 };
@@ -37,7 +37,7 @@ public:
         cout<<"Cat睡觉"<<endl;
     }
     
-    ~Cat() {
+    virtual ~Cat() {
         cout<<"Cat析构函数"<<endl;
     }
 };
