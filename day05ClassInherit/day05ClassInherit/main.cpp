@@ -32,7 +32,8 @@ public:
 int main(int argc, const char * argv[]) {
     
     Son son;
-    son.a = 100;
+    son.Base1::a = 100;
+    son.Base2::a = 300;
     //son.b = 300;
     
     std::cout << "Hello, World!\n";
