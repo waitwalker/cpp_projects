@@ -66,6 +66,7 @@ int main(int argc, const char * argv[]) {
     cat.sleep();
     cat.Animal::sleep();
     
+    /// p不会出现越界情况
     Animal *p = new Cat;
     p->sleep();
     
