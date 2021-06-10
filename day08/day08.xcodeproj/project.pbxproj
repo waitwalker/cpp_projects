@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6AA378CE2671AEAE007D9550 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6AA378CD2671AEAE007D9550 /* main.cpp */; };
 		6AA378DB2671DC5B007D9550 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6AA378DA2671DC5B007D9550 /* main.cpp */; };
+		6AA378E72671F267007D9550 /* MyArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6AA378E52671F267007D9550 /* MyArray.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -38,7 +39,8 @@
 		6AA378D82671DC5B007D9550 /* templateClass */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = templateClass; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AA378DA2671DC5B007D9550 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		6AA378E02671EB77007D9550 /* Person.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Person.hpp; sourceTree = "<group>"; };
-		6AA378E32671F10B007D9550 /* MyArray.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MyArray.hpp; sourceTree = "<group>"; };
+		6AA378E52671F267007D9550 /* MyArray.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MyArray.cpp; sourceTree = "<group>"; };
+		6AA378E62671F267007D9550 /* MyArray.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MyArray.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +92,8 @@
 			children = (
 				6AA378DA2671DC5B007D9550 /* main.cpp */,
 				6AA378E02671EB77007D9550 /* Person.hpp */,
-				6AA378E32671F10B007D9550 /* MyArray.hpp */,
+				6AA378E52671F267007D9550 /* MyArray.cpp */,
+				6AA378E62671F267007D9550 /* MyArray.hpp */,
 			);
 			path = templateClass;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6AA378DB2671DC5B007D9550 /* main.cpp in Sources */,
+				6AA378E72671F267007D9550 /* MyArray.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
