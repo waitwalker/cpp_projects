@@ -48,12 +48,30 @@ void test01() {
     cout<<"c:"<<c<<"\nd:"<<d<<endl;
 }
 
-template <typename T1>
-void myPrintArray(T1 &t1, int t2) {
+template <typename T1> void myPrintArray(T1 &t1, int t2) {
     for (int i = 0; i < t2; i++) {
         cout<<t1[i]<<"  "<<endl;
         cout<<endl;
     }
+}
+
+template <typename T>
+void mySort(T *arr, int len) {
+    for (int i = 0; i < len -1; i++) {
+        int min = i;
+        for (int j = min + 1; j < len; j++) {
+            if (arr[min] > arr[j]) {
+                min = j;
+            }
+        }
+        
+        if (min != i) {
+            T tmp = arr[min];
+            arr[min] = arr[i];
+            arr[i] = tmp;
+        }
+    }
+    return;
 }
 
 int main(int argc, const char * argv[]) {
@@ -67,6 +85,9 @@ int main(int argc, const char * argv[]) {
     
     
     myPrintArray(str, strLength);
+    myPrintArray(arr, arrLength);
+    std::cout << "Hello, World!\n";
+    mySort(arr, arrLength);
     myPrintArray(arr, arrLength);
     std::cout << "Hello, World!\n";
     return 0;
