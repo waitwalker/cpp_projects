@@ -41,11 +41,13 @@ public:
 };
 
 int main(int argc, const char * argv[]) {
+    /// 抽象类可以实例化对象指针
     Animal *p = new Cat;
     p->sleep();
     delete p;
     
-    Animal an;
+    /// 抽象类不能实例化对象
+    //Animal an;
     std::cout << "Hello, World!\n";
     return 0;
 }
