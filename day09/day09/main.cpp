@@ -88,6 +88,9 @@ void test04() {
     //reinterpret_cast不能用于基本类型
     //char ch = 'a';
     //double d = reinterpret_cast<double>(ch);
+    
+    /// reinterpret_cast支持不相干类型之间的转换
+    Base *p = reinterpret_cast<Base *>(new Animal);
 }
 
 int main(int argc, const char * argv[]) {
