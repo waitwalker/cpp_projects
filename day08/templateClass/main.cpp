@@ -30,6 +30,19 @@ public:
     }
 };
 
+
+class Son:public Data<string, int> {
+    
+private:
+    string name;
+    int num;
+public:
+    Son(string name, int num):Data(name,num) {
+        this->name = name;
+        this->num = num;
+    }
+};
+
 int main(int argc, const char * argv[]) {
     
     Data<string, int> ob1("zhangsan",20);
@@ -38,6 +51,9 @@ int main(int argc, const char * argv[]) {
     
     Data<int, string> ob2(12, "kk");
     ob2.showData();
+    
+    Son son("张三",21);
+    son.showData();
     
     std::cout << "Hello, World!\n";
     return 0;
