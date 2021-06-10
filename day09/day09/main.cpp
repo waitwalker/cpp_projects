@@ -42,11 +42,12 @@ void test01 () {
 
 /// 动态类型转换
 void test02() {
-    
+    char ch = 'a';
+    double d = dynamic_cast<double>(ch);
 }
 
 int main(int argc, const char * argv[]) {
-    
+    test02();
     std::cout << "Hello, World!\n";
     return 0;
 }
