@@ -70,6 +70,7 @@ void MyArray<T>::pushBack(const T &val) {
     /// size不能超过容量 并且不能小于0
     if (this->size >= 0 && this->size < this->capacity) {
         this->addr[this->size] = val;
+        this->size++;
     } else {
         cout<<"容器已满"<<endl;
         return;

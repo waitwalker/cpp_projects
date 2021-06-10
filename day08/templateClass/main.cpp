@@ -90,7 +90,16 @@ void test02() {
 
 
 int main(int argc, const char * argv[]) {
-    test01();
+    //test01();
+    
+    MyArray<char> ob(10);
+    ob.pushBack('a');
+    ob.pushBack('b');
+    ob.pushBack('c');
+    ob.pushBack('d');
+    ob.pushBack('e');
+    
+    ob.printArray();
     
     
     std::cout << "Hello, World!\n";
