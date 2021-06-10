@@ -64,6 +64,11 @@ void test02() {
     
 }
 
+/// const_cast 常量转换
+void test03() {
+    
+}
+
 int main(int argc, const char * argv[]) {
     test02();
     std::cout << "Hello, World!\n";
