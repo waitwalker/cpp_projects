@@ -89,7 +89,7 @@ void test04() {
     //char ch = 'a';
     //double d = reinterpret_cast<double>(ch);
     
-    /// reinterpret_cast支持不相干类型之间的转换
+    /// reinterpret_cast支持不相干类型之间的转换 其他类型都可以
     Base *p = reinterpret_cast<Base *>(new Animal);
 }
 
