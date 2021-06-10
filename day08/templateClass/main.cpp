@@ -31,6 +31,7 @@ public:
 };
 
 
+/// 类模板作为子类的父类,子类在实现是必须指定类型
 class Son:public Data<string, int> {
     
 private:
