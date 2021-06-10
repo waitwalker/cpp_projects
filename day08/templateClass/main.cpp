@@ -7,6 +7,7 @@
 
 #include <iostream>
 #include "Person.hpp"
+#include "MyArray.hpp"
 
 using namespace std;
 
@@ -79,14 +80,18 @@ void TemplateClass<T1, T2>::showDatas() {
     cout<<"name="<<name<<",age="<<age<<endl;
 }
 
-
-int main(int argc, const char * argv[]) {
-    
+void test02() {
     /// 这里报错,不识别.类模板会经过两次编译
     /// 第一次:类模板本身编译
     /// 第二次:类模板函数调用的时候编译
     Person<string, int> ob1("张三", 12);
     ob1.showPerson();
+}
+
+
+int main(int argc, const char * argv[]) {
+    test01();
+    
     
     std::cout << "Hello, World!\n";
     return 0;

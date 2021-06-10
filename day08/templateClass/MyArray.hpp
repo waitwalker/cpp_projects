@@ -31,6 +31,9 @@ public:
     
     /// 尾插法
     void pushBack(const T &val);
+    
+    /// 遍历数组
+    void printArray();
 };
 
 #endif /* MyArray_hpp */
@@ -70,5 +73,12 @@ void MyArray<T>::pushBack(const T &val) {
     } else {
         cout<<"容器已满"<<endl;
         return;
+    }
+}
+
+template <typename T>
+void MyArray<T>::printArray() {
+    for (int i = 0; i < this->size; i++) {
+        cout<<this->addr[i]<<" "<<endl;
     }
 }
