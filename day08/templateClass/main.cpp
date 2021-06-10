@@ -35,6 +35,10 @@ int main(int argc, const char * argv[]) {
     Data<string, int> ob1("zhangsan",20);
     ob1.showData();
     
+    
+    Data<int, string> ob2(12, "kk");
+    ob2.showData();
+    
     std::cout << "Hello, World!\n";
     return 0;
 }
