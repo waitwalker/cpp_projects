@@ -9,8 +9,8 @@
 
 using namespace std;
 
-/// 模板类
-template <class T1, class T2>
+/// 模板类 泛型编程
+template <typename T1, typename T2>
 class Data {
 private:
     T1 name;
