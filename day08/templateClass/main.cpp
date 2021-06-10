@@ -23,12 +23,18 @@ public:
     }
     
     ~Data() {
-        
+    }
+    
+    void showData() {
+        cout<<"name="<<this->name<<",num="<<this->num<<endl;
     }
 };
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
+    
+    Data<string, int> ob1("zhangsan",20);
+    ob1.showData();
+    
     std::cout << "Hello, World!\n";
     return 0;
 }
