@@ -64,12 +64,18 @@ public:
     T1 name;
     T2 age;
     TemplateClass(T1 name, T2 age);
-    void showData();
+    void showDatas();
 };
 
 template <typename T1, typename T2>
 TemplateClass<T1, T2>::TemplateClass(T1 name, T2 age) {
-    
+    this->name = name;
+    this->age = age;
+}
+
+template <typename T1, typename T2>
+void TemplateClass<T1, T2>::showDatas() {
+    cout<<"name="<<name<<",age="<<age<<endl;
 }
 
 
