@@ -85,8 +85,9 @@ void test03() {
 
 /// reinterpret_cast 重新解释转换
 void test04() {
-    char ch = 'a';
-    double d = reinterpret_cast<double>(ch);
+    //reinterpret_cast不能用于基本类型
+    //char ch = 'a';
+    //double d = reinterpret_cast<double>(ch);
 }
 
 int main(int argc, const char * argv[]) {
