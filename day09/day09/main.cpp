@@ -77,6 +77,10 @@ void test03() {
     /// consta_cast不支持非指针或引用的转换,const_cast只能用于指针或引用的转换
     const int a = 100;
     //int b = const_cast<int>(a);
+    
+    int data = 100;
+    const int &ob = data;
+    int &ob2 = const_cast<int &>(ob);
 }
 
 int main(int argc, const char * argv[]) {
