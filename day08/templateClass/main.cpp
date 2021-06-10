@@ -88,6 +88,29 @@ void test02() {
     ob1.showPerson();
 }
 
+class Data {
+    
+    
+public:
+    int data;
+    
+    Data() {
+        cout<<"Data无参数构造"<<endl;
+    }
+    
+    Data(int data) {
+        this->data = data;
+    }
+    
+    void showData() {
+        cout<<"data="<<data<<endl;
+    }
+};
+
+ostream& operator<<(ostream &out, const Data &ob){
+    out<<"data="<<ob.data<<endl;
+    return out;
+}
 
 int main(int argc, const char * argv[]) {
     //test01();
@@ -108,6 +131,14 @@ int main(int argc, const char * argv[]) {
     ob2.pushBack(4);
     ob2.pushBack(5);
     ob2.printArray();
+    
+    
+    MyArray<Data> ob3(5);
+    ob3.pushBack(Data(10));
+    ob3.pushBack(Data(11));
+    ob3.pushBack(Data(12));
+    ob3.pushBack(Data(13));
+    ob3.printArray();
     
     std::cout << "Hello, World!\n";
     return 0;
