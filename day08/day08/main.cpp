@@ -43,7 +43,7 @@ int main(int argc, const char * argv[]) {
     swapChar(c, d);
     cout<<"c:"<<c<<"\nd:"<<d<<endl;
     
-    mySwap(c, d);
+    mySwap<char>(c, d);
     cout<<"c:"<<c<<"\nd:"<<d<<endl;
     std::cout << "Hello, World!\n";
     return 0;
