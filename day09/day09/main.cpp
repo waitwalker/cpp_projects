@@ -70,8 +70,13 @@ void test03() {
     const int *p = NULL;
     int *p1 = const_cast<int *>(p);
     
+    /// 这种转换
     int *p2 = NULL;
     const int *p3 = const_cast<const int *>(p2);
+    
+    /// consta_cast不支持非指针或引用的转换,const_cast只能用于指针或引用的转换
+    const int a = 100;
+    //int b = const_cast<int>(a);
 }
 
 int main(int argc, const char * argv[]) {
