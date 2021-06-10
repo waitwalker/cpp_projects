@@ -46,6 +46,8 @@ int main(int argc, const char * argv[]) {
     p->sleep();
     delete p;
     
+    /// 子类必须实现所有的抽象父类纯虚函数(接口),否则子类也是抽象类
+    
     /// 抽象类不能实例化对象
     //Animal an;
     std::cout << "Hello, World!\n";
