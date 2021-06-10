@@ -45,7 +45,12 @@ void test02() {
     /// 动态类型转换不能用于基本类型
     //char ch = 'a';
     //double d = dynamic_cast<double>(ch);
+    
+    /// 动态类型可以用于向上类型转换
     Base *p1 = dynamic_cast<Base *>(new Son);
+    
+    /// 动态类型不能用于向下类型转换
+    Son *p2 = dynamic_cast<Son *>(new Base);
 }
 
 int main(int argc, const char * argv[]) {
