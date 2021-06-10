@@ -98,9 +98,16 @@ int main(int argc, const char * argv[]) {
     ob.pushBack('c');
     ob.pushBack('d');
     ob.pushBack('e');
-    
     ob.printArray();
     
+    
+    MyArray<int> ob2(10);
+    ob2.pushBack(1);
+    ob2.pushBack(2);
+    ob2.pushBack(3);
+    ob2.pushBack(4);
+    ob2.pushBack(5);
+    ob2.printArray();
     
     std::cout << "Hello, World!\n";
     return 0;
