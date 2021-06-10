@@ -139,6 +139,14 @@ void test03() {
     ob3.printArray();
 }
 
+/// Student向前声明
+template <typename T1, typename T2>
+class Student;
+
+/// 声明友元函数
+template<typename T1, typename T2>
+void printStudent1(Student<T1, T2> &ob);
+
 template <typename T1, typename T2>
 class Student {
 private:
@@ -147,9 +155,12 @@ private:
     
 public:
     Student(T1 name, T2 age);
+    /// 友元函数定义在函数内部
     friend void printStudent(Student<T1, T2> &ob) {
         cout<<"name="<<ob.name<<",age="<<ob.age<<endl;
     }
+    
+    friend void printStudent1<>(Student<T1, T2> &ob);
 };
 
 template <typename T1, typename T2>
@@ -158,10 +169,10 @@ Student<T1,T2>::Student(T1 name, T2 age) {
     this->age = age;
 }
 
-//template<typename T1, typename T2>
-//void printStudent(Student<T1, T2> &ob) {
-//    cout<<"name="<<ob.name<<",age="<<ob.age<<endl;
-//}
+template<typename T1, typename T2>
+void printStudent1(Student<T1, T2> &ob) {
+    cout<<"name="<<ob.name<<",age="<<ob.age<<endl;
+}
 
 int main(int argc, const char * argv[]) {
     //test01();
