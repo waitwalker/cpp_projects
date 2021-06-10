@@ -9,7 +9,8 @@
 
 using namespace std;
 
-void swapInt(int &a, int &b) {
+void mySwap(int &a, int &b) {
+    cout<<"调用的是普通"<<endl;
     int tmp = a;
     a = b;
     b = tmp;
@@ -24,6 +25,7 @@ void swapChar(char &a, char &b) {
 /// 函数模板
 template <typename T>
 void mySwap(T &a, T &b) {
+    cout<<"调用的是函数模板"<<endl;
     T tmp = a;
     a = b;
     b = tmp;
@@ -34,7 +36,7 @@ int main(int argc, const char * argv[]) {
     int a = 100;
     int b = 200;
     cout<<"a:"<<a<<"\nb:"<<b<<endl;
-    swapInt(a, b);
+    mySwap(a, b);
     cout<<"a:"<<a<<"\nb:"<<b<<endl;
     
     char c = 'c';
