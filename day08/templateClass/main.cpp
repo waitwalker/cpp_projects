@@ -6,6 +6,7 @@
 //
 
 #include <iostream>
+#include "Person.hpp"
 
 using namespace std;
 
@@ -81,6 +82,7 @@ void TemplateClass<T1, T2>::showDatas() {
 
 int main(int argc, const char * argv[]) {
     
+    Person<string, int> ob1("张三", 12);
     
     
     std::cout << "Hello, World!\n";
