@@ -40,6 +40,13 @@ void test01 () {
     delete p3;
 }
 
+class Animal {
+    
+    
+public:
+    
+};
+
 /// 动态类型转换
 void test02() {
     /// 动态类型转换不能用于基本类型
@@ -50,7 +57,11 @@ void test02() {
     Base *p1 = dynamic_cast<Base *>(new Son);
     
     /// 动态类型不能用于向下类型转换
-    Son *p2 = dynamic_cast<Son *>(new Base);
+    //Son *p2 = dynamic_cast<Son *>(new Base);
+    
+    /// 动态类型不支持没有关系的类型转换
+    //Base *p3 = dynamic_cast<Base *>(new Animal);
+    
 }
 
 int main(int argc, const char * argv[]) {
