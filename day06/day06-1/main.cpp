@@ -16,9 +16,7 @@ public:
         cout<<"动物的构造"<<endl;
     }
     
-    void sleep() {
-        cout<<"动物睡觉"<<endl;
-    }
+    virtual void sleep() =0;
     
     virtual ~Animal() {
         cout<<"动物析构函数"<<endl;
@@ -33,7 +31,7 @@ public:
         cout<<"Cat的构造"<<endl;
     }
     
-    void sleep() {
+    virtual void sleep() {
         cout<<"Cat睡觉"<<endl;
     }
     
@@ -46,6 +44,8 @@ int main(int argc, const char * argv[]) {
     Animal *p = new Cat;
     p->sleep();
     delete p;
+    
+    Animal an;
     std::cout << "Hello, World!\n";
     return 0;
 }
