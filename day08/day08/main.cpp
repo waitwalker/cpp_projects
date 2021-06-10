@@ -74,6 +74,20 @@ void mySort(T *arr, int len) {
     return;
 }
 
+class A {
+        
+    
+public:
+    
+};
+
+class B {
+        
+    
+public:
+    int x;
+};
+
 int main(int argc, const char * argv[]) {
     
     //test01();
@@ -84,6 +98,9 @@ int main(int argc, const char * argv[]) {
     int arrLength = sizeof(arr) / sizeof(arr[0]);
     
     
+    A ob1;
+    B ob2;
+    mySwap(ob1, ob2);
     myPrintArray(str, strLength);
     myPrintArray(arr, arrLength);
     std::cout << "Hello, World!\n";
