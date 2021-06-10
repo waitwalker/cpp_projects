@@ -100,7 +100,7 @@ int main(int argc, const char * argv[]) {
     
     A ob1;
     B ob2;
-    mySwap(ob1, ob2);
+    //mySwap(ob1, ob2);
     myPrintArray(str, strLength);
     myPrintArray(arr, arrLength);
     std::cout << "Hello, World!\n";
