@@ -179,6 +179,7 @@ int main(int argc, const char * argv[]) {
     
     Student<string, int> ob1("张三",12);
     printStudent(ob1);
+    printStudent1(ob1);
     
     std::cout << "Hello, World!\n";
     return 0;
