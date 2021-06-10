@@ -66,8 +66,12 @@ void test02() {
 
 /// const_cast 常量转换
 void test03() {
+    /// const_cast 类型转换
     const int *p = NULL;
     int *p1 = const_cast<int *>(p);
+    
+    int *p2 = NULL;
+    const int *p3 = const_cast<const int *>(p2);
 }
 
 int main(int argc, const char * argv[]) {
