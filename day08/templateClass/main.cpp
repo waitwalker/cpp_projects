@@ -11,18 +11,18 @@ using namespace std;
 
 /// 模板类 泛型编程
 template <typename T1, typename T2>
-class Data {
+class TemplateClassName {
 private:
     T1 name;
     T2 num;
     
 public:
-    Data(T1 name, T2 num) {
+    TemplateClassName(T1 name, T2 num) {
         this->name = name;
         this->num = num;
     }
     
-    ~Data() {
+    ~TemplateClassName() {
     }
     
     void showData() {
@@ -32,29 +32,50 @@ public:
 
 
 /// 类模板作为子类的父类,子类在实现是必须指定类型
-class Son:public Data<string, int> {
+class Son:public TemplateClassName<string, int> {
     
 private:
     string name;
     int num;
 public:
-    Son(string name, int num):Data(name,num) {
+    Son(string name, int num):TemplateClassName(name,num) {
         this->name = name;
         this->num = num;
     }
 };
 
-int main(int argc, const char * argv[]) {
-    
-    Data<string, int> ob1("zhangsan",20);
+void test01() {
+    TemplateClassName<string, int> ob1("zhangsan",20);
     ob1.showData();
     
     
-    Data<int, string> ob2(12, "kk");
+    TemplateClassName<int, string> ob2(12, "kk");
     ob2.showData();
     
     Son son("张三",21);
     son.showData();
+}
+
+template <typename T1, typename T2>
+class TemplateClass {
+    
+    
+public:
+    T1 name;
+    T2 age;
+    TemplateClass(T1 name, T2 age);
+    void showData();
+};
+
+template <typename T1, typename T2>
+TemplateClass<T1, T2>::TemplateClass(T1 name, T2 age) {
+    
+}
+
+
+int main(int argc, const char * argv[]) {
+    
+    
     
     std::cout << "Hello, World!\n";
     return 0;
