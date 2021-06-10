@@ -112,9 +112,7 @@ ostream& operator<<(ostream &out, const Data &ob){
     return out;
 }
 
-int main(int argc, const char * argv[]) {
-    //test01();
-    
+void test03() {
     MyArray<char> ob(10);
     ob.pushBack('a');
     ob.pushBack('b');
@@ -139,6 +137,28 @@ int main(int argc, const char * argv[]) {
     ob3.pushBack(Data(12));
     ob3.pushBack(Data(13));
     ob3.printArray();
+}
+
+template <typename T1, typename T2>
+class Student {
+private:
+    T1 name;
+    T2 age;
+    
+public:
+    Student(T1 name, T2 age);
+};
+
+template <typename T1, typename T2>
+Student<T1,T2>::Student(T1 name, T2 age) {
+    this->name = name;
+    this->age = age;
+}
+
+int main(int argc, const char * argv[]) {
+    //test01();
+    
+    
     
     std::cout << "Hello, World!\n";
     return 0;
