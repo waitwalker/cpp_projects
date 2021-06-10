@@ -26,11 +26,16 @@ public:
     /// 拷贝构造
     MyArray(const MyArray &ob);
     
+    /// 析构函数
     ~MyArray();
+    
+    /// 尾插法
+    void pushBack(const T &val);
 };
 
 #endif /* MyArray_hpp */
 
+/// 类模板成员函数的实现
 template <typename T>
 MyArray<T>::MyArray(int capacity) {
     this->addr = new T[capacity];
@@ -54,5 +59,16 @@ MyArray<T>::~MyArray<T>() {
     if (this->addr != NULL) {
         delete [] addr;
         this->addr = NULL;
+    }
+}
+
+template <typename T>
+void MyArray<T>::pushBack(const T &val) {
+    /// size不能超过容量 并且不能小于0
+    if (this->size >= 0 && this->size < this->capacity) {
+        this->addr[this->size] = val;
+    } else {
+        cout<<"容器已满"<<endl;
+        return;
     }
 }
