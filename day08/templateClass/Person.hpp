@@ -9,6 +9,7 @@
 #define Person_hpp
 
 #include <stdio.h>
+#include <iostream>
 using namespace std;
 
 template <typename T1, typename T2>
