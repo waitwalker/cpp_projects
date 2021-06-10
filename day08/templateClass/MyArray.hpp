@@ -25,6 +25,8 @@ public:
     
     /// 拷贝构造
     MyArray(const MyArray &ob);
+    
+    ~MyArray();
 };
 
 #endif /* MyArray_hpp */
@@ -45,4 +47,12 @@ MyArray<T>::MyArray(const MyArray &ob) {
         this->addr[i] = ob.addr[i];
     }
     this->size = ob.size;
+}
+
+template <typename T>
+MyArray<T>::~MyArray<T>() {
+    if (this->addr != NULL) {
+        delete [] addr;
+        this->addr = NULL;
+    }
 }
