@@ -19,7 +19,8 @@ public:
     
 };
 
-int main(int argc, const char * argv[]) {
+/// static_cast静态类型转换
+void test01 () {
     /// 向上转换
     Base *p1 = new Son;
     
@@ -37,6 +38,10 @@ int main(int argc, const char * argv[]) {
     
     Base *p3 = static_cast<Base *>(new Son);
     delete p3;
+}
+
+int main(int argc, const char * argv[]) {
+    
     std::cout << "Hello, World!\n";
     return 0;
 }
