@@ -17,12 +17,23 @@ public:
     virtual ~AbstractBase() = 0;
 };
 
-/// 第三步 在外部实现 
+/// 第三步 在外部实现  原因:通过基类指针 释放子类对象时 先调用子类的析构 再主动调用父类的析构,如果父类没有实现析构,无法调用
 AbstractBase::~AbstractBase() {
-    
+    cout<<"抽象类析构成功"<<endl;
 }
 
+class Son: AbstractBase {
+    
+    
+public:
+    virtual ~Son() {
+        cout<<"子类析构成功"<<endl;
+    }
+};
+
 int main(int argc, const char * argv[]) {
+    
+    Son son;
     std::cout << "Hello, World!\n";
     return 0;
 }
