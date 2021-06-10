@@ -83,9 +83,17 @@ void test03() {
     int &ob2 = const_cast<int &>(ob);
 }
 
+/// reinterpret_cast 重新解释转换
+void test04() {
+    char ch = 'a';
+    double d = reinterpret_cast<double>(ch);
+}
+
 int main(int argc, const char * argv[]) {
+    //test01();
     //test02();
-    test03();
+    //test03();
+    test04();
     std::cout << "Hello, World!\n";
     return 0;
 }
