@@ -42,8 +42,10 @@ void test01 () {
 
 /// 动态类型转换
 void test02() {
-    char ch = 'a';
-    double d = dynamic_cast<double>(ch);
+    /// 动态类型转换不能用于基本类型
+    //char ch = 'a';
+    //double d = dynamic_cast<double>(ch);
+    Base *p1 = dynamic_cast<Base *>(new Son);
 }
 
 int main(int argc, const char * argv[]) {
