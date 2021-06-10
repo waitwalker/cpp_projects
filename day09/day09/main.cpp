@@ -40,6 +40,11 @@ void test01 () {
     delete p3;
 }
 
+/// 动态类型转换
+void test02() {
+    
+}
+
 int main(int argc, const char * argv[]) {
     
     std::cout << "Hello, World!\n";
