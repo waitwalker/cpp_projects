@@ -147,6 +147,9 @@ private:
     
 public:
     Student(T1 name, T2 age);
+    friend void printStudent(Student<T1, T2> &ob) {
+        cout<<"name="<<ob.name<<",age="<<ob.age<<endl;
+    }
 };
 
 template <typename T1, typename T2>
@@ -155,10 +158,16 @@ Student<T1,T2>::Student(T1 name, T2 age) {
     this->age = age;
 }
 
+//template<typename T1, typename T2>
+//void printStudent(Student<T1, T2> &ob) {
+//    cout<<"name="<<ob.name<<",age="<<ob.age<<endl;
+//}
+
 int main(int argc, const char * argv[]) {
     //test01();
     
-    
+    Student<string, int> ob1("张三",12);
+    printStudent(ob1);
     
     std::cout << "Hello, World!\n";
     return 0;
