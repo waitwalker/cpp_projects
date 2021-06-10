@@ -7,13 +7,3 @@
 
 #include "Person.hpp"
 
-template <typename T1, typename T2>
-Person<T1, T2>::Person(T1 name, T2 age) {
-    this->name = name;
-    this->age = age;
-}
-
-template <typename T1, typename T2>
-void Person<T1, T2>:: showPerson() {
-    cout<<"name="<<name<<",age="<<age<<endl;
-}

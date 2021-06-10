@@ -6,7 +6,7 @@
 //
 
 #include <iostream>
-#include "Person.cpp"
+#include "Person.hpp"
 
 using namespace std;
 
