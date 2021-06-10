@@ -66,11 +66,13 @@ void test02() {
 
 /// const_cast 常量转换
 void test03() {
-    
+    const int *p = NULL;
+    int *p1 = const_cast<int *>(p);
 }
 
 int main(int argc, const char * argv[]) {
-    test02();
+    //test02();
+    test03();
     std::cout << "Hello, World!\n";
     return 0;
 }
