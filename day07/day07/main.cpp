@@ -20,12 +20,15 @@ class Cat: public Animal {
     
     
 public:
-    
+    virtual void sleep() {
+        cout<<"小猫睡觉"<<endl;
+    }
 };
 
 int main(int argc, const char * argv[]) {
     
-    Cat cat;
+    Animal *p = new Cat;
+    p->sleep();
     
     std::cout << "Hello, World!\n";
     return 0;
