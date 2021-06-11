@@ -43,10 +43,38 @@ void test02() {
     }
 }
 
+class Person {
+    
+private:
+    string name;
+public:
+    Person(string name) {
+        cout<<"Person有参数构造 name="<<name<<endl;
+        this->name = name;
+    }
+    
+    ~Person() {
+        cout<<"析构函数"<<endl;
+    }
+    
+};
+
+void test03() {
+    try {
+        Person ob1("a");
+        Person ob2("b");
+        Person ob3("c");
+        Person ob4("d");
+        throw 10;
+    } catch (...) {
+        cout<<"异常捕获到了"<<endl;
+    }
+}
+
 int main(int argc, const char * argv[]) {
     //test01();
-    test02();
-    
+    //test02();
+    test03();
     std::cout << "Hello, World!\n";
     return 0;
 }
