@@ -71,7 +71,8 @@ void test03() {
     }
 }
 
-void testFun01() throw(char, int) {
+void testFun01() throw(char const*) {
+    /// 只能抛出 char, int异常, 其他异常捕获不到
     throw "10";
 }
 
@@ -83,11 +84,41 @@ void test04() {
     }
 }
 
+class MyException {
+    
+    
+public:
+    MyException() {
+        cout<<"异常的构造"<<endl;
+    }
+    
+    MyException(const MyException &exc) {
+        cout<<"拷贝构造"<<endl;
+    }
+    
+    ~MyException() {
+        cout<<"异常的析构"<<endl;
+    }
+};
+
+void test05() {
+    try {
+        /// 这里抛出的是对象
+        //MyException ex;
+        //throw ex;
+        throw new MyException;
+    } catch (...) {
+        cout<< "捕获到了MyException异常"<<endl;
+    }
+}
+
 int main(int argc, const char * argv[]) {
     //test01();
     //test02();
     //test03();
-    test04();
+    //test04();
+    
+    test05();
     std::cout << "Hello, World!\n";
     return 0;
 }
