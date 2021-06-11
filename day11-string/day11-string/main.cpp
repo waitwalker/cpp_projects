@@ -44,7 +44,8 @@ void test3() {
     str1+="你好";
     cout<<str1<<endl;
     
-    
+    str1.append("张三");
+    cout<<str1<<endl;
 }
 
 int main(int argc, const char * argv[]) {
