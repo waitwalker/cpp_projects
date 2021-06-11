@@ -35,8 +35,21 @@ void test2() {
     cout<<str1<<endl;
 }
 
+void test3() {
+    string str1 = "hello";
+    string str2 = " world";
+    str1+=str2;
+    cout<<str1<<endl;
+    
+    str1+="你好";
+    cout<<str1<<endl;
+    
+    
+}
+
 int main(int argc, const char * argv[]) {
     //test1();
-    test2();
+    //test2();
+    test3();
     return 0;
 }
