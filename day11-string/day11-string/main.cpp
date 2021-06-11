@@ -51,13 +51,25 @@ void test3() {
     cout<<str1<<endl;
     
     string str3 = "hehehahaxixiheihei";
-    int position = static_cast<int>(str3.find("xi"));
+    int position = static_cast<int>(str3.find("fi"));
     cout<<"position:"<<position<<endl;
     string sst = "xixi";
     int len = static_cast<int>(sst.length());
     str3.replace(str3.find("xi"), sst.length(), "99####");
     
     cout<<str3<<endl;
+    
+    string str5 = "hehaehamxhaxmxiximxheimxhei";
+    string str6 = "mx";
+    while (1) {
+        size_t a = str5.find(str6);
+        if (a >str5.size()) {
+            break;
+        }
+        str5.replace(a, str6.length(), "**");
+    }
+    
+    cout<<"str5替换后:"<<str5<<endl;
 }
 
 int main(int argc, const char * argv[]) {
