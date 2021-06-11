@@ -71,10 +71,23 @@ void test03() {
     }
 }
 
+void testFun01() throw(char, int) {
+    throw "10";
+}
+
+void test04() {
+    try {
+        testFun01();
+    } catch (...) {
+        cout<<"捕获到异常"<<endl;
+    }
+}
+
 int main(int argc, const char * argv[]) {
     //test01();
     //test02();
-    test03();
+    //test03();
+    test04();
     std::cout << "Hello, World!\n";
     return 0;
 }
