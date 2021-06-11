@@ -46,6 +46,13 @@ void test3() {
     
     str1.append("张三");
     cout<<str1<<endl;
+    
+    str1.append("12", 2);
+    cout<<str1<<endl;
+    
+    string str3 = "hehehahaxixiheihei";
+    int position = static_cast<int>(str3.find("xi"));
+    cout<<"position:"<<position<<endl;
 }
 
 int main(int argc, const char * argv[]) {
