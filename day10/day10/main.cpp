@@ -120,7 +120,11 @@ int main(int argc, const char * argv[]) {
     //test03();
     //test04();
     
-    test05();
+    //test05();
+    
+    char buf[128] = "";
+    cin.getline(buf, sizeof(buf));
+    cout<<"buf:"<<buf<<endl;
     std::cout << "Hello, World!\n";
     return 0;
 }
