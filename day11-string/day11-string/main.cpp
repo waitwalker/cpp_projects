@@ -53,8 +53,10 @@ void test3() {
     string str3 = "hehehahaxixiheihei";
     int position = static_cast<int>(str3.find("xi"));
     cout<<"position:"<<position<<endl;
+    string sst = "xixi";
+    int len = static_cast<int>(sst.length());
+    str3.replace(str3.find("xi"), sst.length(), "99####");
     
-    str3.replace(8, 4, "####");
     cout<<str3<<endl;
 }
 
