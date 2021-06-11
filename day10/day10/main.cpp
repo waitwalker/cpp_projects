@@ -106,7 +106,9 @@ void test05() {
         /// 这里抛出的是对象
         //MyException ex;
         //throw ex;
-        throw new MyException;
+        //throw new MyException;
+        MyException exc;
+        throw exc;
     } catch (...) {
         cout<< "捕获到了MyException异常"<<endl;
     }
