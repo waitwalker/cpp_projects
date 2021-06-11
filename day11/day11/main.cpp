@@ -7,8 +7,13 @@
 
 #include <iostream>
 #include <vector>
+#include <algorithm>
 
 using namespace std;
+
+void myPrintValue(int value) {
+    cout<<"element:"<<value<<endl;
+}
 
 int main(int argc, const char * argv[]) {
     
@@ -36,6 +41,9 @@ int main(int argc, const char * argv[]) {
     for (vector<int>::iterator it= v.begin(); it != v.end(); it++) {
         cout<<"元素:"<<*it<<endl;
     }
+    
+    // for_each方式
+    for_each(v.begin(), v.end(), myPrintValue);
     
     std::cout << "Hello, World!\n";
     return 0;
