@@ -27,14 +27,14 @@ void test01() {
 
 int myDiv02(int a, int b) {
     if (b == 0) {
-        throw 0;
+        throw 0.0f;
     }
     return a/b;
 }
 
 void test02() {
     try {
-        int ret = myDiv02(10, -10);
+        int ret = myDiv02(10, 0);
         cout<<"ret = "<<ret<<endl;
     } catch (int e) {
         cout<<"exception = " <<e<<endl;
