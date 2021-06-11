@@ -53,6 +53,9 @@ void test3() {
     string str3 = "hehehahaxixiheihei";
     int position = static_cast<int>(str3.find("xi"));
     cout<<"position:"<<position<<endl;
+    
+    str3.replace(8, 4, "####");
+    cout<<str3<<endl;
 }
 
 int main(int argc, const char * argv[]) {
