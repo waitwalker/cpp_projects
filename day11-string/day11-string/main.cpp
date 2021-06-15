@@ -132,6 +132,7 @@ void test8() {
     cout<<"str4:"<<str4<<endl;
 }
 
+/// vector的未雨绸缪机制
 void test9() {
     vector<int> v;
     for (int i = 0; i < 100; i++) {
@@ -140,8 +141,13 @@ void test9() {
     cout<<"capacity:"<<v.capacity()<<endl;
     cout<<"size:"<<v.size()<<endl;
     
+    int *p = NULL;
+    
     for (int i = 100; i < 200; i++) {
         v.push_back(i);
+        if (p != &v[0]) {
+            cout<<"另寻了空间"<<endl;
+        }
     }
     cout<<"capacity:"<<v.capacity()<<endl;
     cout<<"size:"<<v.size()<<endl;
