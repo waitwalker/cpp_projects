@@ -231,9 +231,10 @@ void test13() {
     cout<<"v1 capacity:"<<v1.capacity()<<endl;
 }
 
-/// vector reverse预留空间大小
+/// vector reserve预留空间大小
 void test14() {
     vector<int> v;
+    v.reserve(1000);
     int *p = NULL;
     int count = 0;
     for (int i = 0; i < 1000; i++) {
