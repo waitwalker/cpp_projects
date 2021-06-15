@@ -214,6 +214,8 @@ void test12() {
     
     v1.resize(30);
     printVector(v1);
+    
+    cout<<"vi的容量:"<<v1.capacity()<<endl;
 }
 
 int main(int argc, const char * argv[]) {
