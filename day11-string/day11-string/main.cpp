@@ -248,6 +248,18 @@ void test14() {
     cout<<"另寻空间的次数:"<<count<<endl;
 }
 
+/// 尾插法&取值 中括号索引取值越界 不会抛出异常
+void test15() {
+    vector<int> v;
+    v.push_back(10);
+    v.push_back(20);
+    v.push_back(30);
+    v.push_back(40);
+    printVector(v);
+    
+    cout<<v[2]<<endl;
+}
+
 int main(int argc, const char * argv[]) {
     //test1();
     //test2();
@@ -262,6 +274,7 @@ int main(int argc, const char * argv[]) {
     //test11();
     //test12();
     //test13();
-    test14();
+    //test14();
+    test15();
     return 0;
 }
