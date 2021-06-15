@@ -21,6 +21,9 @@ void test1() {
     d.push_back(1);
     d.push_front(0);
     d.insert(d.begin() + 1, 100);
+    d.insert(d.end() - 0, 200);
+    d[3] = 300;
+    
     printDeque(d);
 }
 
