@@ -258,6 +258,8 @@ void test15() {
     printVector(v);
     
     cout<<v[2]<<endl;
+    v[2]=300;
+    cout<<v[2]<<endl;
 }
 
 int main(int argc, const char * argv[]) {
