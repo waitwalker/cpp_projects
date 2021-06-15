@@ -260,6 +260,12 @@ void test15() {
     cout<<v[2]<<endl;
     v[2]=300;
     cout<<v[2]<<endl;
+    v.pop_back();
+    printVector(v);
+    
+    // 插入
+    v.insert(v.begin() + 1, 100);
+    printVector(v);
 }
 
 int main(int argc, const char * argv[]) {
