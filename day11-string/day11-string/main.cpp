@@ -226,7 +226,7 @@ void test13() {
     cout<<"v1 size:"<<v1.size()<<endl;
     cout<<"v1 capacity:"<<v1.capacity()<<endl;
     
-    // 收缩vector的容量
+    // 收缩vector的容量  通过swap和匿名容器交换 收缩容器容量
     vector<int>(v1).swap(v1);
     cout<<"v1 capacity:"<<v1.capacity()<<endl;
 }
