@@ -139,6 +139,12 @@ void test9() {
     }
     cout<<"capacity:"<<v.capacity()<<endl;
     cout<<"size:"<<v.size()<<endl;
+    
+    for (int i = 100; i < 200; i++) {
+        v.push_back(i);
+    }
+    cout<<"capacity:"<<v.capacity()<<endl;
+    cout<<"size:"<<v.size()<<endl;
 }
 
 int main(int argc, const char * argv[]) {
