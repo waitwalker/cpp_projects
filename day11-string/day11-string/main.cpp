@@ -109,6 +109,10 @@ void test7() {
     // 字符串的删除 删除位置 删除长度
     str.erase(5,10);
     cout<<"字符串删除:"<<str<<endl;
+    
+    // 字符串的删除
+    str.erase(0, str.size());
+    cout<<"字符串的擦除:"<<str<<endl;
 }
 
 int main(int argc, const char * argv[]) {
