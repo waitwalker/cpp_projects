@@ -200,6 +200,13 @@ void test11() {
     printVector(v6);
 }
 
+/// vector的大小操作
+void test12() {
+    vector<int> v1(10,22);
+    // 获取vector容器的大小
+    cout<<"vi size:"<<v1.size()<<endl;
+}
+
 int main(int argc, const char * argv[]) {
     //test1();
     //test2();
@@ -211,6 +218,7 @@ int main(int argc, const char * argv[]) {
     //test8();
     //test9();
     //test10();
-    test11();
+    //test11();
+    test12();
     return 0;
 }
