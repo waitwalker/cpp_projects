@@ -265,6 +265,12 @@ void test15() {
     
     // 插入
     v.insert(v.begin() + 1, 100);
+    v.insert(v.end() - 2, 3000);
+    v.insert(v.end() - 2, 1000);
+    printVector(v);
+    
+    // 删除
+    v.erase(v.begin()+2);
     printVector(v);
 }
 
