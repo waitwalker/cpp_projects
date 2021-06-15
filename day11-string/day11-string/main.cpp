@@ -185,6 +185,19 @@ void test11() {
     vector<int> v3;
     v3.assign(5, 100);
     printVector(v3);
+    
+    vector<int> v4;
+    v4.assign(v3.begin(), v3.end());
+    printVector(v4);
+    
+    // 两个vector容器交换
+    vector<int> v5(5,20);
+    vector<int> v6(10,40);
+    printVector(v5);
+    printVector(v6);
+    v5.swap(v6);
+    printVector(v5);
+    printVector(v6);
 }
 
 int main(int argc, const char * argv[]) {
