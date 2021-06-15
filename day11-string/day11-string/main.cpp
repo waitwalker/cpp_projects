@@ -101,12 +101,20 @@ void test6() {
     cout<<"subStr2="<<subStr2<<endl;
 }
 
+/// 字符串的插入
+void test7() {
+    string str = "Today";
+    str.insert(str.length(), " is very hot.");
+    cout<<"字符串插入:"<<str<<endl;
+}
+
 int main(int argc, const char * argv[]) {
     //test1();
     //test2();
     //test3();
     //test4();
     //test5();
-    test6();
+    //test6();
+    test7();
     return 0;
 }
