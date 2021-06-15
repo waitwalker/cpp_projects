@@ -30,6 +30,11 @@ void test1() {
     d1.swap(d2);
     printDeque(d1);
     
+    
+    // 尾部&头部删除
+    d.pop_back();
+    d.pop_front();
+    printDeque(d);
 }
 
 int main(int argc, const char * argv[]) {
