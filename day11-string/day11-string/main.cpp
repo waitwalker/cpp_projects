@@ -7,6 +7,7 @@
 
 #include <iostream>
 #include <string.h>
+#include <vector>
 using namespace std;
 
 void test1() {
@@ -131,6 +132,15 @@ void test8() {
     cout<<"str4:"<<str4<<endl;
 }
 
+void test9() {
+    vector<int> v;
+    for (int i = 0; i < 100; i++) {
+        v.push_back(i);
+    }
+    cout<<"capacity:"<<v.capacity()<<endl;
+    cout<<"size:"<<v.size()<<endl;
+}
+
 int main(int argc, const char * argv[]) {
     //test1();
     //test2();
@@ -140,5 +150,6 @@ int main(int argc, const char * argv[]) {
     //test6();
     //test7();
     //test8();
+    test9();
     return 0;
 }
