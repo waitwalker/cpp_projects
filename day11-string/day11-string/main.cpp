@@ -153,6 +153,28 @@ void test9() {
     cout<<"size:"<<v.size()<<endl;
 }
 
+void printVector(vector<int> &v) {
+    for (vector<int>::iterator it = v.begin(); it != v.end(); it++) {
+        cout<<"元素:"<<*it<<endl;
+    }
+}
+
+/// vector 的构造函数
+void test10() {
+    // 10个5 构造
+    vector<int> v1(5,10);
+    printVector(v1);
+    
+    // 区间构造
+    // v1的第2开始,结束位置减少2个
+    vector<int> v2(v1.begin() + 2, v1.end() - 2);
+    printVector(v2);
+    
+    // 拷贝构造
+    vector<int> v3(v1);
+    printVector(v3);
+}
+
 int main(int argc, const char * argv[]) {
     //test1();
     //test2();
@@ -162,6 +184,7 @@ int main(int argc, const char * argv[]) {
     //test6();
     //test7();
     //test8();
-    test9();
+    //test9();
+    test10();
     return 0;
 }
