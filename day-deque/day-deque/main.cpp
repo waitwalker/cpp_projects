@@ -23,8 +23,13 @@ void test1() {
     d.insert(d.begin() + 1, 100);
     d.insert(d.end() - 0, 200);
     d[3] = 300;
-    
     printDeque(d);
+    
+    deque<int> d1(2,10);
+    deque<int> d2(3,22);
+    d1.swap(d2);
+    printDeque(d1);
+    
 }
 
 int main(int argc, const char * argv[]) {
