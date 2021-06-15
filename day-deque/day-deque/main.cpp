@@ -8,6 +8,7 @@
 #include <iostream>
 #include <deque>
 #include <string.h>
+#include <vector>
 using namespace std;
 
 void printDeque(deque<int> &d) {
@@ -42,7 +43,44 @@ void test1() {
     cout<<"size:"<<d.size()<<endl;
 }
 
+class Person {
+    
+    
+public:
+    string name;
+    int score;
+    Person(string name, int score){
+        this->name = name;
+        this->score = score;
+    }
+};
+
+void createPerson(vector<Person> &v) {
+    string nameTmp = "ABCDE";
+    for (int i = 0; i < 5; i++) {
+        string name = "选手";
+        name += nameTmp[i];
+        v.push_back(Person(name, 0));
+    }
+}
+
+void printVector(vector<Person> &v) {
+    for (vector<Person>::iterator it = v.begin();  it != v.end(); it++) {
+        cout<<"name:"<<(*it).name<<",score:"<<(*it).score<<endl;
+    }
+}
+
+void test2() {
+    // 定义一个vector 存放5名选手
+    vector<Person> v;
+    createPerson(v);
+    
+    // 遍历容器
+    printVector(v);
+}
+
 int main(int argc, const char * argv[]) {
-    test1();
+    //test1();
+    test2();
     return 0;
 }
