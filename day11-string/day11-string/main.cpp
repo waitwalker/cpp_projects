@@ -175,6 +175,18 @@ void test10() {
     printVector(v3);
 }
 
+/// vector 赋值
+void test11() {
+    vector<int> v1(5,10);
+    vector<int> v2;
+    v2 = v1;
+    printVector(v2);
+    
+    vector<int> v3;
+    v3.assign(5, 100);
+    printVector(v3);
+}
+
 int main(int argc, const char * argv[]) {
     //test1();
     //test2();
@@ -185,6 +197,7 @@ int main(int argc, const char * argv[]) {
     //test7();
     //test8();
     //test9();
-    test10();
+    //test10();
+    test11();
     return 0;
 }
