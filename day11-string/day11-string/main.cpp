@@ -218,6 +218,15 @@ void test12() {
     cout<<"vi的容量:"<<v1.capacity()<<endl;
 }
 
+void test13() {
+    vector<int> v1;
+    for (int i = 0; i < 100; i++) {
+        v1.push_back(i);
+    }
+    cout<<"v1 size:"<<v1.size()<<endl;
+    cout<<"v1 capacity:"<<v1.capacity()<<endl;
+}
+
 int main(int argc, const char * argv[]) {
     //test1();
     //test2();
@@ -230,6 +239,7 @@ int main(int argc, const char * argv[]) {
     //test9();
     //test10();
     //test11();
-    test12();
+    //test12();
+    test13();
     return 0;
 }
