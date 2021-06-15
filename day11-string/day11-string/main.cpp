@@ -208,6 +208,12 @@ void test12() {
     
     bool isEmpty = v1.empty();
     cout<<"vector容器是否为空:"<<isEmpty<<endl;
+    
+    v1.resize(5);
+    printVector(v1);
+    
+    v1.resize(30);
+    printVector(v1);
 }
 
 int main(int argc, const char * argv[]) {
