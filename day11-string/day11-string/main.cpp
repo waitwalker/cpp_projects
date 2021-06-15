@@ -70,11 +70,21 @@ void test3() {
     }
     
     cout<<"str5替换后:"<<str5<<endl;
+    
+}
+
+
+void test4() {
+    string str1 = "sh";
+    string str2 = "d";
+    int result = str1.compare(str2);
+    cout<<"比较结果:"<<result<<endl;
 }
 
 int main(int argc, const char * argv[]) {
     //test1();
     //test2();
-    test3();
+    //test3();
+    test4();
     return 0;
 }
