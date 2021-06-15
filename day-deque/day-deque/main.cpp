@@ -113,6 +113,9 @@ void test2() {
     
     // 5名选手逐一比赛
     playGame(v);
+    
+    // 将5名选手的成绩打印出来
+    printVector(v);
 }
 
 int main(int argc, const char * argv[]) {
