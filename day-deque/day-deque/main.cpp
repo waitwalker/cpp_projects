@@ -35,6 +35,8 @@ void test1() {
     d.pop_back();
     d.pop_front();
     printDeque(d);
+    d.clear();
+    printDeque(d);
 }
 
 int main(int argc, const char * argv[]) {
