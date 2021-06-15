@@ -231,6 +231,22 @@ void test13() {
     cout<<"v1 capacity:"<<v1.capacity()<<endl;
 }
 
+/// vector reverse预留空间大小
+void test14() {
+    vector<int> v;
+    int *p = NULL;
+    int count = 0;
+    for (int i = 0; i < 1000; i++) {
+        v.push_back(i);
+        if (p != &v[0]) {
+            cout<<"另寻空间:"<<count<<endl;
+            count++;
+            p = &v[0];
+        }
+    }
+    cout<<"另寻空间的次数:"<<count<<endl;
+}
+
 int main(int argc, const char * argv[]) {
     //test1();
     //test2();
@@ -244,6 +260,7 @@ int main(int argc, const char * argv[]) {
     //test10();
     //test11();
     //test12();
-    test13();
+    //test13();
+    test14();
     return 0;
 }
