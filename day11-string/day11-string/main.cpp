@@ -115,6 +115,22 @@ void test7() {
     cout<<"字符串的擦除:"<<str<<endl;
 }
 
+/// 字符串和C语言风格字符串转换
+void test8() {
+    
+    // c语言赋值给C++
+    string str;
+    char *str2 = "hao";
+    str = str2;
+    cout<<"str转换后:"<<str<<endl;
+    
+    // C++赋值给C语言
+    string str3 = "zhangsan";
+    char *str4;
+    str4 = (char *)str3.c_str();
+    cout<<"str4:"<<str4<<endl;
+}
+
 int main(int argc, const char * argv[]) {
     //test1();
     //test2();
@@ -122,6 +138,7 @@ int main(int argc, const char * argv[]) {
     //test4();
     //test5();
     //test6();
-    test7();
+    //test7();
+    test8();
     return 0;
 }
