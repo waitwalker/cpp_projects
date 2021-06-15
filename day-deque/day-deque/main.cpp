@@ -9,6 +9,7 @@
 #include <deque>
 #include <string.h>
 #include <vector>
+#include <time.h>
 using namespace std;
 
 void printDeque(deque<int> &d) {
@@ -70,6 +71,38 @@ void printVector(vector<Person> &v) {
     }
 }
 
+void playGame(vector<Person> &v) {
+    
+    srand(time(NULL));
+    
+    // 容器中的每个人逐一比赛
+    for (vector<Person>::iterator it = v.begin(); it != v.end(); it++) {
+        // 每个选手要被10个评委打分 放入deque容器中
+        deque<int> d;
+        for (int i = 0; i < 10; i++) {
+            int score = rand() %41 + 60;
+            d.push_back(score);
+        }
+        //排序
+        sort(d.begin(), d.end());
+        // 去掉一个最低分 & 去掉一个最高分
+        d.pop_front();
+        d.pop_back();
+        int sum = 0;
+        //打印结果
+        for (int i = 0; i < d.size(); i++) {
+            sum += d[i];
+            cout<<"值:"<<d[i];
+        }
+        // 总分
+        cout<<"总分:"<<sum<<endl;
+        // 平均分
+        (*it).score = sum/(d.size());
+        cout<<"平均分:"<<(*it).score<<endl;
+        cout<<"-------------"<<endl;
+    }
+}
+
 void test2() {
     // 定义一个vector 存放5名选手
     vector<Person> v;
@@ -77,6 +110,9 @@ void test2() {
     
     // 遍历容器
     printVector(v);
+    
+    // 5名选手逐一比赛
+    playGame(v);
 }
 
 int main(int argc, const char * argv[]) {
