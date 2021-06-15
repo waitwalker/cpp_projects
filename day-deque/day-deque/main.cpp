@@ -35,8 +35,11 @@ void test1() {
     d.pop_back();
     d.pop_front();
     printDeque(d);
+    // 清空空间
+    d.erase(d.begin());
     d.clear();
     printDeque(d);
+    cout<<"size:"<<d.size()<<endl;
 }
 
 int main(int argc, const char * argv[]) {
