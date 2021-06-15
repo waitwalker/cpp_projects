@@ -88,11 +88,25 @@ void test5() {
     cout<<"字符串的提取/截串:"<<sub<<endl;
 }
 
+void test6() {
+    string str = "Today:is:very:hot";
+    size_t position = str.find(":",0);
+    cout<<"position="<<position<<endl;
+    string subStr = str.substr(0,position);
+    cout<<"first="<<subStr<<endl;
+    
+    size_t position2 = str.find(":",position + 1);
+    string subStr2 = str.substr(position + 1, position2 - position - 1);
+    cout<<"position2="<<position2<<endl;
+    cout<<"subStr2="<<subStr2<<endl;
+}
+
 int main(int argc, const char * argv[]) {
     //test1();
     //test2();
     //test3();
     //test4();
-    test5();
+    //test5();
+    test6();
     return 0;
 }
