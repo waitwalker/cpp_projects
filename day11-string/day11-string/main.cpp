@@ -205,6 +205,9 @@ void test12() {
     vector<int> v1(10,22);
     // 获取vector容器的大小
     cout<<"vi size:"<<v1.size()<<endl;
+    
+    bool isEmpty = v1.empty();
+    cout<<"vector容器是否为空:"<<isEmpty<<endl;
 }
 
 int main(int argc, const char * argv[]) {
