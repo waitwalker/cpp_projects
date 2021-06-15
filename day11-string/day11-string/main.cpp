@@ -101,11 +101,14 @@ void test6() {
     cout<<"subStr2="<<subStr2<<endl;
 }
 
-/// 字符串的插入
+/// 字符串的插入&删除
 void test7() {
     string str = "Today";
     str.insert(str.length(), " is very hot.");
     cout<<"字符串插入:"<<str<<endl;
+    // 字符串的删除 删除位置 删除长度
+    str.erase(5,10);
+    cout<<"字符串删除:"<<str<<endl;
 }
 
 int main(int argc, const char * argv[]) {
