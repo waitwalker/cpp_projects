@@ -73,7 +73,7 @@ void test3() {
     
 }
 
-
+/// 字符串比较
 void test4() {
     string str1 = "sh";
     string str2 = "d";
@@ -81,10 +81,18 @@ void test4() {
     cout<<"比较结果:"<<result<<endl;
 }
 
+void test5() {
+    string str = "Today is very hot";
+    // 截串的起始位置,长度
+    string sub = str.substr(0,5);
+    cout<<"字符串的提取/截串:"<<sub<<endl;
+}
+
 int main(int argc, const char * argv[]) {
     //test1();
     //test2();
     //test3();
-    test4();
+    //test4();
+    test5();
     return 0;
 }
