@@ -120,7 +120,7 @@ void test8() {
     
     // c语言赋值给C++
     string str;
-    char *str2 = "hao";
+    char *str2 = (char *)"hao";
     str = str2;
     cout<<"str转换后:"<<str<<endl;
     
@@ -139,6 +139,6 @@ int main(int argc, const char * argv[]) {
     //test5();
     //test6();
     //test7();
-    test8();
+    //test8();
     return 0;
 }
