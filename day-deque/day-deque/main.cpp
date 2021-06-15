@@ -20,6 +20,7 @@ void test1() {
     deque<int> d;
     d.push_back(1);
     d.push_front(0);
+    d.insert(d.begin() + 1, 100);
     printDeque(d);
 }
 
