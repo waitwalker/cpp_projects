@@ -12,8 +12,9 @@ using namespace std;
 
 void printList(list<int> &L) {
     for (list<int>::iterator it = L.begin(); it != L.end(); it++) {
-        cout<<"元素:"<<*it<<endl;
+        cout<<"元素:"<<*it<<" ";
     }
+    cout<<endl;
 }
 
 void test1() {
@@ -21,6 +22,12 @@ void test1() {
     L.push_back(10);
     L.push_back(20);
     L.push_front(9);
+    printList(L);
+    // list迭代器不支持+n操作,但是支持++操作
+    list<int>::iterator it = L.begin();
+    it++;
+    it++;
+    L.insert(it, 2, 100);
     printList(L);
 }
 
