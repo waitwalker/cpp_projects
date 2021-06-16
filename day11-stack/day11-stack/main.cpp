@@ -6,9 +6,19 @@
 //
 
 #include <iostream>
+#include <stack>
+using namespace std;
+
+void test1() {
+    stack<int> sta;
+    sta.push(1);
+    sta.push(2);
+    sta.push(3);
+    cout<<"size:"<<sta.size()<<endl;
+}
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    test1();
+    
     return 0;
 }
