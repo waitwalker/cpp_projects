@@ -78,6 +78,13 @@ void printListPerson(list<Person> &L) {
     cout<<endl;
 }
 
+void printVectorPerson(vector<Person> &v) {
+    for (vector<Person>::iterator it = v.begin(); it != v.end(); it++) {
+        cout<<"name:"<<(*it).name<<", age:"<<(*it).age<<" "<<endl;
+    }
+    cout<<endl;
+}
+
 void test2() {
     list<Person> L;
     L.push_front(Person("张三", 10));
@@ -106,10 +113,30 @@ void test4() {
     sort(v.begin(), v.end(), myCompare);
 }
 
+class MyCamaprePerson {
+    
+    
+public:
+    // 重载小括号的叫做 仿函数
+    bool operator()(Person &ob1, Person &ob2) {
+        return ob1.age < ob2.age;
+    }
+};
+
+void test5() {
+    vector<Person> v;
+    v.push_back(Person("张三", 20));
+    v.push_back(Person("李四", 11));
+    v.push_back(Person("王二", 12));
+    sort(v.begin(), v.end(), MyCamaprePerson());
+    printVectorPerson(v);
+}
+
 int main(int argc, const char * argv[]) {
     //test1();
     //test2();
-    test3();
+    //test3();
     //test4();
+    test5();
     return 0;
 }
