@@ -18,6 +18,11 @@ void test1() {
     
     bool isEmpty = sta.empty();
     cout<<"isEmpty:"<<isEmpty<<endl;
+    
+    while (!sta.empty()) {
+        cout<<"栈顶元素:"<<sta.top()<<endl;
+        sta.pop();
+    }
 }
 
 int main(int argc, const char * argv[]) {
