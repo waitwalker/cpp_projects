@@ -134,6 +134,7 @@ void test5() {
     printVectorPerson(v);
 }
 
+/// lambda表达式
 void test6() {
     vector<int> v;
     v.push_back(10);
