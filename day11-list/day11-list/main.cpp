@@ -54,6 +54,13 @@ public:
         }
         return false;
     }
+    
+    bool operator<(const Person &ob) {
+        if (this->age < ob.age) {
+            return true;
+        }
+        return false;
+    }
 };
 
 void printListPerson(list<Person> &L) {
@@ -73,8 +80,19 @@ void test2() {
     //L.remove(tmp);
 }
 
+void test3() {
+    list<Person> L;
+    L.push_front(Person("张三", 10));
+    L.push_back(Person("李四", 11));
+    L.push_back(Person("王二", 12));
+    printListPerson(L);
+    L.sort();
+}
+
 int main(int argc, const char * argv[]) {
     //test1();
-    test2();
+    //test2();
+    test3();
+    
     return 0;
 }
