@@ -105,6 +105,7 @@ void test3() {
     printListPerson(L);
 }
 
+/// 通过指定函数实现排序规则
 void test4() {
     vector<Person> v;
     v.push_back(Person("张三", 10));
@@ -123,6 +124,7 @@ public:
     }
 };
 
+/// 通过仿函数指定排序规则
 void test5() {
     vector<Person> v;
     v.push_back(Person("张三", 20));
