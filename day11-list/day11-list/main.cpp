@@ -37,7 +37,35 @@ void test1() {
     printList(L);
 }
 
+class Person {
+    
+    
+public:
+    string name;
+    int age;
+    Person(string name, int age) {
+        this->name = name;
+        this->age = age;
+    }
+};
+
+void printListPerson(list<Person> &L) {
+    for (list<Person>::iterator it = L.begin(); it != L.end(); it++) {
+        cout<<"name:"<<(*it).name<<", age:"<<(*it).age<<" "<<endl;
+    }
+    cout<<endl;
+}
+
+void test2() {
+    list<Person> L;
+    L.push_front(Person("张三", 10));
+    L.push_back(Person("李四", 11));
+    L.push_back(Person("王二", 12));
+    printListPerson(L);
+}
+
 int main(int argc, const char * argv[]) {
-    test1();
+    //test1();
+    test2();
     return 0;
 }
