@@ -7,6 +7,7 @@
 
 #include <iostream>
 #include <list>
+#include <vector>
 
 using namespace std;
 
@@ -86,13 +87,21 @@ void test3() {
     L.push_back(Person("李四", 11));
     L.push_back(Person("王二", 12));
     printListPerson(L);
-    L.sort();
+    //L.sort();
+}
+
+void test4() {
+    vector<Person> v;
+    v.push_back(Person("张三", 10));
+    v.push_back(Person("李四", 11));
+    v.push_back(Person("王二", 12));
+    sort(v.begin(), v.end());
 }
 
 int main(int argc, const char * argv[]) {
     //test1();
     //test2();
-    test3();
-    
+    //test3();
+    test4();
     return 0;
 }
