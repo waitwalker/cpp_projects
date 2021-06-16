@@ -47,6 +47,13 @@ public:
         this->name = name;
         this->age = age;
     }
+    
+    bool operator==(const Person &ob) {
+        if (this->name == ob.name && this->age == ob.age) {
+            return true;
+        }
+        return false;
+    }
 };
 
 void printListPerson(list<Person> &L) {
@@ -62,6 +69,8 @@ void test2() {
     L.push_back(Person("李四", 11));
     L.push_back(Person("王二", 12));
     printListPerson(L);
+    Person tmp("张三", 10);
+    //L.remove(tmp);
 }
 
 int main(int argc, const char * argv[]) {
