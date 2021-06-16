@@ -134,11 +134,27 @@ void test5() {
     printVectorPerson(v);
 }
 
+void test6() {
+    vector<int> v;
+    v.push_back(10);
+    v.push_back(11);
+    v.push_back(12);
+    
+    for (vector<int>::iterator it = v.begin(); it != v.end(); it++) {
+        cout<<*it<<endl;
+    }
+    
+    for_each(v.begin(), v.end(), [](int value){
+        cout<<value<<endl;
+    });
+}
+
 int main(int argc, const char * argv[]) {
     //test1();
     //test2();
     //test3();
     //test4();
-    test5();
+    //test5();
+    test6();
     return 0;
 }
