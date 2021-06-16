@@ -23,7 +23,8 @@ void test1() {
     for_each(s.begin(), s.end(), [](int value){
         cout<<"value:"<<value<<endl;
     });
-    
+    set<int>::iterator it = s.begin();
+    *it = 100;
 }
 
 int main(int argc, const char * argv[]) {
