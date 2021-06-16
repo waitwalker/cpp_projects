@@ -29,6 +29,12 @@ void test1() {
     it++;
     L.insert(it, 2, 100);
     printList(L);
+    
+    //L.remove(100);
+    //printList(L);
+    //排序
+    L.sort();
+    printList(L);
 }
 
 int main(int argc, const char * argv[]) {
