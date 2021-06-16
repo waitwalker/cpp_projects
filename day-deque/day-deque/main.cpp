@@ -118,8 +118,18 @@ void test2() {
     printVector(v);
 }
 
+void test3() {
+    // 设置基准值 随机数种子
+    srand(2);
+    for (int i = 0; i < 10; i++) {
+        int num = rand();
+        cout<<"随机数:"<<num<<endl;
+    }
+}
+
 int main(int argc, const char * argv[]) {
     //test1();
-    test2();
+    //test2();
+    test3();
     return 0;
 }
