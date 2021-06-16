@@ -90,11 +90,12 @@ void test2() {
 
 void test3() {
     list<Person> L;
-    L.push_front(Person("张三", 10));
+    L.push_front(Person("张三", 18));
     L.push_back(Person("李四", 11));
     L.push_back(Person("王二", 12));
     printListPerson(L);
-    //L.sort();
+    L.sort(myCompare);
+    printListPerson(L);
 }
 
 void test4() {
@@ -108,7 +109,7 @@ void test4() {
 int main(int argc, const char * argv[]) {
     //test1();
     //test2();
-    //test3();
-    test4();
+    test3();
+    //test4();
     return 0;
 }
