@@ -15,6 +15,9 @@ void test1() {
     sta.push(2);
     sta.push(3);
     cout<<"size:"<<sta.size()<<endl;
+    
+    bool isEmpty = sta.empty();
+    cout<<"isEmpty:"<<isEmpty<<endl;
 }
 
 int main(int argc, const char * argv[]) {
