@@ -64,6 +64,13 @@ public:
     }
 };
 
+bool myCompare(const Person &ob1, const Person &ob2) {
+    if (ob1.age < ob2.age) {
+        return true;
+    }
+    return false;
+}
+
 void printListPerson(list<Person> &L) {
     for (list<Person>::iterator it = L.begin(); it != L.end(); it++) {
         cout<<"name:"<<(*it).name<<", age:"<<(*it).age<<" "<<endl;
@@ -95,7 +102,7 @@ void test4() {
     v.push_back(Person("张三", 10));
     v.push_back(Person("李四", 11));
     v.push_back(Person("王二", 12));
-    sort(v.begin(), v.end());
+    sort(v.begin(), v.end(), myCompare);
 }
 
 int main(int argc, const char * argv[]) {
