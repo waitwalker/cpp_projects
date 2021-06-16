@@ -24,7 +24,12 @@ void test1() {
         cout<<"value:"<<value<<endl;
     });
     set<int>::iterator it = s.begin();
-    *it = 100;
+    //*it = 100;
+    s.erase(10);
+    
+    for_each(s.begin(), s.end(), [](int value){
+        cout<<"value:"<<value<<endl;
+    });
 }
 
 int main(int argc, const char * argv[]) {
