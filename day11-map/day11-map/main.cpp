@@ -8,6 +8,7 @@
 #include <iostream>
 #include <string.h>
 #include <map>
+#include <vector>
 using namespace std;
 
 void printMap(map<string, int> &m) {
@@ -43,8 +44,30 @@ void test1() {
     
 }
 
+void test2() {
+    map<int, string> m;
+    m.insert(make_pair( 1,"RNG"));
+    m.insert(make_pair( 2,"IG"));
+    m.insert(make_pair( 3, "WE"));
+    m.insert(make_pair( 4, "EDG"));
+    
+    vector<int> v;
+    v.push_back(1);
+    v.push_back(2);
+    v.push_back(3);
+    v.push_back(4);
+    
+    random_shuffle(v.begin(), v.end());
+    
+    // 随机出场
+    for_each(v.begin(), v.end(), [&](int value){
+        cout<<m[value]<<endl;
+    });
+}
+
 
 int main(int argc, const char * argv[]) {
-    test1();
+    //test1();
+    test2();
     return 0;
 }
