@@ -97,9 +97,24 @@ void test3() {
     });
 }
 
+void myPrint(int value) {
+    cout<<value<<endl;
+}
+
+void test4() {
+    vector<int> v;
+    v.push_back(20);
+    v.push_back(30);
+    v.push_back(40);
+    v.push_back(50);
+    v.push_back(60);
+    for_each(v.begin(), v.end(), myPrint);
+}
+
 int main(int argc, const char * argv[]) {
     //test1();
     //test2();
-    test3();
+    //test3();
+    test4();
     return 0;
 }
