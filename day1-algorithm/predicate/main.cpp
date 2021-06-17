@@ -97,9 +97,19 @@ void test3() {
     });
 }
 
-void myPrint(int value) {
-    cout<<value<<endl;
+void myPrint(int value, int v2) {
+    cout<<value+v2<<endl;
 }
+
+// 2 继承binary_function
+class MyPrinter:public binary_function<int, int, void> {
+        
+    
+public:
+    void operator()(int value) const{
+        cout<<value<<endl;
+    }
+};
 
 void test4() {
     vector<int> v;
@@ -108,7 +118,8 @@ void test4() {
     v.push_back(40);
     v.push_back(50);
     v.push_back(60);
-    for_each(v.begin(), v.end(), myPrint);
+    //for_each(v.begin(), v.end(), myPrint);
+    for_each(v.begin(), v.end(), binder2nd<int>(MyPrinter(),1000));
 }
 
 int main(int argc, const char * argv[]) {
