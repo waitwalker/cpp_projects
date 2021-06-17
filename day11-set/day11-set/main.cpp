@@ -105,9 +105,9 @@ public:
         this->name= name;
     }
     /// test3 用到就打开注释
-//    bool operator<(const Person &ob) const{
-//        return this->age < ob.age;
-//    }
+    bool operator<(const Person &ob) const{
+        return this->age < ob.age;
+    }
 };
 
 bool myCompare2(const Person &ob1, const Person &ob2) {
@@ -129,15 +129,29 @@ void test3() {
 }
 
 void test4() {
-    set<Person, myCompare2> s;
-    s.insert(Person(18, "张三"));
-    s.insert(Person(39, "张四"));
-    s.insert(Person(11, "张5"));
-    s.insert(Person(29, "张1"));
-    s.insert(Person(52, "张位"));
-    
-    for_each(s.begin(), s.end(), [](Person ob){
-        cout<<"age:"<<ob.age<<", name:"<<ob.name<<" ";
+//    set<Person, myCompare2> s;
+//    s.insert(Person(18, "张三"));
+//    s.insert(Person(39, "张四"));
+//    s.insert(Person(11, "张5"));
+//    s.insert(Person(29, "张1"));
+//    s.insert(Person(52, "张位"));
+//    
+//    for_each(s.begin(), s.end(), [](Person ob){
+//        cout<<"age:"<<ob.age<<", name:"<<ob.name<<" ";
+//    });
+//    cout<<endl;
+}
+
+void test5() {
+    multiset<int> s;
+    s.insert(30);
+    s.insert(10);
+    s.insert(20);
+    s.insert(50);
+    s.insert(40);
+    s.insert(10);
+    for_each(s.begin(), s.end(), [](int value){
+        cout<<"元素:"<<value<<" ";
     });
     cout<<endl;
 }
@@ -146,6 +160,7 @@ int main(int argc, const char * argv[]) {
     //test1();
     //test2();
     //test3();
-    test4();
+    //test4();
+    test5();
     return 0;
 }
