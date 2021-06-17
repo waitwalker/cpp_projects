@@ -104,11 +104,15 @@ public:
         this->age= age;
         this->name= name;
     }
-    
-    bool operator<(const Person &ob) const{
-        return this->age < ob.age;
-    }
+    /// test3 用到就打开注释
+//    bool operator<(const Person &ob) const{
+//        return this->age < ob.age;
+//    }
 };
+
+bool myCompare2(const Person &ob1, const Person &ob2) {
+    return ob1.age > ob2.age;
+}
 
 void test3() {
     set<Person> s;
@@ -124,9 +128,24 @@ void test3() {
     cout<<endl;
 }
 
+void test4() {
+    set<Person, myCompare2> s;
+    s.insert(Person(18, "张三"));
+    s.insert(Person(39, "张四"));
+    s.insert(Person(11, "张5"));
+    s.insert(Person(29, "张1"));
+    s.insert(Person(52, "张位"));
+    
+    for_each(s.begin(), s.end(), [](Person ob){
+        cout<<"age:"<<ob.age<<", name:"<<ob.name<<" ";
+    });
+    cout<<endl;
+}
+
 int main(int argc, const char * argv[]) {
     //test1();
     //test2();
-    test3();
+    //test3();
+    test4();
     return 0;
 }
