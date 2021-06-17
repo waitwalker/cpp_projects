@@ -77,6 +77,10 @@ public:
     }
 };
 
+bool myGreater2(int value1, int value2) {
+    return value1 > value2;
+}
+
 void test2() {
     set<int, MyGreater> s;
     s.insert(30);
