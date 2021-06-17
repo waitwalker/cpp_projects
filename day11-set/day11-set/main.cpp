@@ -43,6 +43,9 @@ void test1() {
     cout<<"找到的值:"<<*(iter)<<endl;
     //cout<<"找到的值:"<<*(ret)<<endl;
     
+    size_t co = s.count(8);
+    cout<<"查找元素是否存在的另一种方法:"<<co<<endl;
+    
 }
 
 int main(int argc, const char * argv[]) {
