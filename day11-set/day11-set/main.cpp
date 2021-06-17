@@ -62,12 +62,36 @@ void test1() {
     cout<<"string:"<<pair1.first<<endl;
     cout<<"int:"<<pair1.second<<endl;
     
+    // 对组的初始化
     pair<int, string> pair2 = make_pair(9527, "华安");
     cout<<"int:"<<pair2.first<<endl;
     cout<<"string:"<<pair2.second<<endl;
 }
 
+class MyGreater {
+    
+    
+public:
+    bool operator()(int value1, int value2) {
+        return value1 > value2;
+    }
+};
+
+void test2() {
+    set<int, MyGreater> s;
+    s.insert(30);
+    s.insert(10);
+    s.insert(20);
+    s.insert(50);
+    s.insert(40);
+    for_each(s.begin(), s.end(), [](int value){
+        cout<<"元素:"<<value<<" ";
+    });
+    cout<<endl;
+}
+
 int main(int argc, const char * argv[]) {
-    test1();
+    //test1();
+    test2();
     return 0;
 }
