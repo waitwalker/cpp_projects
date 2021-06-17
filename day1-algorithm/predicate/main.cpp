@@ -77,8 +77,29 @@ void test2() {
     cout<<endl;
 }
 
+/// 内建函数对象
+void test3() {
+    // 加法函数对象
+    plus<int> p;
+    cout<<p(10,20)<<endl;
+    
+    vector<int> v;
+    v.push_back(20);
+    v.push_back(30);
+    v.push_back(40);
+    v.push_back(50);
+    v.push_back(60);
+    
+    // 系统内建的函数对象
+    sort(v.begin(), v.end(), greater<int>());
+    for_each(v.begin(), v.end(), [](int value){
+        cout<<"元素:"<<value<<" ";
+    });
+}
+
 int main(int argc, const char * argv[]) {
     //test1();
-    test2();
+    //test2();
+    test3();
     return 0;
 }
