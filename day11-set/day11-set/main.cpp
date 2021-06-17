@@ -46,6 +46,11 @@ void test1() {
     size_t co = s.count(8);
     cout<<"查找元素是否存在的另一种方法:"<<co<<endl;
     
+    set<int>::iterator iter1 = lower_bound(s.begin(), s.end(), 12);
+    set<int>::iterator iter2 = upper_bound(s.begin(), s.end(), 50);
+    cout<<"lower_bound:"<<*iter1<<endl;
+    cout<<"upper_bound:"<<*iter2<<endl;
+    
 }
 
 int main(int argc, const char * argv[]) {
