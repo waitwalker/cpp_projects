@@ -60,7 +60,7 @@ void test2() {
     random_shuffle(v.begin(), v.end());
     
     // 随机出场
-    for_each(v.begin(), v.end(), [&](int value){
+    for_each(v.begin(), v.end(), [&  ](int value){
         cout<<m[value]<<endl;
     });
 }
