@@ -36,6 +36,8 @@ void test1() {
     
     printMap(m);
     
+    
+    cout<<"通过中括号形式取值:"<<m["key2"]<<endl;
 }
 
 
