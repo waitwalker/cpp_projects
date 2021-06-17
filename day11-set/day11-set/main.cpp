@@ -51,6 +51,11 @@ void test1() {
     cout<<"lower_bound:"<<*iter1<<endl;
     cout<<"upper_bound:"<<*iter2<<endl;
     
+    
+    pair<set<int>::const_iterator, set<int>::const_iterator> pair_ret;
+    pair<set<int>::const_iterator, set<int>::const_iterator> ite = s.equal_range(30);
+    cout<<*(ite.first)<<endl;
+    cout<<*(ite.second)<<endl;
 }
 
 int main(int argc, const char * argv[]) {
