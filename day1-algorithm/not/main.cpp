@@ -59,10 +59,44 @@ void test2() {
     cout<<endl;
 }
 
+class Person {
+    
+    
+public:
+    string name;
+    int age;
+    Person(string name, int age){
+        this->name = name;
+        this->age = age;
+    }
+    
+    void showPerson() {
+        cout<<"name = "<<this->name<<", age = "<<this->age<<endl;
+    }
+};
+
+void myPrintPerson(Person &ob) {
+    cout<<"name = "<<ob.name<<", age = "<<ob.age<<endl;
+}
+
+void test3() {
+    vector<Person> v;
+    v.push_back(Person("张三", 12));
+    v.push_back(Person("张2", 11));
+    v.push_back(Person("张4", 5));
+    v.push_back(Person("张5", 18));
+    
+    // 普通函数遍历
+    //for_each(v.begin(), v.end(), myPrintPerson);
+    
+    // 成员函数
+    for_each(v.begin(), v.end(), mem_fun_ref_t<int, void>(&Person::showPerson));
+}
+
 int main(int argc, const char * argv[]) {
     
     //test1();
-    test2();
-    
+    //test2();
+    test3();
     return 0;
 }
