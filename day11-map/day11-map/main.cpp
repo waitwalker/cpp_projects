@@ -10,6 +10,12 @@
 #include <map>
 using namespace std;
 
+void printMap(map<string, int> &m) {
+    for (map<string, int>::iterator it = m.begin(); it != m.end(); it++) {
+        cout<<"key:"<<(*it).first<<",value:"<<(*it).second<<endl;
+    }
+}
+
 void test1() {
     map<string, int> m;
     // 第一种插入方式 不推荐
@@ -27,6 +33,8 @@ void test1() {
     for_each(m.begin(), m.end(), [](pair<string, int> element){
         cout<<"key:"<<element.first<<",value:"<<element.second<<endl;
     });
+    
+    printMap(m);
     
 }
 
