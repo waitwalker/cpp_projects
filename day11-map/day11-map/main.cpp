@@ -23,6 +23,11 @@ void test1() {
     
     // 第四种插入方式 读推荐 写不推荐
     m["key4"] = 123456;
+    
+    for_each(m.begin(), m.end(), [](pair<string, int> element){
+        cout<<"key:"<<element.first<<",value:"<<element.second<<endl;
+    });
+    
 }
 
 
