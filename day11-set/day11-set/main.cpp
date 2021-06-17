@@ -56,6 +56,11 @@ void test1() {
     pair<set<int>::const_iterator, set<int>::const_iterator> ite = s.equal_range(30);
     cout<<"上限:"<<*(ite.first)<<endl;
     cout<<"下限:"<<*(ite.second)<<endl;
+    
+    // 对组
+    pair<string, int> pair1("123",456);
+    cout<<"string:"<<(pair1.first)<<endl;
+    cout<<"int:"<<(pair1.second)<<endl;
 }
 
 int main(int argc, const char * argv[]) {
