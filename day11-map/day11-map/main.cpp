@@ -36,8 +36,11 @@ void test1() {
     
     printMap(m);
     
-    
     cout<<"通过中括号形式取值:"<<m["key2"]<<endl;
+    
+    map<string,int>::iterator it = m.find("key2");
+    cout<<"查找到的结果key:"<<(*it).first<<",查找到的结果value:"<<(*it).second<<endl;
+    
 }
 
 
