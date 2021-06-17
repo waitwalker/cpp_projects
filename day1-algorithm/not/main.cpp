@@ -90,13 +90,30 @@ void test3() {
     //for_each(v.begin(), v.end(), myPrintPerson);
     
     // 成员函数
-    for_each(v.begin(), v.end(), mem_fun_ref_t<int, void>(&Person::showPerson));
+//    for_each(v.begin(), v.end(), mem_fun_ref_t<int, void>(&Person::showPerson));
+    
+    int a[111];
+    cout<<sizeof(a)<<endl;
+}
+
+void printValue(int v) {
+    cout<<v<<" ";
+}
+
+void test4() {
+    vector<int> v;
+    v.push_back(10);
+    v.push_back(20);
+    v.push_back(30);
+    v.push_back(40);
+    for_each(v.begin(), v.end(), printValue);
 }
 
 int main(int argc, const char * argv[]) {
     
     //test1();
     //test2();
-    test3();
+    //test3();
+    test4();
     return 0;
 }
