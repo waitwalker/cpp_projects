@@ -94,8 +94,39 @@ void test2() {
     cout<<endl;
 }
 
+class Person {
+    
+    
+public:
+    int age;
+    string name;
+    Person(int age, string name) {
+        this->age= age;
+        this->name= name;
+    }
+    
+    bool operator<(const Person &ob) const{
+        return this->age < ob.age;
+    }
+};
+
+void test3() {
+    set<Person> s;
+    s.insert(Person(18, "张三"));
+    s.insert(Person(39, "张四"));
+    s.insert(Person(11, "张5"));
+    s.insert(Person(29, "张1"));
+    s.insert(Person(52, "张位"));
+    
+    for_each(s.begin(), s.end(), [](Person ob){
+        cout<<"age:"<<ob.age<<", name:"<<ob.name<<" ";
+    });
+    cout<<endl;
+}
+
 int main(int argc, const char * argv[]) {
     //test1();
-    test2();
+    //test2();
+    test3();
     return 0;
 }
