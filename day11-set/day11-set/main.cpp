@@ -59,8 +59,12 @@ void test1() {
     
     // 对组
     pair<string, int> pair1("123",456);
-    cout<<"string:"<<(pair1.first)<<endl;
-    cout<<"int:"<<(pair1.second)<<endl;
+    cout<<"string:"<<pair1.first<<endl;
+    cout<<"int:"<<pair1.second<<endl;
+    
+    pair<int, string> pair2 = make_pair(9527, "华安");
+    cout<<"int:"<<pair2.first<<endl;
+    cout<<"string:"<<pair2.second<<endl;
 }
 
 int main(int argc, const char * argv[]) {
