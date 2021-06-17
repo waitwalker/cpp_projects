@@ -54,8 +54,8 @@ void test1() {
     
     pair<set<int>::const_iterator, set<int>::const_iterator> pair_ret;
     pair<set<int>::const_iterator, set<int>::const_iterator> ite = s.equal_range(30);
-    cout<<*(ite.first)<<endl;
-    cout<<*(ite.second)<<endl;
+    cout<<"上限:"<<*(ite.first)<<endl;
+    cout<<"下限:"<<*(ite.second)<<endl;
 }
 
 int main(int argc, const char * argv[]) {
