@@ -44,7 +44,28 @@ void test1() {
     cout<<"找到第一个大于大于的元素:"<<*it2<<endl;
 }
 
+bool myGreater2(int value1, int value2) {
+    return value1 > value2;
+}
+
+void test2() {
+    vector<int> v;
+    v.push_back(20);
+    v.push_back(30);
+    v.push_back(40);
+    v.push_back(50);
+    v.push_back(60);
+    sort(v.begin(), v.end(), myGreater2);
+    for_each(v.begin(), v.end(), [](int value){
+        cout<<"元素:"<<value<<" ";
+    });
+    cout<<endl;
+    
+    
+}
+
 int main(int argc, const char * argv[]) {
-    test1();
+    //test1();
+    test2();
     return 0;
 }
