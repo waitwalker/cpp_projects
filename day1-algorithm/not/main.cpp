@@ -32,11 +32,11 @@ void test1() {
     cout<<*it<<endl;
 }
 
-class MyGreater2 {
+class MyGreater2 : public unary_function<int, bool>{
     
     
 public:
-    bool operator()(int v1, int v2) {
+    bool operator()(int v1, int v2) const{
         return v1 > v2;
     }
 };
@@ -52,7 +52,7 @@ void test2() {
         cout<<value<<" ";
     });
     cout<<endl;
-    sort(v.begin(), v.end(), MyGreater2());
+    sort(v.begin(), v.end(), not2(MyGreater2()));
     for_each(v.begin(), v.end(), [](int value){
         cout<<value<<" ";
     });
