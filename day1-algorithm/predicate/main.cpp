@@ -48,6 +48,15 @@ bool myGreater2(int value1, int value2) {
     return value1 > value2;
 }
 
+class MyGreater3 {
+    
+    
+public:
+    bool operator()(int v1, int v2){
+        return v1 < v2;
+    }
+};
+
 void test2() {
     vector<int> v;
     v.push_back(20);
@@ -61,7 +70,11 @@ void test2() {
     });
     cout<<endl;
     
-    
+    sort(v.begin(), v.end(), MyGreater3());
+    for_each(v.begin(), v.end(), [](int value){
+        cout<<"元素:"<<value<<" ";
+    });
+    cout<<endl;
 }
 
 int main(int argc, const char * argv[]) {
