@@ -52,7 +52,7 @@ void test2() {
         cout<<value<<" ";
     });
     cout<<endl;
-    sort(v.begin(), v.end(), not2(MyGreater2()));
+    sort(v.begin(), v.end(), not2(greater<int>()));
     for_each(v.begin(), v.end(), [](int value){
         cout<<value<<" ";
     });
