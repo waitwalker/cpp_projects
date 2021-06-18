@@ -37,8 +37,26 @@ void test1() {
     
 }
 
+/// 查找find
+void test2() {
+    vector<int> v;
+    v.push_back(12);
+    v.push_back(234);
+    v.push_back(4);
+    v.push_back(67);
+    v.push_back(2);
+    v.push_back(432);
+    v.push_back(23);
+    v.push_back(45);
+    v.push_back(6);
+    v.push_back(78);
+    vector<int>::iterator it = find(v.begin(), v.end(), 23);
+    cout<<"查找到的元素:"<<*it<<endl;
+}
+
 
 int main(int argc, const char * argv[]) {
-    test1();
+    //test1();
+    test2();
     return 0;
 }
