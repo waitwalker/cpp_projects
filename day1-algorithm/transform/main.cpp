@@ -87,6 +87,15 @@ bool myGrater(int value) {
     return value > 30;
 }
 
+class Grater {
+    
+    
+public:
+    bool operator()(int value){
+        return value > 30;
+    }
+};
+
 void test4() {
     vector<int> v;
     v.push_back(12);
@@ -100,8 +109,13 @@ void test4() {
     v.push_back(6);
     v.push_back(78);
     
+    // 普通函数方式实现
     vector<int>::iterator it = find_if(v.begin(), v.end(), myGrater);
     cout<<"查找到的元素:"<<*it<<endl;
+    
+    // 通过函数对象(仿函数)实现
+    vector<int>::iterator it1 = find_if(v.begin(), v.end(), Grater());
+    cout<<"查找到的元素:"<<*it1<<endl;
 }
 
 int main(int argc, const char * argv[]) {
