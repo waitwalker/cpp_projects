@@ -54,9 +54,38 @@ void test2() {
     cout<<"查找到的元素:"<<*it<<endl;
 }
 
+class Person {
+    
+    
+public:
+    string name;
+    int age;
+    Person(string name, int age){
+        this->name = name;
+        this->age = age;
+    }
+    
+    bool operator==(const Person &ob1){
+        return ob1.name == this->name && ob1.age == this->age;
+    }
+};
+
+void test3() {
+    vector<Person> v;
+    v.push_back(Person("张三", 12));
+    v.push_back(Person("张1", 13));
+    v.push_back(Person("张2", 14));
+    v.push_back(Person("张5", 15));
+    
+    Person tmp("张三",12);
+    vector<Person>::iterator it = find(v.begin(), v.end(), tmp);
+    cout<<"查找到的元素:"<<(*it).name<<endl;
+    
+}
 
 int main(int argc, const char * argv[]) {
     //test1();
-    test2();
+    //test2();
+    test3();
     return 0;
 }
