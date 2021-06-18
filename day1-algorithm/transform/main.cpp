@@ -160,7 +160,12 @@ void test6(){
 }
 
 void test7() {
-    
+    vector<int> v;
+    v.push_back(12);
+    v.push_back(13);
+    v.push_back(124);
+    size_t num = count(v.begin(), v.end(), 12);
+    cout<<"统计元素出现个数:"<<num<<endl;
 }
 
 int main(int argc, const char * argv[]) {
@@ -169,7 +174,8 @@ int main(int argc, const char * argv[]) {
     //test3();
     //test4();
     //test5();
-    test6();
+    //test6();
+    test7();
     return 0;
 }
 
