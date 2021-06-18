@@ -269,6 +269,18 @@ void test12() {
     cout<<endl;
 }
 
+void test13() {
+    vector<int> v;
+    v.push_back(12);
+    v.push_back(13);
+    v.push_back(14);
+    v.push_back(15);
+    
+    vector<int> v2;
+    v2.resize(v.size());
+    swap(v, v2);
+}
+
 int main(int argc, const char * argv[]) {
     //test1();
     //test2();
@@ -281,7 +293,7 @@ int main(int argc, const char * argv[]) {
     //test9();
     //test10();
     //test11();
-    test12();
+    //test12();
     return 0;
 }
 
