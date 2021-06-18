@@ -326,6 +326,15 @@ void test15() {
         cout<<"元素:"<<value<<" ";
     });
     cout<<endl;
+    
+    // 求差集
+    vector<int> v5;
+    v5.resize(v1.size());
+    set_difference(v1.begin(), v1.end(), v2.begin(), v2.end(), v5.begin());
+    for_each(v5.begin(), v5.end(), [](int value){
+        cout<<"元素:"<<value<<" ";
+    });
+    cout<<endl;
 }
 
 int main(int argc, const char * argv[]) {
