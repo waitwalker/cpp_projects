@@ -159,6 +159,10 @@ void test6(){
     cout<<"查找结果:"<<ret<<endl;
 }
 
+bool gra(int v){
+    return v > 10;
+}
+
 void test7() {
     vector<int> v;
     v.push_back(12);
@@ -166,6 +170,8 @@ void test7() {
     v.push_back(124);
     size_t num = count(v.begin(), v.end(), 12);
     cout<<"统计元素出现个数:"<<num<<endl;
+    
+    cout<<count_if(v.begin(), v.end(), gra);
 }
 
 int main(int argc, const char * argv[]) {
