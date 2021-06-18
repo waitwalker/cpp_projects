@@ -9,8 +9,13 @@ int main(int argc, char *argv[])
 
     // 创建一个窗口
     Widget w;
+
+    // 显示窗口
     w.show();
 
-    // 主事件循环
+    // 窗口默认是隐藏的
+    //w.hide();
+
+    // 主事件循环 带阻塞的,等待用户在窗口上操作
     return a.exec();
 }
