@@ -213,6 +213,23 @@ void test9() {
     cout<<endl;
 }
 
+void test10() {
+    vector<int> v;
+    v.push_back(12);
+    v.push_back(13);
+    v.push_back(14);
+    v.push_back(15);
+    for_each(v.begin(), v.end(), [](int value){
+        cout<<"元素:"<<value<<" ";
+    });
+    cout<<endl;
+    reverse(v.begin(), v.end());
+    for_each(v.begin(), v.end(), [](int value){
+        cout<<"元素:"<<value<<" ";
+    });
+    cout<<endl;
+}
+
 int main(int argc, const char * argv[]) {
     //test1();
     //test2();
@@ -222,7 +239,8 @@ int main(int argc, const char * argv[]) {
     //test6();
     //test7();
     //test8();
-    test9();
+    //test9();
+    test10();
     return 0;
 }
 
