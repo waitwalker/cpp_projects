@@ -75,9 +75,16 @@ void speech_contest(int index, vector<int> &v, map<int, Speaker> &m, vector<int>
             for (multimap<int, int,greater<int>>::iterator mit = m2.begin(); mit != m2.end() && i < 3; mit++,i++) {
                 // 将晋级的编号放入晋级的容器中
                 v1.push_back((*mit).second);
-                m2.clear();
             }
+            m2.clear();
         }
+    }
+}
+
+void printSpeechResult(int index, vector<int> &v, map<int, Speaker> &m, vector<int> &v1) {
+    cout<<"第"<<index<<"轮比赛结果如下"<<endl;
+    for (vector<int>::iterator it = v.begin(); it != v.end(); it++) {
+        
     }
 }
 
@@ -109,6 +116,8 @@ int main(int argc, const char * argv[]) {
     
     // 1第一轮 v选手编号 m选手信息 v1晋级容器
     speech_contest(1, v, m, v1);
+    
+    printSpeechResult(1, v, m, v1);
     
     return 0;
 }
