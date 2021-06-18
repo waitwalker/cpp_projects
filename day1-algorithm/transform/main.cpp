@@ -26,7 +26,7 @@ void test1() {
     v2.resize(v1.size());
     transform(v1.begin(), v1.end(), v2.begin(), [](int va){
         cout<<"搬运的元素:"<<va<<" ";
-        return va;
+        return va + 10;
     });
     cout<<endl;
     
