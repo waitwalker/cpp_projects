@@ -281,6 +281,19 @@ void test13() {
     swap(v, v2);
 }
 
+/// 算术生成算法
+void test14() {
+    // 求和算法
+    //aacumulate();
+    
+    vector<int> v;
+    v.resize(100);
+    fill(v.begin(), v.end(), 100);
+    for_each(v.begin(), v.end(), [](int value){
+        cout<<"元素:"<<value<<endl;
+    });
+}
+
 int main(int argc, const char * argv[]) {
     //test1();
     //test2();
@@ -294,6 +307,8 @@ int main(int argc, const char * argv[]) {
     //test10();
     //test11();
     //test12();
+    //test13();
+    test14();
     return 0;
 }
 
