@@ -294,6 +294,40 @@ void test14() {
     });
 }
 
+void test15() {
+    vector<int> v1;
+    v1.push_back(1);
+    v1.push_back(2);
+    v1.push_back(3);
+    v1.push_back(4);
+    v1.push_back(5);
+    
+    vector<int> v2;
+    v2.push_back(1);
+    v2.push_back(2);
+    v2.push_back(6);
+    v2.push_back(7);
+    v2.push_back(8);
+    
+    // 求交集
+    vector<int> v3;
+    v3.resize(min(v1.size(), v2.size()));
+    set_intersection(v1.begin(), v1.end(), v2.begin(), v2.end(), v3.begin());
+    for_each(v3.begin(), v3.end(), [](int value){
+        cout<<"元素:"<<value<<" ";
+    });
+    cout<<endl;
+    
+    // 求并集
+    vector<int> v4;
+    v4.resize(v1.size() + v2.size());
+    set_union(v1.begin(), v1.end(), v2.begin(), v2.end(), v4.begin());
+    for_each(v4.begin(), v4.end(), [](int value){
+        cout<<"元素:"<<value<<" ";
+    });
+    cout<<endl;
+}
+
 int main(int argc, const char * argv[]) {
     //test1();
     //test2();
@@ -308,7 +342,8 @@ int main(int argc, const char * argv[]) {
     //test11();
     //test12();
     //test13();
-    test14();
+    //test14();
+    test15();
     return 0;
 }
 
