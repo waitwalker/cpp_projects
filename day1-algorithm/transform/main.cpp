@@ -246,6 +246,10 @@ void test11() {
     cout<<endl;
 }
 
+bool replaceValue(int value) {
+    return value > 13;
+}
+
 void test12() {
     vector<int> v;
     v.push_back(12);
@@ -253,6 +257,12 @@ void test12() {
     v.push_back(14);
     v.push_back(15);
     replace(v.begin(), v.end(), 12, 100);
+    for_each(v.begin(), v.end(), [](int value){
+        cout<<"元素:"<<value<<" ";
+    });
+    cout<<endl;
+    
+    replace_if(v.begin(), v.end(), replaceValue, 100);
     for_each(v.begin(), v.end(), [](int value){
         cout<<"元素:"<<value<<" ";
     });
