@@ -149,11 +149,27 @@ void test5() {
     cout<<"查找到的元素:"<<(*it1).name<<endl;
 }
 
+/// 二分法查找
+void test6(){
+    vector<int> v;
+    v.push_back(12);
+    v.push_back(13);
+    v.push_back(124);
+    bool ret = binary_search(v.begin(), v.end(), 67);
+    cout<<"查找结果:"<<ret<<endl;
+}
+
+void test7() {
+    
+}
+
 int main(int argc, const char * argv[]) {
     //test1();
     //test2();
     //test3();
     //test4();
-    test5();
+    //test5();
+    test6();
     return 0;
 }
+
