@@ -107,6 +107,7 @@ void test4() {
     v.push_back(30);
     v.push_back(40);
     for_each(v.begin(), v.end(), printValue);
+    cout<<endl;
 }
 
 int main(int argc, const char * argv[]) {
