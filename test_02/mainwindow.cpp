@@ -31,12 +31,27 @@ MainWindow::MainWindow(QWidget *parent)
     QAction *saveFile = new QAction("保存",this);
     QAction *recentFile = new QAction("最近",this);
     file->addAction(newFile);
+    file->addSeparator();//分割线
     file->addAction(saveFile);
+    file->addSeparator();//分割线
     file->addAction(recentFile);
 
     // 给菜单项 添加快捷键
-    newFile->setShortcut(QKeySequence(Qt::CTRL+Qt::Key_N));
-    saveFile->setShortcut(QKeySequence(Qt::CTRL+Qt::Key_S));
+    newFile->setShortcut(QKeySequence(Qt::CTRL|Qt::Key_N));
+    saveFile->setShortcut(QKeySequence(Qt::CTRL|Qt::Key_S));
+
+    // 添加事件
+    connect(newFile,&QAction::triggered,[&](){
+        qDebug()<<"新建文件成功";
+    });
+
+    connect(saveFile,&QAction::triggered,[&](){
+        qDebug()<<"保存文件成功";
+    });
+
+
+
+
 
 
 }
