@@ -75,12 +75,13 @@ Widget::Widget(QWidget *parent)
     void (Student:: *p2)(QString foodName) = &Student::treat;
     connect(tea,p1,stu,p2);
 #endif
-
+    QWidget *secondWindow = new QWidget();
     connect(button2,&QPushButton::clicked,[=](){
         // 让老师发出饿的信号
         qDebug()<<"老师饿了";
         // 发出信号
         emit tea->hungry("老师饿了");
+
     });
 }
 
