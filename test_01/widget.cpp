@@ -8,7 +8,7 @@ Widget::Widget(QWidget *parent)
     , ui(new Ui::Widget)
 {
     ui->setupUi(this);
-    this->resize(800,600);
+    this->setFixedSize(800,600);
 
     this->setWindowTitle("登录");
 
