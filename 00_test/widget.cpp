@@ -2,8 +2,6 @@
 #include "ui_widget.h"
 #include <QString>
 #include <QDebug>
-#include <iostream>
-using namespace std;
 
 Widget::Widget(QWidget *parent)
     : QWidget(parent)
@@ -13,9 +11,11 @@ Widget::Widget(QWidget *parent)
     ui->setupUi(this);
     this->setWindowTitle("SourceTree");
 
+    // 固定窗口
+    this->setFixedSize(400,500);
+
     QString str = this->windowTitle();
     qDebug()<<str;
-    cout<<str<<endl;
 }
 
 Widget::~Widget()
