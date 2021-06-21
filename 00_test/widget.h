@@ -16,6 +16,7 @@ class Widget : public QWidget
 public:
     // 构造和析构函数
     Widget(QWidget *parent = nullptr);
+    void buttonAction();
     ~Widget();
 
 private:
