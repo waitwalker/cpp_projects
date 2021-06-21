@@ -53,9 +53,17 @@ OBJECTS_DIR   = ./
 ####### Files
 
 SOURCES       = ../00_test/main.cpp \
-		../00_test/widget.cpp moc_widget.cpp
+		../00_test/student.cpp \
+		../00_test/teacher.cpp \
+		../00_test/widget.cpp moc_student.cpp \
+		moc_teacher.cpp \
+		moc_widget.cpp
 OBJECTS       = main.o \
+		student.o \
+		teacher.o \
 		widget.o \
+		moc_student.o \
+		moc_teacher.o \
 		moc_widget.o
 DIST          = /Users/waitwalker/Qt/6.2.0/macos/mkspecs/features/spec_pre.prf \
 		/Users/waitwalker/Qt/6.2.0/macos/mkspecs/features/device_config.prf \
@@ -261,6 +269,7 @@ DIST          = /Users/waitwalker/Qt/6.2.0/macos/mkspecs/features/spec_pre.prf \
 		/Users/waitwalker/Qt/6.2.0/macos/mkspecs/features/qt_config.prf \
 		/Users/waitwalker/Qt/6.2.0/macos/mkspecs/macx-clang/qmake.conf \
 		/Users/waitwalker/Qt/6.2.0/macos/mkspecs/features/spec_post.prf \
+		../00_test/.qmake.stash \
 		/Users/waitwalker/Qt/6.2.0/macos/mkspecs/features/exclusive_builds.prf \
 		/Users/waitwalker/Qt/6.2.0/macos/mkspecs/features/mac/sdk.prf \
 		/Users/waitwalker/Qt/6.2.0/macos/mkspecs/features/toolchain.prf \
@@ -289,7 +298,11 @@ DIST          = /Users/waitwalker/Qt/6.2.0/macos/mkspecs/features/spec_pre.prf \
 		/Users/waitwalker/Qt/6.2.0/macos/mkspecs/features/exceptions.prf \
 		/Users/waitwalker/Qt/6.2.0/macos/mkspecs/features/yacc.prf \
 		/Users/waitwalker/Qt/6.2.0/macos/mkspecs/features/lex.prf \
-		../00_test/00_test.pro ../00_test/widget.h ../00_test/main.cpp \
+		../00_test/00_test.pro ../00_test/student.h \
+		../00_test/teacher.h \
+		../00_test/widget.h ../00_test/main.cpp \
+		../00_test/student.cpp \
+		../00_test/teacher.cpp \
 		../00_test/widget.cpp
 QMAKE_TARGET  = 00_test
 DESTDIR       = 
@@ -299,7 +312,7 @@ TARGET        = 00_test.app/Contents/MacOS/00_test
 EXPORT_QMAKE_MAC_SDK = macosx
 EXPORT_QMAKE_MAC_SDK_VERSION = 11.3
 EXPORT_QMAKE_XCODE_DEVELOPER_PATH = /Applications/Xcode.app/Contents/Developer
-EXPORT__QMAKE_STASH_ = 
+EXPORT__QMAKE_STASH_ = /Users/waitwalker/Desktop/工作/github_projects/cpp_projects/build-00_test-Qt_6_2_0_for_macOS-Debug/.qmake.stash
 EXPORT_VALID_ARCHS = x86_64 arm64
 EXPORT_ACTIVE_ARCH = x86_64
 EXPORT_ARCHS = $(filter $(EXPORT_VALID_ARCHS), $(if $(ARCHS), $(ARCHS), $(if $(EXPORT_ACTIVE_ARCH), $(EXPORT_ACTIVE_ARCH), $(EXPORT_VALID_ARCHS))))
@@ -519,6 +532,7 @@ Makefile: ../00_test/00_test.pro /Users/waitwalker/Qt/6.2.0/macos/mkspecs/macx-c
 		/Users/waitwalker/Qt/6.2.0/macos/mkspecs/features/qt_config.prf \
 		/Users/waitwalker/Qt/6.2.0/macos/mkspecs/macx-clang/qmake.conf \
 		/Users/waitwalker/Qt/6.2.0/macos/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		/Users/waitwalker/Qt/6.2.0/macos/mkspecs/features/exclusive_builds.prf \
 		/Users/waitwalker/Qt/6.2.0/macos/mkspecs/features/mac/sdk.prf \
 		/Users/waitwalker/Qt/6.2.0/macos/mkspecs/features/toolchain.prf \
@@ -756,6 +770,7 @@ Makefile: ../00_test/00_test.pro /Users/waitwalker/Qt/6.2.0/macos/mkspecs/macx-c
 /Users/waitwalker/Qt/6.2.0/macos/mkspecs/features/qt_config.prf:
 /Users/waitwalker/Qt/6.2.0/macos/mkspecs/macx-clang/qmake.conf:
 /Users/waitwalker/Qt/6.2.0/macos/mkspecs/features/spec_post.prf:
+.qmake.stash:
 /Users/waitwalker/Qt/6.2.0/macos/mkspecs/features/exclusive_builds.prf:
 /Users/waitwalker/Qt/6.2.0/macos/mkspecs/features/mac/sdk.prf:
 /Users/waitwalker/Qt/6.2.0/macos/mkspecs/features/toolchain.prf:
@@ -817,8 +832,8 @@ dist: distdir FORCE
 distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
-	$(COPY_FILE) --parents ../00_test/widget.h $(DISTDIR)/
-	$(COPY_FILE) --parents ../00_test/main.cpp ../00_test/widget.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../00_test/student.h ../00_test/teacher.h ../00_test/widget.h $(DISTDIR)/
+	$(COPY_FILE) --parents ../00_test/main.cpp ../00_test/student.cpp ../00_test/teacher.cpp ../00_test/widget.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents ../00_test/widget.ui $(DISTDIR)/
 
 
@@ -829,6 +844,7 @@ clean: compiler_clean
 
 distclean: clean 
 	-$(DEL_FILE) -r 00_test.app
+	-$(DEL_FILE) .qmake.stash
 	-$(DEL_FILE) Makefile
 
 
@@ -847,9 +863,21 @@ benchmark: first
 
 compiler_rcc_make_all:
 compiler_rcc_clean:
-compiler_moc_header_make_all: moc_widget.cpp
+compiler_moc_header_make_all: moc_student.cpp moc_teacher.cpp moc_widget.cpp
 compiler_moc_header_clean:
-	-$(DEL_FILE) moc_widget.cpp
+	-$(DEL_FILE) moc_student.cpp moc_teacher.cpp moc_widget.cpp
+moc_student.cpp: ../00_test/student.h \
+		/Users/waitwalker/Qt/6.2.0/macos/lib/QtCore.framework/Headers/QObject \
+		/Users/waitwalker/Qt/6.2.0/macos/lib/QtCore.framework/Headers/qobject.h \
+		/Users/waitwalker/Qt/6.2.0/macos/libexec/moc
+	/Users/waitwalker/Qt/6.2.0/macos/libexec/moc $(DEFINES) -D__APPLE__ -D__GNUC__=4 -D__APPLE_CC__ -D__cplusplus=199711L -D__APPLE_CC__=6000 -D__clang__ -D__clang_major__=12 -D__clang_minor__=0 -D__clang_patchlevel__=5 -D__GNUC__=4 -D__GNUC_MINOR__=2 -D__GNUC_PATCHLEVEL__=1 -I/Users/waitwalker/Qt/6.2.0/macos/mkspecs/macx-clang -I/Users/waitwalker/Desktop/工作/github_projects/cpp_projects/00_test -I/Users/waitwalker/Qt/6.2.0/macos/lib/QtWidgets.framework/Headers -I/Users/waitwalker/Qt/6.2.0/macos/lib/QtGui.framework/Headers -I/Users/waitwalker/Qt/6.2.0/macos/lib/QtCore.framework/Headers -I. -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1 -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.5/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -F/Users/waitwalker/Qt/6.2.0/macos/lib ../00_test/student.h -o moc_student.cpp
+
+moc_teacher.cpp: ../00_test/teacher.h \
+		/Users/waitwalker/Qt/6.2.0/macos/lib/QtCore.framework/Headers/QObject \
+		/Users/waitwalker/Qt/6.2.0/macos/lib/QtCore.framework/Headers/qobject.h \
+		/Users/waitwalker/Qt/6.2.0/macos/libexec/moc
+	/Users/waitwalker/Qt/6.2.0/macos/libexec/moc $(DEFINES) -D__APPLE__ -D__GNUC__=4 -D__APPLE_CC__ -D__cplusplus=199711L -D__APPLE_CC__=6000 -D__clang__ -D__clang_major__=12 -D__clang_minor__=0 -D__clang_patchlevel__=5 -D__GNUC__=4 -D__GNUC_MINOR__=2 -D__GNUC_PATCHLEVEL__=1 -I/Users/waitwalker/Qt/6.2.0/macos/mkspecs/macx-clang -I/Users/waitwalker/Desktop/工作/github_projects/cpp_projects/00_test -I/Users/waitwalker/Qt/6.2.0/macos/lib/QtWidgets.framework/Headers -I/Users/waitwalker/Qt/6.2.0/macos/lib/QtGui.framework/Headers -I/Users/waitwalker/Qt/6.2.0/macos/lib/QtCore.framework/Headers -I. -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1 -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.5/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -F/Users/waitwalker/Qt/6.2.0/macos/lib ../00_test/teacher.h -o moc_teacher.cpp
+
 moc_widget.cpp: ../00_test/widget.h \
 		/Users/waitwalker/Qt/6.2.0/macos/lib/QtWidgets.framework/Headers/QWidget \
 		/Users/waitwalker/Qt/6.2.0/macos/lib/QtWidgets.framework/Headers/qwidget.h \
@@ -886,11 +914,33 @@ main.o: ../00_test/main.cpp ../00_test/widget.h \
 		/Users/waitwalker/Qt/6.2.0/macos/lib/QtWidgets.framework/Headers/qapplication.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../00_test/main.cpp
 
+student.o: ../00_test/student.cpp ../00_test/student.h \
+		/Users/waitwalker/Qt/6.2.0/macos/lib/QtCore.framework/Headers/QObject \
+		/Users/waitwalker/Qt/6.2.0/macos/lib/QtCore.framework/Headers/qobject.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o student.o ../00_test/student.cpp
+
+teacher.o: ../00_test/teacher.cpp ../00_test/teacher.h \
+		/Users/waitwalker/Qt/6.2.0/macos/lib/QtCore.framework/Headers/QObject \
+		/Users/waitwalker/Qt/6.2.0/macos/lib/QtCore.framework/Headers/qobject.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o teacher.o ../00_test/teacher.cpp
+
 widget.o: ../00_test/widget.cpp ../00_test/widget.h \
 		/Users/waitwalker/Qt/6.2.0/macos/lib/QtWidgets.framework/Headers/QWidget \
 		/Users/waitwalker/Qt/6.2.0/macos/lib/QtWidgets.framework/Headers/qwidget.h \
-		ui_widget.h
+		ui_widget.h \
+		/Users/waitwalker/Qt/6.2.0/macos/lib/QtCore.framework/Headers/QString \
+		/Users/waitwalker/Qt/6.2.0/macos/lib/QtCore.framework/Headers/qstring.h \
+		/Users/waitwalker/Qt/6.2.0/macos/lib/QtCore.framework/Headers/QDebug \
+		/Users/waitwalker/Qt/6.2.0/macos/lib/QtCore.framework/Headers/qdebug.h \
+		/Users/waitwalker/Qt/6.2.0/macos/lib/QtWidgets.framework/Headers/QPushButton \
+		/Users/waitwalker/Qt/6.2.0/macos/lib/QtWidgets.framework/Headers/qpushbutton.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o widget.o ../00_test/widget.cpp
+
+moc_student.o: moc_student.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_student.o moc_student.cpp
+
+moc_teacher.o: moc_teacher.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_teacher.o moc_teacher.cpp
 
 moc_widget.o: moc_widget.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_widget.o moc_widget.cpp
