@@ -7,6 +7,7 @@
 #include <QDockWidget>
 #include <QTextEdit>
 
+// QMainWindow 及子控件相关API
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -107,8 +108,6 @@ MainWindow::MainWindow(QWidget *parent)
     QTextEdit *textEdit = new QTextEdit(this);
     textEdit->setText("今天是好的电话号");
     this->setCentralWidget(textEdit);
-
-
 }
 
 MainWindow::~MainWindow()
