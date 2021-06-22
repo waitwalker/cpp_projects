@@ -2,6 +2,8 @@
 #include "ui_mainwindow.h"
 #include <QMenuBar>
 #include <QToolBar>
+#include <QStatusBar>
+#include <QLabel>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -11,7 +13,7 @@ MainWindow::MainWindow(QWidget *parent)
     //this->setFixedSize(300,400);
     this->setWindowTitle("登录");
 
-    // 创建一个菜单栏
+    // 1.创建一个菜单栏
     QMenuBar *menuBar = new QMenuBar(this);
 
     // 将菜单栏添加到主窗口中
@@ -50,7 +52,7 @@ MainWindow::MainWindow(QWidget *parent)
         qDebug()<<"保存文件成功";
     });
 
-    // 添加工具栏
+    // 2.添加工具栏
     QToolBar *toolBar = new QToolBar(this);
 
     // 将工具栏添加到主窗口中
@@ -81,7 +83,17 @@ MainWindow::MainWindow(QWidget *parent)
     // 设置工具栏允许的位置
     toolBar->setAllowedAreas(Qt::LeftToolBarArea | Qt::RightToolBarArea);
 
+    // 3. 创建一个状态栏
+    QStatusBar *statusBar = new QStatusBar(this);
 
+    // 将状态栏添加到主窗口中
+    this->setStatusBar(statusBar);
+
+    // 创建两个label
+    QLabel *label1 = new QLabel("左侧提示信息",this);
+    QLabel *label2 = new QLabel("右侧提示信息",this);
+    statusBar->addWidget(label1);
+    statusBar->addWidget(label2);
 
 }
 
