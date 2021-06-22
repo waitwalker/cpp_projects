@@ -5,6 +5,7 @@
 #include <QMessageBox>
 #include <QFontDialog>
 #include <QColorDialog>
+#include <QFileDialog>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -87,20 +88,18 @@ MainWindow::MainWindow(QWidget *parent)
     button7->setGeometry(300,200,100,100);
     connect(button7,&QPushButton::clicked,[&](){
         // 颜色对话框 是一个模态的对话框 获取系统字体
-        bool flag;
         QColor color;
         color = QColorDialog::getColor();
         qDebug()<<"R:"<<color.red()<<"G:"<<color.green()<<"B:"<<color.blue();
     });
 
-    QPushButton *button8 = new QPushButton("颜色",this);
+    QPushButton *button8 = new QPushButton("文件",this);
     button8->setGeometry(300,300,100,100);
     connect(button8,&QPushButton::clicked,[&](){
-        // 字体对话框 是一个模态的对话框 获取系统字体
-        bool flag;
-        QFont font;
-        font = QFontDialog::getFont(&flag,QFont("Apple"),this);
-        qDebug()<<"结果:"<<flag<<"family:"<<font.family()<<"font size:"<<font.pointSize();
+        // 文件对话框 是一个模态的对话框
+        QString fileName;
+        fileName = QFileDialog::getOpenFileName();
+        qDebug()<<"文件路径结果:"<<fileName;
     });
 
 
