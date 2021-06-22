@@ -98,7 +98,7 @@ MainWindow::MainWindow(QWidget *parent)
     connect(button8,&QPushButton::clicked,[&](){
         // 文件对话框 是一个模态的对话框
         QString fileName;
-        fileName = QFileDialog::getOpenFileName();
+        fileName = QFileDialog::getOpenFileName(this,"文件","/Download","*.png *.jpg");
         qDebug()<<"文件路径结果:"<<fileName;
     });
 
