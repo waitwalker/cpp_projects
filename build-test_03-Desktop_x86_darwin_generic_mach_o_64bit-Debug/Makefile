@@ -220,6 +220,7 @@ DIST          = ../test_03/images/123.png \
 		/usr/local/Cellar/qt/6.1.0_1/share/qt/mkspecs/features/qt_config.prf \
 		/usr/local/Cellar/qt/6.1.0_1/share/qt/mkspecs/macx-clang/qmake.conf \
 		/usr/local/Cellar/qt/6.1.0_1/share/qt/mkspecs/features/spec_post.prf \
+		../test_03/.qmake.stash \
 		/usr/local/Cellar/qt/6.1.0_1/share/qt/mkspecs/features/exclusive_builds.prf \
 		/usr/local/Cellar/qt/6.1.0_1/share/qt/mkspecs/features/mac/sdk.prf \
 		/usr/local/Cellar/qt/6.1.0_1/share/qt/mkspecs/features/toolchain.prf \
@@ -258,7 +259,7 @@ TARGET        = test_03.app/Contents/MacOS/test_03
 EXPORT_QMAKE_MAC_SDK = macosx
 EXPORT_QMAKE_MAC_SDK_VERSION = 11.3
 EXPORT_QMAKE_XCODE_DEVELOPER_PATH = /Applications/Xcode.app/Contents/Developer
-EXPORT__QMAKE_STASH_ = 
+EXPORT__QMAKE_STASH_ = /Users/waitwalker/Desktop/工作/github_projects/cpp_projects/build-test_03-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qmake.stash
 EXPORT_VALID_ARCHS = x86_64
 EXPORT_ACTIVE_ARCHS = $(filter $(EXPORT_VALID_ARCHS), $(ARCHS))
 EXPORT_ARCH_ARGS = $(foreach arch, $(if $(EXPORT_ACTIVE_ARCHS), $(EXPORT_ACTIVE_ARCHS), $(EXPORT_VALID_ARCHS)), -arch $(arch))
@@ -433,6 +434,7 @@ Makefile: ../test_03/test_03.pro /usr/local/Cellar/qt/6.1.0_1/share/qt/mkspecs/m
 		/usr/local/Cellar/qt/6.1.0_1/share/qt/mkspecs/features/qt_config.prf \
 		/usr/local/Cellar/qt/6.1.0_1/share/qt/mkspecs/macx-clang/qmake.conf \
 		/usr/local/Cellar/qt/6.1.0_1/share/qt/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		/usr/local/Cellar/qt/6.1.0_1/share/qt/mkspecs/features/exclusive_builds.prf \
 		/usr/local/Cellar/qt/6.1.0_1/share/qt/mkspecs/features/mac/sdk.prf \
 		/usr/local/Cellar/qt/6.1.0_1/share/qt/mkspecs/features/toolchain.prf \
@@ -627,6 +629,7 @@ Makefile: ../test_03/test_03.pro /usr/local/Cellar/qt/6.1.0_1/share/qt/mkspecs/m
 /usr/local/Cellar/qt/6.1.0_1/share/qt/mkspecs/features/qt_config.prf:
 /usr/local/Cellar/qt/6.1.0_1/share/qt/mkspecs/macx-clang/qmake.conf:
 /usr/local/Cellar/qt/6.1.0_1/share/qt/mkspecs/features/spec_post.prf:
+.qmake.stash:
 /usr/local/Cellar/qt/6.1.0_1/share/qt/mkspecs/features/exclusive_builds.prf:
 /usr/local/Cellar/qt/6.1.0_1/share/qt/mkspecs/features/mac/sdk.prf:
 /usr/local/Cellar/qt/6.1.0_1/share/qt/mkspecs/features/toolchain.prf:
@@ -703,6 +706,7 @@ clean: compiler_clean
 
 distclean: clean 
 	-$(DEL_FILE) -r test_03.app
+	-$(DEL_FILE) .qmake.stash
 	-$(DEL_FILE) Makefile
 
 
@@ -775,7 +779,9 @@ main.o: ../test_03/main.cpp ../test_03/mainwindow.h \
 mainwindow.o: ../test_03/mainwindow.cpp ../test_03/mainwindow.h \
 		/usr/local/Cellar/qt/6.1.0_1/lib/QtWidgets.framework/Headers/QMainWindow \
 		/usr/local/Cellar/qt/6.1.0_1/lib/QtWidgets.framework/Headers/qmainwindow.h \
-		ui_mainwindow.h
+		ui_mainwindow.h \
+		/usr/local/Cellar/qt/6.1.0_1/lib/QtWidgets.framework/Headers/QMenuBar \
+		/usr/local/Cellar/qt/6.1.0_1/lib/QtWidgets.framework/Headers/qmenubar.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o ../test_03/mainwindow.cpp
 
 qrc_res.o: qrc_res.cpp 
