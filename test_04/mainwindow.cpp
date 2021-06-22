@@ -75,10 +75,11 @@ MainWindow::MainWindow(QWidget *parent)
     QPushButton *button6 = new QPushButton("字体",this);
     button6->setGeometry(300,100,100,100);
     connect(button6,&QPushButton::clicked,[&](){
-        // 字体对话框 是一个模态的对话框
+        // 字体对话框 是一个模态的对话框 获取系统字体
         bool flag;
-        QFontDialog::getFont(&flag,QFont("Apple"),this);
-        qDebug()<<"结果:"<<flag;
+        QFont font;
+        font = QFontDialog::getFont(&flag,QFont("Apple"),this);
+        qDebug()<<"结果:"<<flag<<"family:"<<font.family();
     });
 
 
