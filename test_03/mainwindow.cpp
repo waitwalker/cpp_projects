@@ -39,6 +39,10 @@ MainWindow::MainWindow(QWidget *parent)
     //:+加号图片在资源文件中的路径
     pixMap.load(":/images/new_file.png");
     newFile->setIcon(QIcon(pixMap));
+
+    QPixmap savePix;
+    savePix.load(":/images/save_file.png");
+    saveFile->setIcon(QIcon(savePix));
 }
 
 MainWindow::~MainWindow()
