@@ -60,6 +60,7 @@ MainWindow::MainWindow(QWidget *parent)
     QAction *upload = new QAction("上传",this);
     QAction *deleteA = new QAction("删除",this);
 
+    // 将QAction添加到工具栏
     toolBar->addAction(upload);
     toolBar->addAction(deleteA);
     upload->setShortcut(QKeySequence(Qt::CTRL | Qt::Key_U));
@@ -72,6 +73,9 @@ MainWindow::MainWindow(QWidget *parent)
     connect(deleteA,&QAction::triggered,[=](){
         qDebug()<<"删除成功";
     });
+
+    // 禁止工具栏拖动
+    toolBar->setFloatable(false);
 
 
 
