@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <QMenuBar>
+#include <QToolBar>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -49,6 +50,28 @@ MainWindow::MainWindow(QWidget *parent)
         qDebug()<<"保存文件成功";
     });
 
+    // 添加工具栏
+    QToolBar *toolBar = new QToolBar(this);
+
+    // 将工具栏添加到主窗口中
+    this->addToolBar(toolBar);
+
+    // 将菜单项item 放入到工具栏中
+    QAction *upload = new QAction("上传",this);
+    QAction *deleteA = new QAction("删除",this);
+
+    toolBar->addAction(upload);
+    toolBar->addAction(deleteA);
+    upload->setShortcut(QKeySequence(Qt::CTRL | Qt::Key_U));
+    deleteA->setShortcut(QKeySequence(Qt::CTRL | Qt::Key_D));
+
+    connect(upload,&QAction::triggered,[=](){
+        qDebug()<<"上传成功";
+    });
+
+    connect(deleteA,&QAction::triggered,[=](){
+        qDebug()<<"删除成功";
+    });
 
 
 
