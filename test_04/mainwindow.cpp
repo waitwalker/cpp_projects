@@ -3,6 +3,7 @@
 #include <QDialog>
 #include <QPushButton>
 #include <QMessageBox>
+#include <QFontDialog>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -69,6 +70,15 @@ MainWindow::MainWindow(QWidget *parent)
         } else if (ret == QMessageBox::Cancel) {
             qDebug()<<"用户选择了取消";
         }
+    });
+
+    QPushButton *button6 = new QPushButton("字体",this);
+    button6->setGeometry(300,100,100,100);
+    connect(button6,&QPushButton::clicked,[&](){
+        // 字体对话框 是一个模态的对话框
+        bool flag;
+        QFontDialog::getFont(&flag,QFont("Apple"),this);
+        qDebug()<<"结果:"<<flag;
     });
 
 
