@@ -79,7 +79,7 @@ MainWindow::MainWindow(QWidget *parent)
         bool flag;
         QFont font;
         font = QFontDialog::getFont(&flag,QFont("Apple"),this);
-        qDebug()<<"结果:"<<flag<<"family:"<<font.family();
+        qDebug()<<"结果:"<<flag<<"family:"<<font.family()<<"font size:"<<font.pointSize();
     });
 
 
