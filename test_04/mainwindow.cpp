@@ -57,7 +57,7 @@ MainWindow::MainWindow(QWidget *parent)
     button5->setGeometry(200,500,100,100);
     connect(button5,&QPushButton::clicked,[&](){
         // 询问对话框 是一个模态的对话框
-        QMessageBox::question(this,"询问","请立即续费",QMessageBox::Save | QMessageBox::Cancel);
+        QMessageBox::question(this,"询问","请立即续费",QMessageBox::Save | QMessageBox::Cancel, QMessageBox::Cancel);
     });
 
 
