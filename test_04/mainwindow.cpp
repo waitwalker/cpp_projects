@@ -15,7 +15,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     this->resize(1200,1200);
 
-    QPushButton *button1 = new QPushButton("弹出",this);
+    QPushButton *button1 = new QPushButton("模态",this);
     button1->setGeometry(200,100,100,100);
 
     connect(button1,&QPushButton::clicked,[&](){
@@ -26,7 +26,7 @@ MainWindow::MainWindow(QWidget *parent)
         qDebug()<<"显示模态对话框";
     });
 
-    QPushButton *button2 = new QPushButton("弹出2",this);
+    QPushButton *button2 = new QPushButton("非模态",this);
     button2->setGeometry(200,300,100,100);
 
     connect(button2,&QPushButton::clicked,[&](){
@@ -38,7 +38,7 @@ MainWindow::MainWindow(QWidget *parent)
         qDebug()<<"显示模态对话框";
     });
 
-    QPushButton *button3 = new QPushButton("打开",this);
+    QPushButton *button3 = new QPushButton("错误",this);
     button3->setGeometry(200,400,100,100);
     connect(button3,&QPushButton::clicked,[&](){
         // 错误对话框 是一个模态的对话框
@@ -46,11 +46,18 @@ MainWindow::MainWindow(QWidget *parent)
     });
 
 
-    QPushButton *button4 = new QPushButton("打开",this);
+    QPushButton *button4 = new QPushButton("信息",this);
     button4->setGeometry(200,500,100,100);
     connect(button4,&QPushButton::clicked,[&](){
         // 信息对话框 是一个模态的对话框
         QMessageBox::information(this,"信息提示","重要信息提示");
+    });
+
+    QPushButton *button5 = new QPushButton("询问",this);
+    button5->setGeometry(200,600,100,100);
+    connect(button5,&QPushButton::clicked,[&](){
+        // 询问对话框 是一个模态的对话框
+        QMessageBox::question(this,"询问","请立即续费");
     });
 
 
