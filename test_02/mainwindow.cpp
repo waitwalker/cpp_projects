@@ -74,10 +74,12 @@ MainWindow::MainWindow(QWidget *parent)
         qDebug()<<"删除成功";
     });
 
-    // 禁止工具栏拖动
+    // 禁止工具栏浮动 但是可以拖动
     toolBar->setFloatable(false);
 
-
+    // 刚开始默认上面的 拖动一次后就不行了
+    // 设置工具栏允许的位置
+    toolBar->setAllowedAreas(Qt::LeftToolBarArea | Qt::RightToolBarArea);
 
 
 
