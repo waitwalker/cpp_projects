@@ -4,6 +4,7 @@
 #include <QPushButton>
 #include <QMessageBox>
 #include <QFontDialog>
+#include <QColorDialog>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -75,6 +76,26 @@ MainWindow::MainWindow(QWidget *parent)
     QPushButton *button6 = new QPushButton("字体",this);
     button6->setGeometry(300,100,100,100);
     connect(button6,&QPushButton::clicked,[&](){
+        // 字体对话框 是一个模态的对话框 获取系统字体
+        bool flag;
+        QFont font;
+        font = QFontDialog::getFont(&flag,QFont("Apple"),this);
+        qDebug()<<"结果:"<<flag<<"family:"<<font.family()<<"font size:"<<font.pointSize();
+    });
+
+    QPushButton *button7 = new QPushButton("颜色",this);
+    button7->setGeometry(300,200,100,100);
+    connect(button7,&QPushButton::clicked,[&](){
+        // 颜色对话框 是一个模态的对话框 获取系统字体
+        bool flag;
+        QColor color;
+        color = QColorDialog::getColor();
+        qDebug()<<"R:"<<color.red()<<"G:"<<color.green()<<"B:"<<color.blue();
+    });
+
+    QPushButton *button8 = new QPushButton("颜色",this);
+    button8->setGeometry(300,300,100,100);
+    connect(button8,&QPushButton::clicked,[&](){
         // 字体对话框 是一个模态的对话框 获取系统字体
         bool flag;
         QFont font;
