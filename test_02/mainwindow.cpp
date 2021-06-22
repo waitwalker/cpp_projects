@@ -4,6 +4,8 @@
 #include <QToolBar>
 #include <QStatusBar>
 #include <QLabel>
+#include <QDockWidget>
+#include <QTextEdit>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -94,6 +96,18 @@ MainWindow::MainWindow(QWidget *parent)
     QLabel *label2 = new QLabel("右侧提示信息",this);
     statusBar->addWidget(label1);
     statusBar->addWidget(label2);
+
+    // 4.添加铆接部件
+    QDockWidget *dockWidget = new QDockWidget("铆接部件",this);
+
+    // 铆接部件添加到主窗口中
+    this->addDockWidget(Qt::TopDockWidgetArea, dockWidget);
+
+    // 5.设置中心部件
+    QTextEdit *textEdit = new QTextEdit(this);
+    textEdit->setText("今天是好的电话号");
+    this->setCentralWidget(textEdit);
+
 
 }
 
