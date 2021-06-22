@@ -41,8 +41,16 @@ MainWindow::MainWindow(QWidget *parent)
     QPushButton *button3 = new QPushButton("打开",this);
     button3->setGeometry(200,400,100,100);
     connect(button3,&QPushButton::clicked,[&](){
-        // 消息对话框 是一个模态的对话框
+        // 错误对话框 是一个模态的对话框
         QMessageBox::critical(this,"错误","很严重的错误,留意");
+    });
+
+
+    QPushButton *button4 = new QPushButton("打开",this);
+    button4->setGeometry(200,500,100,100);
+    connect(button4,&QPushButton::clicked,[&](){
+        // 信息对话框 是一个模态的对话框
+        QMessageBox::information(this,"信息提示","重要信息提示");
     });
 
 
