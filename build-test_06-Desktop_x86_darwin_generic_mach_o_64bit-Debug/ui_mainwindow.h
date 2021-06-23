@@ -50,7 +50,7 @@ public:
         comboBox->setGeometry(QRect(200, 100, 161, 71));
         label2 = new QLabel(centralwidget);
         label2->setObjectName(QString::fromUtf8("label2"));
-        label2->setGeometry(QRect(580, 290, 60, 16));
+        label2->setGeometry(QRect(490, 160, 291, 321));
         play = new QPushButton(centralwidget);
         play->setObjectName(QString::fromUtf8("play"));
         play->setGeometry(QRect(140, 350, 80, 24));

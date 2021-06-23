@@ -39,11 +39,11 @@ MainWindow::MainWindow(QWidget *parent)
     ui->label2->setMovie(movie);
 
 
-    connect(ui->play,&QPushButton::clicked,[&](){
+    connect(ui->play,&QPushButton::clicked,[=](){
         movie->start();
     });
 
-    connect(ui->pause,&QPushButton::clicked,[&](){
+    connect(ui->pause,&QPushButton::clicked,[=](){
         movie->stop();
     });
 
