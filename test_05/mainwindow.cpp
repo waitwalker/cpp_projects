@@ -74,6 +74,19 @@ MainWindow::MainWindow(QWidget *parent)
     // 设置垂直表头信息
     ui->tableWidget->setVerticalHeaderLabels(QStringList()<<"1");
 
+    // 往表格里面添加item
+    QStringList nameList;
+    nameList<<"张飞"<<"刘备"<<"曹操"<<"诸葛亮"<<"赵云";
+    QStringList ageList;
+    ageList<<"3"<<"4"<<"5"<<"6"<<"7"<<"8"<<"9"<<"10"<<"11"<<"12"<<"13"<<"14"<<"15"<<"16"<<"17"<<"18";
+
+
+    for (int i = 0; i < 5; i++) {
+        ui->tableWidget->setItem(i,0, new QTableWidgetItem(nameList[i]));
+        ui->tableWidget->setItem(i,1, new QTableWidgetItem(ageList[i]));
+    }
+
+
 }
 
 MainWindow::~MainWindow()
