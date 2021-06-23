@@ -40,6 +40,14 @@ MainWindow::MainWindow(QWidget *parent)
         qDebug()<<item->text();
     });
 
+    QStringList treeList;
+    treeList.append("姓名");
+    treeList.append("年龄");
+    treeList.append("学号");
+    treeList.append("班级");
+    ui->treeWidget->setHeaderLabels(treeList);
+
+
 
 }
 

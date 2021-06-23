@@ -112,6 +112,7 @@ public:
         listWidget->setGeometry(QRect(480, 200, 256, 192));
         treeWidget = new QTreeWidget(centralwidget);
         new QTreeWidgetItem(treeWidget);
+        new QTreeWidgetItem(treeWidget);
         treeWidget->setObjectName(QString::fromUtf8("treeWidget"));
         treeWidget->setGeometry(QRect(50, 310, 411, 241));
         MainWindow->setCentralWidget(centralwidget);
@@ -160,6 +161,9 @@ public:
         QTreeWidgetItem *___qtreewidgetitem1 = treeWidget->topLevelItem(0);
         ___qtreewidgetitem1->setText(1, QCoreApplication::translate("MainWindow", "10", nullptr));
         ___qtreewidgetitem1->setText(0, QCoreApplication::translate("MainWindow", "\345\274\240\344\270\211", nullptr));
+        QTreeWidgetItem *___qtreewidgetitem2 = treeWidget->topLevelItem(1);
+        ___qtreewidgetitem2->setText(1, QCoreApplication::translate("MainWindow", "11", nullptr));
+        ___qtreewidgetitem2->setText(0, QCoreApplication::translate("MainWindow", "\346\235\216\345\233\233", nullptr));
         treeWidget->setSortingEnabled(__sortingEnabled);
 
     } // retranslateUi
