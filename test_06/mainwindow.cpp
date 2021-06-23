@@ -2,6 +2,7 @@
 #include "ui_mainwindow.h"
 #include <QComboBox>
 #include <QLabel>
+#include <QPixmap>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -27,7 +28,11 @@ MainWindow::MainWindow(QWidget *parent)
 
     QLabel *label = new QLabel(this);
     label->setGeometry(200,200,100,150);
-    label->setText("布加迪");
+    // 设置文字
+    //label->setText("布加迪");
+    QPixmap pix;
+    pix.load(":/images/save_file.png");
+    label->setPixmap(pix);
 
 }
 
