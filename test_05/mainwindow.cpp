@@ -65,10 +65,14 @@ MainWindow::MainWindow(QWidget *parent)
     // 设置表格列数
     ui->tableWidget->setColumnCount(3);
 
-    ui->tableWidget->setHorizontalHeaderLabels(QStringList()<<"北京"<<"12"<<"100");
+    // 设置水平表头信息
+    ui->tableWidget->setHorizontalHeaderLabels(QStringList()<<"姓名"<<"年龄"<<"性别");
 
     // 设置表格行数
     ui->tableWidget->setRowCount(12);
+
+    // 设置垂直表头信息
+    ui->tableWidget->setVerticalHeaderLabels(QStringList()<<"1");
 
 }
 
