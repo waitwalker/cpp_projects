@@ -18,6 +18,7 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->radioButton,&QRadioButton::clicked,[=](){
         qDebug()<<"选中男了";
     });
+
     connect(ui->radioButton_2,&QRadioButton::clicked,[=](){
         qDebug()<<"选中女了";
     });

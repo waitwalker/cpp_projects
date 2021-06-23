@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>814</width>
+    <height>628</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -130,8 +130,8 @@
    <widget class="QGroupBox" name="groupBox">
     <property name="geometry">
      <rect>
-      <x>310</x>
-      <y>310</y>
+      <x>290</x>
+      <y>230</y>
       <width>120</width>
       <height>80</height>
      </rect>
@@ -172,8 +172,8 @@
    <widget class="QGroupBox" name="groupBox_2">
     <property name="geometry">
      <rect>
-      <x>140</x>
-      <y>320</y>
+      <x>120</x>
+      <y>240</y>
       <width>120</width>
       <height>80</height>
      </rect>
@@ -211,12 +211,40 @@
    <widget class="QListWidget" name="listWidget">
     <property name="geometry">
      <rect>
-      <x>490</x>
-      <y>290</y>
+      <x>480</x>
+      <y>200</y>
       <width>256</width>
       <height>192</height>
      </rect>
     </property>
+   </widget>
+   <widget class="QTreeWidget" name="treeWidget">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>310</y>
+      <width>411</width>
+      <height>241</height>
+     </rect>
+    </property>
+    <column>
+     <property name="text">
+      <string>姓名</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>年龄</string>
+     </property>
+    </column>
+    <item>
+     <property name="text">
+      <string>张三</string>
+     </property>
+     <property name="text">
+      <string>10</string>
+     </property>
+    </item>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -224,7 +252,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>814</width>
      <height>21</height>
     </rect>
    </property>

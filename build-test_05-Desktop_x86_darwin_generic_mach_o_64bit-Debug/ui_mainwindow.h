@@ -12,6 +12,7 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QGroupBox>
+#include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QListWidget>
@@ -21,6 +22,7 @@
 #include <QtWidgets/QRadioButton>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTabWidget>
+#include <QtWidgets/QTreeWidget>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -45,6 +47,7 @@ public:
     QRadioButton *radioButton_4;
     QRadioButton *radioButton_3;
     QListWidget *listWidget;
+    QTreeWidget *treeWidget;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -52,7 +55,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(800, 600);
+        MainWindow->resize(814, 628);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         label = new QLabel(centralwidget);
@@ -87,7 +90,7 @@ public:
         tabWidget->addTab(tab_2, QString());
         groupBox = new QGroupBox(centralwidget);
         groupBox->setObjectName(QString::fromUtf8("groupBox"));
-        groupBox->setGeometry(QRect(310, 310, 120, 80));
+        groupBox->setGeometry(QRect(290, 230, 120, 80));
         radioButton_2 = new QRadioButton(groupBox);
         radioButton_2->setObjectName(QString::fromUtf8("radioButton_2"));
         radioButton_2->setGeometry(QRect(0, 50, 99, 22));
@@ -97,7 +100,7 @@ public:
         radioButton->setChecked(true);
         groupBox_2 = new QGroupBox(centralwidget);
         groupBox_2->setObjectName(QString::fromUtf8("groupBox_2"));
-        groupBox_2->setGeometry(QRect(140, 320, 120, 80));
+        groupBox_2->setGeometry(QRect(120, 240, 120, 80));
         radioButton_4 = new QRadioButton(groupBox_2);
         radioButton_4->setObjectName(QString::fromUtf8("radioButton_4"));
         radioButton_4->setGeometry(QRect(10, 50, 99, 22));
@@ -106,11 +109,15 @@ public:
         radioButton_3->setGeometry(QRect(10, 20, 99, 22));
         listWidget = new QListWidget(centralwidget);
         listWidget->setObjectName(QString::fromUtf8("listWidget"));
-        listWidget->setGeometry(QRect(490, 290, 256, 192));
+        listWidget->setGeometry(QRect(480, 200, 256, 192));
+        treeWidget = new QTreeWidget(centralwidget);
+        new QTreeWidgetItem(treeWidget);
+        treeWidget->setObjectName(QString::fromUtf8("treeWidget"));
+        treeWidget->setGeometry(QRect(50, 310, 411, 241));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 800, 21));
+        menubar->setGeometry(QRect(0, 0, 814, 21));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
@@ -144,6 +151,17 @@ public:
         groupBox_2->setTitle(QCoreApplication::translate("MainWindow", "\345\251\232\345\247\273\347\212\266\345\206\265", nullptr));
         radioButton_4->setText(QCoreApplication::translate("MainWindow", "\346\234\252\345\251\232", nullptr));
         radioButton_3->setText(QCoreApplication::translate("MainWindow", " \345\267\262\345\251\232", nullptr));
+        QTreeWidgetItem *___qtreewidgetitem = treeWidget->headerItem();
+        ___qtreewidgetitem->setText(1, QCoreApplication::translate("MainWindow", "\345\271\264\351\276\204", nullptr));
+        ___qtreewidgetitem->setText(0, QCoreApplication::translate("MainWindow", "\345\247\223\345\220\215", nullptr));
+
+        const bool __sortingEnabled = treeWidget->isSortingEnabled();
+        treeWidget->setSortingEnabled(false);
+        QTreeWidgetItem *___qtreewidgetitem1 = treeWidget->topLevelItem(0);
+        ___qtreewidgetitem1->setText(1, QCoreApplication::translate("MainWindow", "10", nullptr));
+        ___qtreewidgetitem1->setText(0, QCoreApplication::translate("MainWindow", "\345\274\240\344\270\211", nullptr));
+        treeWidget->setSortingEnabled(__sortingEnabled);
+
     } // retranslateUi
 
 };
