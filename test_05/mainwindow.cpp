@@ -50,9 +50,12 @@ MainWindow::MainWindow(QWidget *parent)
 
 
 
-    // 添加顶层控件
+    // 添加顶层控件 往树控件中添加item
     QTreeWidgetItem *treeItem = new QTreeWidgetItem(QStringList()<<"张三丰"<<"11"<<"110220"<<"1班");
+
     ui->treeWidget->addTopLevelItem(treeItem);
+    QTreeWidgetItem *child = new QTreeWidgetItem(QStringList()<<"孩子");
+    treeItem->addChild(child);
 
 }
 
