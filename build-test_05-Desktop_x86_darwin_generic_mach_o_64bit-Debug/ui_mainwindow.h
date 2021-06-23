@@ -128,6 +128,10 @@ public:
             tableWidget->setRowCount(1);
         QTableWidgetItem *__qtablewidgetitem2 = new QTableWidgetItem();
         tableWidget->setVerticalHeaderItem(0, __qtablewidgetitem2);
+        QTableWidgetItem *__qtablewidgetitem3 = new QTableWidgetItem();
+        tableWidget->setItem(0, 0, __qtablewidgetitem3);
+        QTableWidgetItem *__qtablewidgetitem4 = new QTableWidgetItem();
+        tableWidget->setItem(0, 1, __qtablewidgetitem4);
         tableWidget->setObjectName(QString::fromUtf8("tableWidget"));
         tableWidget->setGeometry(QRect(470, 350, 256, 192));
         MainWindow->setCentralWidget(centralwidget);
@@ -186,7 +190,16 @@ public:
         QTableWidgetItem *___qtablewidgetitem1 = tableWidget->horizontalHeaderItem(1);
         ___qtablewidgetitem1->setText(QCoreApplication::translate("MainWindow", "\345\271\264\351\276\204", nullptr));
         QTableWidgetItem *___qtablewidgetitem2 = tableWidget->verticalHeaderItem(0);
-        ___qtablewidgetitem2->setText(QCoreApplication::translate("MainWindow", "\346\210\220\347\273\251", nullptr));
+        ___qtablewidgetitem2->setText(QCoreApplication::translate("MainWindow", "\345\272\217\345\217\267", nullptr));
+
+        const bool __sortingEnabled1 = tableWidget->isSortingEnabled();
+        tableWidget->setSortingEnabled(false);
+        QTableWidgetItem *___qtablewidgetitem3 = tableWidget->item(0, 0);
+        ___qtablewidgetitem3->setText(QCoreApplication::translate("MainWindow", "\345\274\240\344\270\211", nullptr));
+        QTableWidgetItem *___qtablewidgetitem4 = tableWidget->item(0, 1);
+        ___qtablewidgetitem4->setText(QCoreApplication::translate("MainWindow", "12", nullptr));
+        tableWidget->setSortingEnabled(__sortingEnabled1);
+
     } // retranslateUi
 
 };

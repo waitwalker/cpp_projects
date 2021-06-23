@@ -62,6 +62,14 @@ MainWindow::MainWindow(QWidget *parent)
         qDebug()<<item->text(column)<<column;
     });
 
+    // 设置表格列数
+    ui->tableWidget->setColumnCount(3);
+
+    ui->tableWidget->setHorizontalHeaderLabels(QStringList()<<"北京"<<"12"<<"100");
+
+    // 设置表格行数
+    ui->tableWidget->setRowCount(12);
+
 }
 
 MainWindow::~MainWindow()
