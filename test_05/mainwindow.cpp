@@ -40,6 +40,7 @@ MainWindow::MainWindow(QWidget *parent)
         qDebug()<<item->text();
     });
 
+    // 设置树控件的头部信息
     QStringList treeList;
     treeList.append("姓名");
     treeList.append("年龄");
@@ -48,6 +49,10 @@ MainWindow::MainWindow(QWidget *parent)
     ui->treeWidget->setHeaderLabels(treeList);
 
 
+
+    // 添加顶层控件
+    QTreeWidgetItem *treeItem = new QTreeWidgetItem(QStringList()<<"张三丰"<<"11"<<"110220"<<"1班");
+    ui->treeWidget->addTopLevelItem(treeItem);
 
 }
 
