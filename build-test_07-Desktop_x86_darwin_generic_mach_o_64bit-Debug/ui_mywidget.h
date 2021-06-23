@@ -12,6 +12,7 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QProgressBar>
+#include <QtWidgets/QSlider>
 #include <QtWidgets/QSpinBox>
 #include <QtWidgets/QWidget>
 
@@ -22,6 +23,7 @@ class Ui_MyWidget
 public:
     QSpinBox *spinBox;
     QProgressBar *progressBar;
+    QSlider *horizontalSlider;
 
     void setupUi(QWidget *MyWidget)
     {
@@ -35,6 +37,10 @@ public:
         progressBar->setObjectName(QString::fromUtf8("progressBar"));
         progressBar->setGeometry(QRect(121, 81, 221, 41));
         progressBar->setValue(24);
+        horizontalSlider = new QSlider(MyWidget);
+        horizontalSlider->setObjectName(QString::fromUtf8("horizontalSlider"));
+        horizontalSlider->setGeometry(QRect(120, 170, 231, 31));
+        horizontalSlider->setOrientation(Qt::Horizontal);
 
         retranslateUi(MyWidget);
 
