@@ -14,6 +14,7 @@
 #include <QtWidgets/QGroupBox>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
+#include <QtWidgets/QListWidget>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
@@ -43,6 +44,7 @@ public:
     QGroupBox *groupBox_2;
     QRadioButton *radioButton_4;
     QRadioButton *radioButton_3;
+    QListWidget *listWidget;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -102,6 +104,9 @@ public:
         radioButton_3 = new QRadioButton(groupBox_2);
         radioButton_3->setObjectName(QString::fromUtf8("radioButton_3"));
         radioButton_3->setGeometry(QRect(10, 20, 99, 22));
+        listWidget = new QListWidget(centralwidget);
+        listWidget->setObjectName(QString::fromUtf8("listWidget"));
+        listWidget->setGeometry(QRect(490, 290, 256, 192));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
