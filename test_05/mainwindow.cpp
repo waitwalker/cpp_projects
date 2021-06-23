@@ -57,6 +57,7 @@ MainWindow::MainWindow(QWidget *parent)
     QTreeWidgetItem *child = new QTreeWidgetItem(QStringList()<<"孩子");
     treeItem->addChild(child);
 
+    // 树控件的点击事件
     connect(ui->treeWidget,&QTreeWidget::itemClicked,[&](QTreeWidgetItem *item, int column){
         qDebug()<<item->text(column)<<column;
     });

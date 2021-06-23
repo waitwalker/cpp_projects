@@ -22,6 +22,7 @@
 #include <QtWidgets/QRadioButton>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTabWidget>
+#include <QtWidgets/QTableWidget>
 #include <QtWidgets/QTreeWidget>
 #include <QtWidgets/QWidget>
 
@@ -48,6 +49,7 @@ public:
     QRadioButton *radioButton_3;
     QListWidget *listWidget;
     QTreeWidget *treeWidget;
+    QTableWidget *tableWidget;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -109,12 +111,25 @@ public:
         radioButton_3->setGeometry(QRect(10, 20, 99, 22));
         listWidget = new QListWidget(centralwidget);
         listWidget->setObjectName(QString::fromUtf8("listWidget"));
-        listWidget->setGeometry(QRect(480, 200, 256, 192));
+        listWidget->setGeometry(QRect(480, 130, 256, 192));
         treeWidget = new QTreeWidget(centralwidget);
         new QTreeWidgetItem(treeWidget);
         new QTreeWidgetItem(treeWidget);
         treeWidget->setObjectName(QString::fromUtf8("treeWidget"));
-        treeWidget->setGeometry(QRect(50, 310, 411, 241));
+        treeWidget->setGeometry(QRect(20, 310, 411, 241));
+        tableWidget = new QTableWidget(centralwidget);
+        if (tableWidget->columnCount() < 2)
+            tableWidget->setColumnCount(2);
+        QTableWidgetItem *__qtablewidgetitem = new QTableWidgetItem();
+        tableWidget->setHorizontalHeaderItem(0, __qtablewidgetitem);
+        QTableWidgetItem *__qtablewidgetitem1 = new QTableWidgetItem();
+        tableWidget->setHorizontalHeaderItem(1, __qtablewidgetitem1);
+        if (tableWidget->rowCount() < 1)
+            tableWidget->setRowCount(1);
+        QTableWidgetItem *__qtablewidgetitem2 = new QTableWidgetItem();
+        tableWidget->setVerticalHeaderItem(0, __qtablewidgetitem2);
+        tableWidget->setObjectName(QString::fromUtf8("tableWidget"));
+        tableWidget->setGeometry(QRect(470, 350, 256, 192));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -166,6 +181,12 @@ public:
         ___qtreewidgetitem2->setText(0, QCoreApplication::translate("MainWindow", "\346\235\216\345\233\233", nullptr));
         treeWidget->setSortingEnabled(__sortingEnabled);
 
+        QTableWidgetItem *___qtablewidgetitem = tableWidget->horizontalHeaderItem(0);
+        ___qtablewidgetitem->setText(QCoreApplication::translate("MainWindow", "\345\247\223\345\220\215", nullptr));
+        QTableWidgetItem *___qtablewidgetitem1 = tableWidget->horizontalHeaderItem(1);
+        ___qtablewidgetitem1->setText(QCoreApplication::translate("MainWindow", "\345\271\264\351\276\204", nullptr));
+        QTableWidgetItem *___qtablewidgetitem2 = tableWidget->verticalHeaderItem(0);
+        ___qtablewidgetitem2->setText(QCoreApplication::translate("MainWindow", "\346\210\220\347\273\251", nullptr));
     } // retranslateUi
 
 };
