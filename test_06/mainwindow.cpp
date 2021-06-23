@@ -17,6 +17,11 @@ MainWindow::MainWindow(QWidget *parent)
     list.append("五菱宏光");
 
     ui->comboBox->addItems(list);
+    ui->comboBox->setCurrentIndex(7);
+
+    connect(ui->comboBox,&QComboBox::currentIndexChanged,[&](int index){
+        qDebug()<<index;
+    });
 
 }
 
