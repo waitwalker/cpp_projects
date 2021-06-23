@@ -13,6 +13,7 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
+#include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QWidget>
 #include <mywidget.h>
@@ -24,6 +25,8 @@ class Ui_MainWindow
 public:
     QWidget *centralwidget;
     MyWidget *widget;
+    QPushButton *setButton;
+    QPushButton *getvalueButton;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -36,7 +39,13 @@ public:
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         widget = new MyWidget(centralwidget);
         widget->setObjectName(QString::fromUtf8("widget"));
-        widget->setGeometry(QRect(180, 100, 361, 201));
+        widget->setGeometry(QRect(180, 30, 361, 201));
+        setButton = new QPushButton(centralwidget);
+        setButton->setObjectName(QString::fromUtf8("setButton"));
+        setButton->setGeometry(QRect(180, 300, 80, 24));
+        getvalueButton = new QPushButton(centralwidget);
+        getvalueButton->setObjectName(QString::fromUtf8("getvalueButton"));
+        getvalueButton->setGeometry(QRect(360, 300, 80, 24));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -54,6 +63,8 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
+        setButton->setText(QCoreApplication::translate("MainWindow", "\350\256\276\347\275\256", nullptr));
+        getvalueButton->setText(QCoreApplication::translate("MainWindow", "\350\216\267\345\217\226\345\200\274", nullptr));
     } // retranslateUi
 
 };

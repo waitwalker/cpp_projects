@@ -13,6 +13,11 @@ class MyWidget : public QWidget
 
 public:
     explicit MyWidget(QWidget *parent = nullptr);
+
+    void setSliderValue(int value);
+
+    int getSliderValue();
+
     ~MyWidget();
 
 private:

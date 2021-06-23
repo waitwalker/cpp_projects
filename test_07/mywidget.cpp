@@ -34,6 +34,15 @@ MyWidget::MyWidget(QWidget *parent) :
 
 }
 
+void MyWidget::setSliderValue(int value) {
+    ui->horizontalSlider->setValue(value);
+}
+
+int MyWidget::getSliderValue() {
+    return ui->horizontalSlider->value();
+}
+
+
 MyWidget::~MyWidget()
 {
     delete ui;

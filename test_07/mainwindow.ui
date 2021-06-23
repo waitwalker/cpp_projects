@@ -18,10 +18,36 @@
     <property name="geometry">
      <rect>
       <x>180</x>
-      <y>100</y>
+      <y>30</y>
       <width>361</width>
       <height>201</height>
      </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="setButton">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>300</y>
+      <width>80</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>设置</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="getvalueButton">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>300</y>
+      <width>80</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>获取值</string>
     </property>
    </widget>
   </widget>
