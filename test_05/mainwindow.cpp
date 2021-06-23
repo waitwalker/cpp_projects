@@ -86,6 +86,9 @@ MainWindow::MainWindow(QWidget *parent)
         ui->tableWidget->setItem(i,1, new QTableWidgetItem(ageList[i]));
     }
 
+    connect(ui->tableWidget,&QTableWidget::itemClicked,[&](QTableWidgetItem *item){
+        qDebug()<<item->text();
+    });
 
 }
 
