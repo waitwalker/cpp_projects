@@ -18,18 +18,23 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->radioButton,&QRadioButton::clicked,[=](){
         qDebug()<<"选中男了";
     });
+    connect(ui->radioButton_2,&QRadioButton::clicked,[=](){
+        qDebug()<<"选中女了";
+    });
 
     // 列表控件
     // 往列表控件里面添加 item
     QListWidgetItem *item = new QListWidgetItem("北京");
     ui->listWidget->addItem(item);
 
+    // 往listwidget添加list数据(链表)
     QStringList list;
     list.append("积水潭");
     list.append("天安门");
     list.append("谷歌");
     ui->listWidget->addItems(list);
 
+    // 监听item点击
     connect(ui->listWidget,&QListWidget::itemClicked,[](QListWidgetItem *item){
         qDebug()<<item->text();
     });
