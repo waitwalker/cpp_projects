@@ -53,9 +53,11 @@ OBJECTS_DIR   = ./
 ####### Files
 
 SOURCES       = ../test_06/main.cpp \
-		../test_06/mainwindow.cpp moc_mainwindow.cpp
+		../test_06/mainwindow.cpp qrc_resource.cpp \
+		moc_mainwindow.cpp
 OBJECTS       = main.o \
 		mainwindow.o \
+		qrc_resource.o \
 		moc_mainwindow.o
 DIST          = /usr/local/Cellar/qt/6.1.0_1/share/qt/mkspecs/features/spec_pre.prf \
 		/usr/local/Cellar/qt/6.1.0_1/share/qt/mkspecs/features/device_config.prf \
@@ -217,6 +219,7 @@ DIST          = /usr/local/Cellar/qt/6.1.0_1/share/qt/mkspecs/features/spec_pre.
 		/usr/local/Cellar/qt/6.1.0_1/share/qt/mkspecs/features/qt_config.prf \
 		/usr/local/Cellar/qt/6.1.0_1/share/qt/mkspecs/macx-clang/qmake.conf \
 		/usr/local/Cellar/qt/6.1.0_1/share/qt/mkspecs/features/spec_post.prf \
+		../test_06/.qmake.stash \
 		/usr/local/Cellar/qt/6.1.0_1/share/qt/mkspecs/features/exclusive_builds.prf \
 		/usr/local/Cellar/qt/6.1.0_1/share/qt/mkspecs/features/mac/sdk.prf \
 		/usr/local/Cellar/qt/6.1.0_1/share/qt/mkspecs/features/toolchain.prf \
@@ -255,7 +258,7 @@ TARGET        = test_06.app/Contents/MacOS/test_06
 EXPORT_QMAKE_MAC_SDK = macosx
 EXPORT_QMAKE_MAC_SDK_VERSION = 11.3
 EXPORT_QMAKE_XCODE_DEVELOPER_PATH = /Applications/Xcode.app/Contents/Developer
-EXPORT__QMAKE_STASH_ = 
+EXPORT__QMAKE_STASH_ = /Users/waitwalker/Desktop/工作/github_projects/cpp_projects/build-test_06-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qmake.stash
 EXPORT_VALID_ARCHS = x86_64
 EXPORT_ACTIVE_ARCHS = $(filter $(EXPORT_VALID_ARCHS), $(ARCHS))
 EXPORT_ARCH_ARGS = $(foreach arch, $(if $(EXPORT_ACTIVE_ARCHS), $(EXPORT_ACTIVE_ARCHS), $(EXPORT_VALID_ARCHS)), -arch $(arch))
@@ -430,6 +433,7 @@ Makefile: ../test_06/test_06.pro /usr/local/Cellar/qt/6.1.0_1/share/qt/mkspecs/m
 		/usr/local/Cellar/qt/6.1.0_1/share/qt/mkspecs/features/qt_config.prf \
 		/usr/local/Cellar/qt/6.1.0_1/share/qt/mkspecs/macx-clang/qmake.conf \
 		/usr/local/Cellar/qt/6.1.0_1/share/qt/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		/usr/local/Cellar/qt/6.1.0_1/share/qt/mkspecs/features/exclusive_builds.prf \
 		/usr/local/Cellar/qt/6.1.0_1/share/qt/mkspecs/features/mac/sdk.prf \
 		/usr/local/Cellar/qt/6.1.0_1/share/qt/mkspecs/features/toolchain.prf \
@@ -459,6 +463,7 @@ Makefile: ../test_06/test_06.pro /usr/local/Cellar/qt/6.1.0_1/share/qt/mkspecs/m
 		/usr/local/Cellar/qt/6.1.0_1/share/qt/mkspecs/features/yacc.prf \
 		/usr/local/Cellar/qt/6.1.0_1/share/qt/mkspecs/features/lex.prf \
 		../test_06/test_06.pro \
+		../test_06/resource.qrc \
 		/usr/local/Cellar/qt/6.1.0_1/lib/QtWidgets.framework/Resources/QtWidgets.prl \
 		/usr/local/Cellar/qt/6.1.0_1/lib/QtGui.framework/Resources/QtGui.prl \
 		/usr/local/Cellar/qt/6.1.0_1/lib/QtCore.framework/Resources/QtCore.prl
@@ -623,6 +628,7 @@ Makefile: ../test_06/test_06.pro /usr/local/Cellar/qt/6.1.0_1/share/qt/mkspecs/m
 /usr/local/Cellar/qt/6.1.0_1/share/qt/mkspecs/features/qt_config.prf:
 /usr/local/Cellar/qt/6.1.0_1/share/qt/mkspecs/macx-clang/qmake.conf:
 /usr/local/Cellar/qt/6.1.0_1/share/qt/mkspecs/features/spec_post.prf:
+.qmake.stash:
 /usr/local/Cellar/qt/6.1.0_1/share/qt/mkspecs/features/exclusive_builds.prf:
 /usr/local/Cellar/qt/6.1.0_1/share/qt/mkspecs/features/mac/sdk.prf:
 /usr/local/Cellar/qt/6.1.0_1/share/qt/mkspecs/features/toolchain.prf:
@@ -652,6 +658,7 @@ Makefile: ../test_06/test_06.pro /usr/local/Cellar/qt/6.1.0_1/share/qt/mkspecs/m
 /usr/local/Cellar/qt/6.1.0_1/share/qt/mkspecs/features/yacc.prf:
 /usr/local/Cellar/qt/6.1.0_1/share/qt/mkspecs/features/lex.prf:
 ../test_06/test_06.pro:
+../test_06/resource.qrc:
 /usr/local/Cellar/qt/6.1.0_1/lib/QtWidgets.framework/Resources/QtWidgets.prl:
 /usr/local/Cellar/qt/6.1.0_1/lib/QtGui.framework/Resources/QtGui.prl:
 /usr/local/Cellar/qt/6.1.0_1/lib/QtCore.framework/Resources/QtCore.prl:
@@ -684,6 +691,7 @@ dist: distdir FORCE
 distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
+	$(COPY_FILE) --parents ../test_06/resource.qrc $(DISTDIR)/
 	$(COPY_FILE) --parents /usr/local/Cellar/qt/6.1.0_1/share/qt/mkspecs/features/data/dummy.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents ../test_06/mainwindow.h $(DISTDIR)/
 	$(COPY_FILE) --parents ../test_06/main.cpp ../test_06/mainwindow.cpp $(DISTDIR)/
@@ -697,6 +705,7 @@ clean: compiler_clean
 
 distclean: clean 
 	-$(DEL_FILE) -r test_06.app
+	-$(DEL_FILE) .qmake.stash
 	-$(DEL_FILE) Makefile
 
 
@@ -713,8 +722,13 @@ check: first
 
 benchmark: first
 
-compiler_rcc_make_all:
+compiler_rcc_make_all: qrc_resource.cpp
 compiler_rcc_clean:
+	-$(DEL_FILE) qrc_resource.cpp
+qrc_resource.cpp: ../test_06/resource.qrc \
+		/usr/local/Cellar/qt/6.1.0_1/share/qt/libexec/rcc
+	/usr/local/Cellar/qt/6.1.0_1/share/qt/libexec/rcc -name resource ../test_06/resource.qrc -o qrc_resource.cpp
+
 compiler_moc_predefs_make_all: moc_predefs.h
 compiler_moc_predefs_clean:
 	-$(DEL_FILE) moc_predefs.h
@@ -750,7 +764,7 @@ compiler_yacc_impl_make_all:
 compiler_yacc_impl_clean:
 compiler_lex_make_all:
 compiler_lex_clean:
-compiler_clean: compiler_moc_predefs_clean compiler_moc_header_clean compiler_uic_clean 
+compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_header_clean compiler_uic_clean 
 
 ####### Compile
 
@@ -764,8 +778,15 @@ main.o: ../test_06/main.cpp ../test_06/mainwindow.h \
 mainwindow.o: ../test_06/mainwindow.cpp ../test_06/mainwindow.h \
 		/usr/local/Cellar/qt/6.1.0_1/lib/QtWidgets.framework/Headers/QMainWindow \
 		/usr/local/Cellar/qt/6.1.0_1/lib/QtWidgets.framework/Headers/qmainwindow.h \
-		ui_mainwindow.h
+		ui_mainwindow.h \
+		/usr/local/Cellar/qt/6.1.0_1/lib/QtWidgets.framework/Headers/QComboBox \
+		/usr/local/Cellar/qt/6.1.0_1/lib/QtWidgets.framework/Headers/qcombobox.h \
+		/usr/local/Cellar/qt/6.1.0_1/lib/QtWidgets.framework/Headers/QLabel \
+		/usr/local/Cellar/qt/6.1.0_1/lib/QtWidgets.framework/Headers/qlabel.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o ../test_06/mainwindow.cpp
+
+qrc_resource.o: qrc_resource.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o qrc_resource.o qrc_resource.cpp
 
 moc_mainwindow.o: moc_mainwindow.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_mainwindow.o moc_mainwindow.cpp

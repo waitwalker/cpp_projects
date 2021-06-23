@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <QComboBox>
+#include <QLabel>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -22,6 +23,11 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->comboBox,&QComboBox::currentIndexChanged,[&](int index){
         qDebug()<<index;
     });
+
+
+    QLabel *label = new QLabel(this);
+    label->setGeometry(200,200,100,150);
+    label->setText("布加迪");
 
 }
 
