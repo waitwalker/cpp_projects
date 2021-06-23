@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include <QRadioButton>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -11,6 +12,10 @@ MainWindow::MainWindow(QWidget *parent)
         qDebug()<<"输入的用户名:"<<userAccout;
         QString password = ui->lineEdit_2->text();
         qDebug()<<"输入的密码:"<<password;
+    });
+
+    connect(ui->radioButton,&QRadioButton::clicked,[=](){
+        qDebug()<<"选中男了";
     });
 }
 
