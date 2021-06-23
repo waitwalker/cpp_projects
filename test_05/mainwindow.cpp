@@ -30,6 +30,11 @@ MainWindow::MainWindow(QWidget *parent)
     list.append("谷歌");
     ui->listWidget->addItems(list);
 
+    connect(ui->listWidget,&QListWidget::itemClicked,[](QListWidgetItem *item){
+        qDebug()<<item->text();
+    });
+
+
 }
 
 MainWindow::~MainWindow()
