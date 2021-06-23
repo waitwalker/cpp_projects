@@ -49,13 +49,17 @@ MainWindow::MainWindow(QWidget *parent)
     ui->treeWidget->setHeaderLabels(treeList);
 
 
-
     // 添加顶层控件 往树控件中添加item
     QTreeWidgetItem *treeItem = new QTreeWidgetItem(QStringList()<<"张三丰"<<"11"<<"110220"<<"1班");
-
     ui->treeWidget->addTopLevelItem(treeItem);
+
+    // 树控件的item添加child
     QTreeWidgetItem *child = new QTreeWidgetItem(QStringList()<<"孩子");
     treeItem->addChild(child);
+
+    connect(ui->treeWidget,&QTreeWidget::itemClicked,[&](QTreeWidgetItem *item, int column){
+        qDebug()<<item->text(column)<<column;
+    });
 
 }
 
