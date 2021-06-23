@@ -2,5 +2,6 @@
     <qresource prefix="/">
         <file>images/new_file.png</file>
         <file>images/save_file.png</file>
+        <file>images/think.gif</file>
     </qresource>
 </RCC>

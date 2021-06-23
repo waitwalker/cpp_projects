@@ -782,7 +782,11 @@ mainwindow.o: ../test_06/mainwindow.cpp ../test_06/mainwindow.h \
 		/usr/local/Cellar/qt/6.1.0_1/lib/QtWidgets.framework/Headers/QComboBox \
 		/usr/local/Cellar/qt/6.1.0_1/lib/QtWidgets.framework/Headers/qcombobox.h \
 		/usr/local/Cellar/qt/6.1.0_1/lib/QtWidgets.framework/Headers/QLabel \
-		/usr/local/Cellar/qt/6.1.0_1/lib/QtWidgets.framework/Headers/qlabel.h
+		/usr/local/Cellar/qt/6.1.0_1/lib/QtWidgets.framework/Headers/qlabel.h \
+		/usr/local/Cellar/qt/6.1.0_1/lib/QtGui.framework/Headers/QPixmap \
+		/usr/local/Cellar/qt/6.1.0_1/lib/QtGui.framework/Headers/qpixmap.h \
+		/usr/local/Cellar/qt/6.1.0_1/lib/QtGui.framework/Headers/QMovie \
+		/usr/local/Cellar/qt/6.1.0_1/lib/QtGui.framework/Headers/qmovie.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o ../test_06/mainwindow.cpp
 
 qrc_resource.o: qrc_resource.cpp 

@@ -3,6 +3,7 @@
 #include <QComboBox>
 #include <QLabel>
 #include <QPixmap>
+#include <QMovie>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -33,6 +34,18 @@ MainWindow::MainWindow(QWidget *parent)
     QPixmap pix;
     pix.load(":/images/save_file.png");
     label->setPixmap(pix);
+
+    QMovie *movie = new QMovie(":/images/think.gif");
+    ui->label2->setMovie(movie);
+
+
+    connect(ui->play,&QPushButton::clicked,[&](){
+        movie->start();
+    });
+
+    connect(ui->pause,&QPushButton::clicked,[&](){
+        movie->stop();
+    });
 
 }
 

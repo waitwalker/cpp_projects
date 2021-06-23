@@ -12,8 +12,10 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QComboBox>
+#include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
+#include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QWidget>
 
@@ -24,6 +26,9 @@ class Ui_MainWindow
 public:
     QWidget *centralwidget;
     QComboBox *comboBox;
+    QLabel *label2;
+    QPushButton *play;
+    QPushButton *pause;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -43,6 +48,15 @@ public:
         comboBox->addItem(QString());
         comboBox->setObjectName(QString::fromUtf8("comboBox"));
         comboBox->setGeometry(QRect(200, 100, 161, 71));
+        label2 = new QLabel(centralwidget);
+        label2->setObjectName(QString::fromUtf8("label2"));
+        label2->setGeometry(QRect(580, 290, 60, 16));
+        play = new QPushButton(centralwidget);
+        play->setObjectName(QString::fromUtf8("play"));
+        play->setGeometry(QRect(140, 350, 80, 24));
+        pause = new QPushButton(centralwidget);
+        pause->setObjectName(QString::fromUtf8("pause"));
+        pause->setGeometry(QRect(310, 350, 80, 24));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -67,6 +81,9 @@ public:
         comboBox->setItemText(4, QCoreApplication::translate("MainWindow", "\351\253\230\344\272\214", nullptr));
         comboBox->setItemText(5, QCoreApplication::translate("MainWindow", "\351\253\230\344\270\211", nullptr));
 
+        label2->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
+        play->setText(QCoreApplication::translate("MainWindow", "play", nullptr));
+        pause->setText(QCoreApplication::translate("MainWindow", "pause", nullptr));
     } // retranslateUi
 
 };
