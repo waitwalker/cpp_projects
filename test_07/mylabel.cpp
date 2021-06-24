@@ -5,6 +5,9 @@ MyLabel::MyLabel(QWidget *parent) : QLabel(parent)
 {
     // 设置鼠标跟踪功能
     this->setMouseTracking(true);
+
+    // 1. 加载事件过滤器
+    this->installEventFilter(this);
 }
 
 void MyLabel::enterEvent(QEnterEvent *event)
@@ -61,12 +64,29 @@ bool MyLabel::event(QEvent *event)
 
         QMouseEvent *mouseEvent = static_cast<QMouseEvent *>(event);
         if (mouseEvent->button() == Qt::LeftButton) {
-            qDebug()<<"鼠标左键按下";
+            qDebug()<<"=======event mouseEvent鼠标左键按下";
         } else if (mouseEvent->button() == Qt::RightButton) {
-            qDebug()<<"鼠标右键按下";
+            qDebug()<<"=======event mouseEvent鼠标右键按下";
         }
         // 这里拦截了鼠标单击事件了,该事件不会再向下传递了
         return true;
     }
     return QLabel::event(event);
+}
+
+bool MyLabel::eventFilter(QObject *watched, QEvent *event)
+{
+    if (watched == this) {
+        if (event->type() == QEvent::MouseButtonPress) {
+            qDebug()<<"鼠标单击了";
+            QMouseEvent *mouseEvent = static_cast<QMouseEvent *>(event);
+            if (mouseEvent->button() == Qt::LeftButton) {
+                qDebug()<<"eventFilter====== mouseEvent鼠标左键按下";
+            } else if (mouseEvent->button() == Qt::RightButton) {
+                qDebug()<<"eventFilter====== mouseEvent鼠标右键按下";
+            }
+            return false;// 过滤true, 不过滤false
+        }
+    }
+    return QLabel::eventFilter(watched,event);
 }

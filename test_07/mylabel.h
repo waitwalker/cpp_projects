@@ -31,6 +31,11 @@ public:
     // 重写事件分发器
     virtual bool event(QEvent *event);
 
+    // 重写事件过滤器
+    // watched:事件发生的控件
+    // event:具体的事件
+    virtual bool eventFilter(QObject *watched, QEvent *event);
+
 signals:
 
 };
