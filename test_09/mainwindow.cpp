@@ -24,6 +24,11 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->stopButton,&QPushButton::clicked,[=](){
         timer->stop();
     });
+
+    // 延迟操作
+    QTimer::singleShot(5000,[=](){
+        ui->label->setText("延迟5s后到这里了");
+    });
 }
 
 MainWindow::~MainWindow()
