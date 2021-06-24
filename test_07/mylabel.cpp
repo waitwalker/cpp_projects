@@ -9,22 +9,22 @@ MyLabel::MyLabel(QWidget *parent) : QLabel(parent)
 
 void MyLabel::enterEvent(QEnterEvent *event)
 {
-    qDebug()<<"鼠标进入了";
+    qDebug()<<"enterEvent鼠标进入了";
 }
 
 void MyLabel::leaveEvent(QEvent *event)
 {
-    qDebug()<<"鼠标离开了";
+    qDebug()<<"leaveEvent鼠标离开了";
 }
 
 void MyLabel::mouseDoubleClickEvent(QMouseEvent *event)
 {
-    qDebug()<<"鼠标双击了";
+    qDebug()<<"mouseDoubleClickEvent鼠标双击了";
 }
 
 void MyLabel::mouseMoveEvent(QMouseEvent *event)
 {
-    qDebug()<<"鼠标移动事件";
+    qDebug()<<"mouseMoveEvent鼠标移动事件";
     qDebug()<<"相对x:"<<event->x();
     qDebug()<<"相对y:"<<event->y();
 
@@ -34,7 +34,7 @@ void MyLabel::mouseMoveEvent(QMouseEvent *event)
 
 void MyLabel::mousePressEvent(QMouseEvent *event)
 {
-    qDebug()<<"鼠标按下事件";
+    qDebug()<<"mousePressEvent鼠标按下事件";
     if (event->button() == Qt::LeftButton) {
         qDebug()<<"鼠标左键按下";
     } else if (event->button() == Qt::RightButton) {
@@ -44,7 +44,7 @@ void MyLabel::mousePressEvent(QMouseEvent *event)
 
 void MyLabel::mouseReleaseEvent(QMouseEvent *event)
 {
-    qDebug()<<"鼠标松开事件";
+    qDebug()<<"mouseReleaseEvent鼠标松开事件";
     if (event->button() == Qt::LeftButton) {
         qDebug()<<"鼠标左键松开";
     } else if (event->button() == Qt::RightButton) {
