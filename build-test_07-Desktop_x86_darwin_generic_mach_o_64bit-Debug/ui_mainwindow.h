@@ -11,6 +11,7 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
@@ -27,6 +28,7 @@ public:
     MyWidget *widget;
     QPushButton *setButton;
     QPushButton *getvalueButton;
+    QLabel *label;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -46,6 +48,10 @@ public:
         getvalueButton = new QPushButton(centralwidget);
         getvalueButton->setObjectName(QString::fromUtf8("getvalueButton"));
         getvalueButton->setGeometry(QRect(360, 300, 80, 24));
+        label = new QLabel(centralwidget);
+        label->setObjectName(QString::fromUtf8("label"));
+        label->setGeometry(QRect(570, 250, 201, 161));
+        label->setFrameShape(QFrame::Box);
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -65,6 +71,7 @@ public:
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
         setButton->setText(QCoreApplication::translate("MainWindow", "\350\256\276\347\275\256", nullptr));
         getvalueButton->setText(QCoreApplication::translate("MainWindow", "\350\216\267\345\217\226\345\200\274", nullptr));
+        label->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
     } // retranslateUi
 
 };

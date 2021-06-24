@@ -11,6 +11,7 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QLabel>
 #include <QtWidgets/QProgressBar>
 #include <QtWidgets/QSlider>
 #include <QtWidgets/QSpinBox>
@@ -24,12 +25,13 @@ public:
     QSpinBox *spinBox;
     QProgressBar *progressBar;
     QSlider *horizontalSlider;
+    QLabel *label;
 
     void setupUi(QWidget *MyWidget)
     {
         if (MyWidget->objectName().isEmpty())
             MyWidget->setObjectName(QString::fromUtf8("MyWidget"));
-        MyWidget->resize(400, 300);
+        MyWidget->resize(600, 483);
         spinBox = new QSpinBox(MyWidget);
         spinBox->setObjectName(QString::fromUtf8("spinBox"));
         spinBox->setGeometry(QRect(71, 81, 44, 25));
@@ -41,6 +43,10 @@ public:
         horizontalSlider->setObjectName(QString::fromUtf8("horizontalSlider"));
         horizontalSlider->setGeometry(QRect(120, 170, 231, 31));
         horizontalSlider->setOrientation(Qt::Horizontal);
+        label = new QLabel(MyWidget);
+        label->setObjectName(QString::fromUtf8("label"));
+        label->setGeometry(QRect(70, 250, 221, 61));
+        label->setFrameShape(QFrame::Box);
 
         retranslateUi(MyWidget);
 
@@ -50,6 +56,7 @@ public:
     void retranslateUi(QWidget *MyWidget)
     {
         MyWidget->setWindowTitle(QCoreApplication::translate("MyWidget", "Form", nullptr));
+        label->setText(QCoreApplication::translate("MyWidget", "Label", nullptr));
     } // retranslateUi
 
 };
