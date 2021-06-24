@@ -3,7 +3,8 @@
 
 MyLabel::MyLabel(QWidget *parent) : QLabel(parent)
 {
-
+    // 设置鼠标跟踪功能
+    this->setMouseTracking(true);
 }
 
 void MyLabel::enterEvent(QEnterEvent *event)
