@@ -28,6 +28,9 @@ public:
     // 鼠标松开事件
     virtual void mouseReleaseEvent(QMouseEvent *event);
 
+    // 重写事件分发器
+    virtual bool event(QEvent *event);
+
 signals:
 
 };

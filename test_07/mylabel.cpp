@@ -51,3 +51,9 @@ void MyLabel::mouseReleaseEvent(QMouseEvent *event)
         qDebug()<<"鼠标右键松开";
     }
 }
+
+/// 事件分发器
+bool MyLabel::event(QEvent *event)
+{
+
+}
