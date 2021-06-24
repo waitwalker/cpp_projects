@@ -20,5 +20,8 @@ public:
 
 private:
     Ui::MainWindow *ui;
+    // 定时器 id
+    int id1;
+    int id2;
 };
 #endif // MAINWINDOW_H
