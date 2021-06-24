@@ -11,12 +11,12 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QWidget>
+#include <mylabel.h>
 #include <mywidget.h>
 
 QT_BEGIN_NAMESPACE
@@ -28,7 +28,7 @@ public:
     MyWidget *widget;
     QPushButton *setButton;
     QPushButton *getvalueButton;
-    QLabel *label;
+    MyLabel *label;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -48,7 +48,7 @@ public:
         getvalueButton = new QPushButton(centralwidget);
         getvalueButton->setObjectName(QString::fromUtf8("getvalueButton"));
         getvalueButton->setGeometry(QRect(360, 300, 80, 24));
-        label = new QLabel(centralwidget);
+        label = new MyLabel(centralwidget);
         label->setObjectName(QString::fromUtf8("label"));
         label->setGeometry(QRect(570, 250, 201, 161));
         label->setFrameShape(QFrame::Box);

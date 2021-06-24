@@ -11,10 +11,12 @@ CONFIG += c++11
 SOURCES += \
     main.cpp \
     mainwindow.cpp \
+    mylabel.cpp \
     mywidget.cpp
 
 HEADERS += \
     mainwindow.h \
+    mylabel.h \
     mywidget.h
 
 FORMS += \

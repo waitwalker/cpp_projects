@@ -50,7 +50,7 @@
      <string>获取值</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label">
+   <widget class="MyLabel" name="label">
     <property name="geometry">
      <rect>
       <x>570</x>
@@ -85,6 +85,11 @@
    <extends>QWidget</extends>
    <header location="global">mywidget.h</header>
    <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>MyLabel</class>
+   <extends>QLabel</extends>
+   <header location="global">mylabel.h</header>
   </customwidget>
  </customwidgets>
  <resources/>
