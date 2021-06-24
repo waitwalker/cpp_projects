@@ -58,6 +58,13 @@ bool MyLabel::event(QEvent *event)
     // 鼠标按下事件
     if (event->type() == QEvent::MouseButtonPress) {
         qDebug()<<"鼠标单击了";
+
+        QMouseEvent *mouseEvent = static_cast<QMouseEvent *>(event);
+        if (mouseEvent->button() == Qt::LeftButton) {
+            qDebug()<<"鼠标左键按下";
+        } else if (mouseEvent->button() == Qt::RightButton) {
+            qDebug()<<"鼠标右键按下";
+        }
         // 这里拦截了鼠标单击事件了,该事件不会再向下传递了
         return true;
     }
