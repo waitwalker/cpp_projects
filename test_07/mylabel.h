@@ -3,6 +3,7 @@
 
 #include <QLabel>
 
+
 class MyLabel : public QLabel
 {
     Q_OBJECT
@@ -24,7 +25,7 @@ public:
     // 鼠标按下事件
     virtual void mousePressEvent(QMouseEvent *event);
 
-    // 鼠标移动事件
+    // 鼠标松开事件
     virtual void mouseReleaseEvent(QMouseEvent *event);
 
 signals:
