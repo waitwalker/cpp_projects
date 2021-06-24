@@ -50,7 +50,7 @@ public:
         getvalueButton->setGeometry(QRect(360, 300, 80, 24));
         label = new MyLabel(centralwidget);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(570, 250, 201, 161));
+        label->setGeometry(QRect(570, 250, 211, 181));
         label->setFrameShape(QFrame::Box);
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
@@ -71,7 +71,7 @@ public:
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
         setButton->setText(QCoreApplication::translate("MainWindow", "\350\256\276\347\275\256", nullptr));
         getvalueButton->setText(QCoreApplication::translate("MainWindow", "\350\216\267\345\217\226\345\200\274", nullptr));
-        label->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
+        label->setText(QCoreApplication::translate("MainWindow", "Label", nullptr));
     } // retranslateUi
 
 };

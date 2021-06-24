@@ -55,15 +55,15 @@
      <rect>
       <x>570</x>
       <y>250</y>
-      <width>201</width>
-      <height>161</height>
+      <width>211</width>
+      <height>181</height>
      </rect>
     </property>
     <property name="frameShape">
      <enum>QFrame::Box</enum>
     </property>
     <property name="text">
-     <string>TextLabel</string>
+     <string>Label</string>
     </property>
    </widget>
   </widget>

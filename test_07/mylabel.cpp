@@ -55,5 +55,11 @@ void MyLabel::mouseReleaseEvent(QMouseEvent *event)
 /// 事件分发器
 bool MyLabel::event(QEvent *event)
 {
-
+    // 鼠标按下事件
+    if (event->type() == QEvent::MouseButtonPress) {
+        qDebug()<<"鼠标单击了";
+        // 这里拦截了鼠标单击事件了,该事件不会再向下传递了
+        return true;
+    }
+    return QLabel::event(event);
 }
