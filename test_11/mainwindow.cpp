@@ -39,6 +39,9 @@ void MainWindow::paintEvent(QPaintEvent *event)
     painter->drawPixmap(x++,0,pixMap.width() * 0.5, pixMap.height() * 0.5, pixMap);
 
     x+=2;
+    if (x >= this->width()) {
+        x = 0;
+    }
 
 }
 
