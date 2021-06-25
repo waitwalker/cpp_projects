@@ -15,14 +15,14 @@ MainWindow::MainWindow(QWidget *parent)
 
     for (int i =50; i < 100;i++ ) {
         for (int j = 50;j < 100 ;j++ ) {
-            int value = qRgb(255,0,0);
+            int value = qRgb(255,100,0);
             img.setPixel(i,j,value);
         }
     }
 
     // 定义一个画笔
     QPainter painter(&img);
-    painter.drawEllipse(QPoint(100,100),100,100);
+    painter.drawEllipse(QPoint(10,100),100,100);
     img.save("/Users/waitwalker/Desktop/工作/github_projects/cpp_projects/test_12/img1.jpg");
 
 
