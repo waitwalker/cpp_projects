@@ -9,6 +9,13 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     this->resize(800,600);
+
+    // 定义QBitMap 一会绘图设备
+    QBitmap bitMap(200,200);
+    // 定义个画笔
+    QPainter painter(&bitMap);
+    painter.drawEllipse(50,50,50,50);
+    bitMap.save("/Users/waitwalker/Desktop/工作/github_projects/cpp_projects/test_12/bit1.jpg");
 }
 
 MainWindow::~MainWindow()
