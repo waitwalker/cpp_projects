@@ -27,5 +27,8 @@ void MainWindow::paintEvent(QPaintEvent *event)
 
     // 画矩形
     painter->drawRect(50,50,100,100);
+
+    // 画圆
+    painter->drawEllipse(200,200,200,200);
 }
 
