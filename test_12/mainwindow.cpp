@@ -15,18 +15,30 @@ MainWindow::MainWindow(QWidget *parent)
     QPicture pic;
 
     // 定义一个画笔
-    QPainter painter;
+    QPainter painter(this);
 
-    // 记录绘图指令
-    painter.begin(&pic);
+    pic.load("/Users/waitwalker/Desktop/工作/github_projects/cpp_projects/test_12/pic.zl");
 
-    painter.drawEllipse(100,100,100,100);
+    // 画笔根据绘图指令进行绘制
+    painter.drawPicture(300,400,pic);
 
-    // 结束记录绘图指令
-    painter.end();
 
-    // 保存绘图指令
-    pic.save("/Users/waitwalker/Desktop/工作/github_projects/cpp_projects/test_12/pic.zl");
+//    // 定义一个Picture
+//    QPicture pic;
+
+//    // 定义一个画笔
+//    QPainter painter;
+
+//    // 记录绘图指令
+//    painter.begin(&pic);
+
+//    painter.drawEllipse(100,100,100,100);
+
+//    // 结束记录绘图指令
+//    painter.end();
+
+//    // 保存绘图指令
+//    pic.save("/Users/waitwalker/Desktop/工作/github_projects/cpp_projects/test_12/pic.zl");
 
 //    // 定义一个QImage图片
 //    QImage img;
