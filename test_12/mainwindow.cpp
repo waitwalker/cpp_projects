@@ -13,6 +13,13 @@ MainWindow::MainWindow(QWidget *parent)
     QImage img;
     img.load(":/images/123.png");
 
+    for (int i =50; i < 100;i++ ) {
+        for (int j = 50;j < 100 ;j++ ) {
+            int value = qRgb(255,0,0);
+            img.setPixel(i,j,value);
+        }
+    }
+
     // 定义一个画笔
     QPainter painter(&img);
     painter.drawEllipse(QPoint(100,100),100,100);
